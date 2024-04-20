@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Statements</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <script>
+        let x, y, z;
+        x = 5;
+        y = 6;
+        z = x + y;
+        document.getElementById("demo1").innerHTML = "The value of z is " + z + ".";
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML = "Hello Dolly.";
+    </script>
+
+    <p id="demo3"></p>
+    <script>
+        let a, b, c;
+        a = 5;
+        b = 6;
+        c = a + b;
+        document.getElementById("demo3").innerHTML = c;
+    </script>
+
+    <b><p>Multiple statements on one line are allowed.</p></b>
+    <p id="demo4"></p>
+    <script>
+        let d, e, f;
+        d = 5; e = 6; f = d + e;
+        document.getElementById("demo4").innerHTML = f;
+    </script>
+
+    <b><p>JavaScript code blocks are written between { and }</p></b>
+    <button type="button" onclick="myFunction()">Click me!</button>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        function myFunction() {
+            document.getElementById("demo5").innerHTML = "Hello Dolly!";
+            document.getElementById("demo6").innerHTML = "How are you?";
+        }
+    </script>
+</body>
+</html>

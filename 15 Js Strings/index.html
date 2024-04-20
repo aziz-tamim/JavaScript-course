@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Strings</title>
+</head>
+<body>
+    <b><p>Strings are written inside quotes. You can use single or double quotes:</p></b>
+    <p id="demo1"></p>
+    <script>
+        let carName1 = "Volvo XC60";
+        let carName2 = 'Volvo Xc60';
+        document.getElementById("demo1").innerHTML = carName1 + " " + carName2;
+    </script>
+
+    <b><p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p></b>
+    <p id="demo2"></p>
+    <script>
+        let answer1 = "It's alright";
+        let answer2 = "He is called 'Johnny'";
+        let answer3 = 'He is called "Johnny"';
+
+        document.getElementById("demo2").innerHTML = answer1 + "<br>" + answer2 + "<br>" + answer3;
+    </script>
+
+    <b><p>Javascript template strings</p></b>
+    <p id="demo3"></p>
+    <script>
+        let text = `He's often called "Johnny"`;
+        document.getElementById("demo3").innerHTML = text;
+    </script>
+
+    <b><p>The length property</p></b>
+    <p id="demo4"></p>
+    <script>
+        let text1 = "ABCDEFGHILKLMNOPQRSTUVWXYZ";
+        document.getElementById("demo4").innerHTML = text1.length; 
+    </script>
+
+    <b><p>The escape sequence \" inserts a double quote in a string.</p></b>
+    <p id="demo5"></p>
+    <script>
+        let text2 = "We are the so-called \"Vikings\" from the north.";
+        document.getElementById("demo5").innerHTML = text2;
+    </script>
+
+    <b><p>The escape sequence \' inserts a single quote in a string.</p></b>
+    <p id="demo6"></p>
+    <script>
+        let text3 = 'It\'s alright.';
+        document.getElementById("demo6").innerHTML = text3;
+    </script>
+
+    <b><p>The escape sequence \\ inserts a backslash in a string.</p></b>
+    <p id="demo7"></p>
+    <script>
+        let text4 = "The character \\ is called backslash.";
+        document.getElementById("demo7").innerHTML = text4;
+    </script>
+
+    <b><p>Strings and objects cannot be safely compared.</p></b>
+    <p id="demo8"></p>
+    <script>
+        let x = "John";
+        let y = new String("John");
+        document.getElementById("demo8").innerHTML = (x==y);
+    </script>
+</body>
+</html>

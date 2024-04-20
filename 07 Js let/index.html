@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js let</title>
+</head>
+<body>
+    <b><p>Redeclaring a variable using var</p></b>
+    <p id="demo1"></p>
+    <script>
+        var x = 10;
+        {
+            var x = 2;
+        }
+        document.getElementById("demo1").innerHTML = x;
+    </script>
+
+    <b><p>Redeclaring a variable using let</p></b>
+    <p id="demo2"></p>
+    <script>
+        let y = 10;
+        {
+            let y = 2;
+        }
+        document.getElementById("demo2").innerHTML = y;
+    </script>
+
+    <b><p>Redeclaring a javaScript variable with var is allowed anywhere in a program:</p></b>
+    <p id="demo3"></p>
+    <script>
+        var z = 2;
+        var z = 3;
+        document.getElementById("demo3").innerHTML = z;
+    </script>
+
+    <b><p>With var you can use a variable before it is declared:</p></b>
+    <p id="demo4"></p>
+    <script>
+        carName = "Volvo";
+        document.getElementById("demo4").innerHTML = carName;
+        var carName;
+    </script>
+
+    <b><p>With let you cannot use a variable before it is declared.</p></b>
+    <p id="demo5"></p>
+    <script>
+        try {
+            Name = "Saab";
+            let Name = "Volvo";
+        }
+        catch(err) {
+            document.getElementById("demo5").innerHTML = err;
+        }
+    </script>
+</body>
+</html>
