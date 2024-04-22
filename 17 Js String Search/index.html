@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js string search</title>
+</head>
+<body>
+    <h2>JavaScript String Search</h2>
+
+    <b><p>The lastIndexOf() Method</p></b>
+    <p id="demo1"></p>
+    <script>
+        let text1 = "Please locate where 'locate' occurs!";
+        let index = text1.lastIndexOf("locate");
+        document.getElementById("demo1").innerHTML = index;
+    </script>
+
+    <b><p>The indexOf() Method</p></b>
+    <p id="demo2"></p>
+    <script>
+        let text2 = "please locate where 'locate' occurs!";
+        let index2 = text2.indexOf("locate");
+        document.getElementById("demo2").innerHTML = index2; 
+    </script>
+
+    <b><p>The search() Method</p></b>
+    <p id="demo3"></p>
+    <script>
+        let text3 = "Please locate where 'locate' occurs!";
+        let index3 = text3.search("locate");
+        document.getElementById("demo3").innerHTML = index3;
+    </script>
+
+    <b><p>The match() Method</p></b>
+    <p id="demo4"></p>
+    <script>
+        let text4 = "The tain in SPAIN stays mainly in the plain";
+        const myArr = text4.match(/ain/g);
+        document.getElementById("demo4").innerHTML = myArr.length + " " + myArr; 
+    </script>
+
+    <b><p>The matchAll() Method</p></b>
+    <p id="demo5"></p>
+    <script>
+        let text5 = "I love cats. Cats are very easy to love. Cats are very popular.";
+        const iterator = text5.matchAll("Cats");
+        document.getElementById("demo5").innerHTML = Array.from(iterator);
+    </script>
+
+    <b><p>The includes() Method</p></b>
+    <p id="demo6"></p>
+    <script>
+        let text6 = "Hello world, welcome to the universe.";
+        document.getElementById("demo6").innerHTML = text6.includes("world");
+    </script>
+
+    <b><p>The startsWith() Method</p></b>
+    <p id="demo7"></p>
+    <script>
+        let text7 = "Hello world, welcome to the universe.";
+        document.getElementById("demo7").innerHTML = text7.startsWith("Hello");
+    </script>
+</body>
+</html>

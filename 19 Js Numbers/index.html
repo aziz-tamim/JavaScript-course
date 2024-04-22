@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Numbers</title>
+</head>
+<body>
+    <h2>JavaScript Numbers</h2>
+
+    <b><p>Numbers can be written with or without decimals:</p></b>
+    <p id="demo1"></p>
+    <script>
+        let x = 3.14;
+        let y = 3;
+        document.getElementById("demo1").innerHTML = x + "<br>" + y;
+    </script>
+
+    <b><p>Floating point precision</p></b>
+    <p id="demo2"></p>
+    <script>
+        let a = 0.2 + 0.1;        
+        document.getElementById("demo2").innerHTML = "0.2 + 0.1 = " + a;
+    </script>
+
+    <b><p>If you add two numbers, the result will be a number:</p></b>
+    <p id="demo3"></p>
+    <script>
+        let b = 10;
+        let c = 20;
+        let d = b + c;
+        document.getElementById("demo3").innerHTML = d;
+    </script>
+
+    <b><p>If you add two numeric strings, the result will be a concatenated string:</p></b>
+    <p id="demo4"></p>
+    <script>
+        let e = "10";
+        let f = "20";
+        let g = e + f;
+        document.getElementById("demo4").innerHTML = g;
+    </script>
+
+    <b><p>A common mistake is to expect this result to be 102030:</p></b>
+    <p id="demo5"></p>
+    <script>
+        let h = 10;
+        let i = 20;
+        let j = "30";
+        let result = h + i + j;
+        document.getElementById("demo5").innerHTML = result;
+    </script>
+
+    <b><p>JavaScript will try to convert strings to numbers when dividing:</p></b>
+    <p id="demo6"></p>
+    <script>
+        let k = "100";
+        let l = "10";
+        let m = k / l;
+        document.getElementById("demo6").innerHTML = m;
+    </script>
+
+    <b><p>JavaScript will try to convert strings to numbers when multiplying:</p></b>
+    <p id="demo7"></p>
+    <script>
+        let n = "100";
+        let o = "10";
+        let p = n * o;
+        document.getElementById("demo7").innerHTML = p;
+    </script>
+
+    <b><p>JavaScript will try to convert strings to numbers when subtraction:</p></b>
+    <p id="demo8"></p>
+    <script>
+        let q = "100";
+        let r = "10";
+        let s = q - r;
+        document.getElementById("demo8").innerHTML = s;
+    </script>
+
+    <b><p>A number divided by a non-numeric string becomes NaN (Not a Number):</p></b>
+    <p id="demo9"></p>
+    <script>
+        document.getElementById("demo9").innerHTML = 100 / "Apple";
+    </script>
+
+    <b><p>A number divided by a numeric string becomes a number:</p></b>
+    <p id="demo10"></p>
+    <script>
+        document.getElementById("demo10").innerHTML = 100 / "10";
+    </script>
+
+    <b><p>You can use the global javaScript function isNaN() to find out if a value is not a number:</p></b>
+    <p id="demo11"></p>
+    <script>
+        let t = 100/ "Apple";
+        document.getElementById("demo11").innerHTML = isNaN(t);
+    </script>
+
+    <b><p>If you use NaN in a mathematical operation, the result will also be NaN:</p></b>
+    <p id="demo12"></p>
+    <script>
+        let u = NaN;
+        let v = 5;
+        document.getElementById("demo12").innerHTML = u + v;
+    </script>
+
+    <b><p>The typeof NaN is number:</p></b>
+    <p id="demo13"></p>
+    <script>
+        let w = NaN;
+        document.getElementById("demo13").innerHTML = typeof w;
+    </script>
+
+    <b><p>Infinity is returned if you calculate a number outside the largest possible number:</p></b>
+    <p id="demo14"></p>
+    <script>
+        let myNumber = 2;
+        let txt = "";
+        while (myNumber != Infinity) {
+            myNumber = myNumber * myNumber;
+            txt = txt + myNumber + "<br>";
+        }
+        document.getElementById("demo14").innerHTML = txt;
+    </script>
+
+    <b><p>The typeof Infinity is a number:</p></b>
+    <p id="demo15"></p>
+    <script>
+        document.getElementById("demo15").innerHTML = typeof Infinity;
+    </script>
+
+    <b><p>Numbers and Number objects cannot be safely compared:</p></b>
+    <p id="demo16"></p>
+    <script>
+        let A = 500;
+        let B = new Number(500);
+        document.getElementById("demo16").innerHTML = (A==B);
+    </script>
+</body>
+</html>

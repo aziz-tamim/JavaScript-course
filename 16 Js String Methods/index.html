@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js string methods</title>
+</head>
+<body>
+    <h2>JavaScript String Method</h2>
+
+    <b><p>The length property</p></b>
+    <p id="demo1"></p>
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("demo1").innerHTML = text.length;
+    </script>
+
+    <b><p>The charAt() Method</p></b>
+    <p id="demo2"></p>
+    <script>
+        var text1 = "HELLO WORLD";
+        document.getElementById("demo2").innerHTML = text1.charAt(0);
+    </script>
+
+    <b><p>The charCodeAt() method</p></b>
+    <p id="demo3"></p>
+    <script>
+        let text3 = "Hello World";
+        document.getElementById("demo3").innerHTML = text3.charCodeAt(0);
+    </script>
+
+    <b><p>The at() Method</p></b>
+    <p id="demo4"></p>
+    <script>
+        const name = "W3Schools";
+        let letter = name.at(2);
+        document.getElementById("demo4").innerHTML = letter;
+    </script>
+
+    <b><p>Property access on strings are read only:</p></b>
+    <p id="demo5"></p>
+    <script>
+        let text4 = "HELLO WORLD";
+        text4[0] = "A";
+        document.getElementById("demo5").innerHTML = text4;
+    </script>
+
+    <b><p>The slice() Method</p></b>
+    <p id="demo6"></p>
+    <script>
+        let text5 = "Apple, Banana, Kiwi";
+        let part = text5.slice(7, 13);
+        document.getElementById("demo6").innerHTML = part;
+    </script>
+
+    <b><p>The substr() Method</p></b>
+    <p id="demo7"></p>
+    <script>
+        let str = "Apple, Banana, Kiwi";
+        document.getElementById("demo7").innerHTML = str.substr(7);
+    </script>
+
+    <b><p>Convert string to UpperCase</p></b>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo8">Hello World!</p>
+    <script>
+        function myFunction() {
+          let text6 = document.getElementById("demo8").innerHTML;
+          document.getElementById("demo8").innerHTML = text6.toUpperCase();
+        }
+    </script>
+
+    <b><p>The concat() Method</p></b>
+    <p id="demo9"></p>
+    <script>
+        let text7 = "Hello";
+        let text8 = "World!";
+        let text9 = text7.concat("",text8);
+        document.getElementById("demo9").innerHTML = text9;
+    </script>
+
+    <b><p>The trim() Method</p></b>
+    <p id="demo10"></p>
+    <script>
+        let text10 = "     Hello World!     ";
+        let text11 = text10.trim();
+        document.getElementById("demo10").innerHTML = "Length text1 = " + text10.length + "<br>Length text2 = " + text11.length;
+    </script>
+
+    <b><p>The repeat() Method</p></b>
+    <p id="demo11"></p>
+    <script>
+        let text12 = "Hello world! ";
+        let result = text12.repeat(5);
+        document.getElementById("demo11").innerHTML = result;
+    </script>
+
+    <b><p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p></b>
+    <button onclick="myFunction2()">Try it</button>
+    <p id="demo12">Please visit Microsoft!</p>
+    <script>
+        function myFunction2() {
+            let text13 = document.getElementById("demo12").innerHTML;
+            document.getElementById("demo12").innerHTML = text13.replace("Microsoft", "W3Schools");
+        }
+    </script>
+
+    <b><p>The replaceAll() Method</p></b>
+    <p id="demo13"></p>
+    <script>
+        let text14 = "I love cats. Cats are very easy to love. Cats are very popular."
+        text14 = text14.replaceAll("Cats","Dogs");
+        text14 = text14.replaceAll("cats","dogs");
+        document.getElementById("demo13").innerHTML = text14;
+    </script>
+</body>
+</html>
