@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Array Methods</title>
+</head>
+<body>
+    <b><p>The length Property</p></b>
+    <p id="demo1"></p>
+    <script>
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"]
+        let size = fruits1.length;
+        document.getElementById("demo1").innerHTML = size;
+    </script>
+
+    <b><p>The toString Method</p></b>
+    <p id="demo2"></p>
+    <script>
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo2").innerHTML = fruits2.toString();
+    </script>
+
+    <b><p>The at() Methods</p></b>
+    <p id="demo3"></p>
+    <script>
+        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        let fruit = fruits3.at(2);
+        document.getElementById("demo3").innerHTML = fruit;
+    </script>
+
+    <b><p>The join() Method</p></b>
+    <p id="demo4"></p>
+    <script>
+        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo4").innerHTML = fruits4.join(" * ");
+    </script>
+
+    <b><p>The Pop() Method</p></b>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        const fruits5 = ["Banana", "Orange", "Apple", "Mango"]
+        document.getElementById("demo5").innerHTML = fruits5;
+        document.getElementById("demo6").innerHTML = fruits5;
+    </script>
+
+    <b><p>The push() Method</p></b>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <script>
+        const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo7").innerHTML = fruits6;
+        fruits6.push("kiwi");
+        document.getElementById("demo8").innerHTML = fruits6;
+    </script>
+
+    <b><p>The shift() Method</p></b>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <script>
+        const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo9").innerHTML = fruits7;
+        fruits7.shift();
+        document.getElementById("demo10").innerHTML = fruits7;
+    </script>
+
+    <b><p>The unshift() Method</p></b>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <script>
+        const fruits8 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo11").innerHTML = fruits8;
+        fruits8.unshift("Lemon");
+        document.getElementById("demo12").innerHTML = fruits8;
+    </script>
+</body>
+</html>
