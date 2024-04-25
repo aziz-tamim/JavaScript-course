@@ -74,5 +74,64 @@
         fruits8.unshift("Lemon");
         document.getElementById("demo12").innerHTML = fruits8;
     </script>
+
+    <b><p>The delete Method</p></b>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <script>
+        const fruits9 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo13").innerHTML = "The first fruit is: " + fruits9[0]; 
+        delete fruits9[0];
+        document.getElementById("demo14").innerHTML = "The first fruit is: " + fruits9[0];
+    </script>
+
+    <b><p>The concat() Method</p></b>
+    <p id="demo15"></p>
+    <script>
+        const myGirls = ["Cecilie", "Lone"];
+        const myBoys = ["Emil", "Tobias", "Linus"];
+        const myChildren = myGirls.concat(myBoys);
+        document.getElementById("demo15").innerHTML = myChildren;
+    </script>
+
+    <b><p>The copyWithin() Method</p></b>
+    <p id="demo16"></p>
+    <script>
+        const fruits10 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo16").innerHTML = fruits10.copyWithin(2,0);
+    </script>
+
+    <b><p>The fiat() Method</p></b>
+    <p id="demo17"></p>
+    <script>
+        const myArr = [[1,2],[3,4],[5,6]];
+        const newArr = myArr.flat();
+        document.getElementById("demo17").innerHTML = newArr;
+    </script>
+
+    <b><p>The splice() Method</p></b>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <script>
+        const fruits11 = ["Banana","Orange", "Apple", "Mango"];
+        document.getElementById("demo18").innerHTML = fruits11;
+        fruits11.splice(2,0, "Lemon", "Kiwi");
+        document.getElementById("demo19").innerHTML = fruits11;
+    </script>
+
+    <b><p>The toSpliced() Method</p></b>
+    <p id="demo20"></p>
+    <script>
+        const months = ["Jan", "Feb", "Mar", "Apr"];
+        const spliced = months.toSpliced(0,1);
+        document.getElementById("demo20").innerHTML = spliced;
+    </script>
+
+    <b><p>The toString() Method</p></b>
+    <p id="demo21"></p>
+    <script>
+        const fruits12 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo21").innerHTML = fruits12.toString();
+    </script>
 </body>
 </html>
