@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Array Const</title>
+</head>
+<body>
+    <h2>JavaScript Array Const</h2>
+    
+    <b><p>Js const</p></b>
+    <p id="demo1"></p>
+    <script>
+        const cars1 = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo1").innerHTML = cars1;
+    </script>
+
+    <b><p>You can NOT reassign a constant array:</p></b>
+    <p id="demo2"></p>
+    <script>
+        try {
+            const cars = ["Saab", "Volvo", "BMW"];
+            cars = ["Toyota", "Volvo", "Audi"];
+        }
+        catch (err) {
+            document.getElementById("demo2").innerHTML = err;
+        }
+    </script>
+
+    <b><p>Declaring a constant array does NOT make the elements unchangeable:</p></b>
+    <p id="demo3"></p>
+    <script>
+        const cars2 = ["Saab", "Volvo", "BMW"];
+        cars2[0] = "Toyota";
+        cars2.push("Audi");
+        document.getElementById("demo3").innerHTML = cars2;
+    </script>
+
+    <b><p>Declaring an Array Using const</p></b>
+    <p id="demo4"></p>
+    <script>
+        const cars3 = ["Saab", "Volvo", "BMW"];
+        {
+            const cars3 = ["Toyota", "Volvo", "BMW"];
+        } 
+        document.getElementById("demo4").innerHTML = cars3[0];
+    </script>
+</body>
+</html>
