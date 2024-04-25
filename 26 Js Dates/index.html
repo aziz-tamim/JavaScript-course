@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Dates</title>
+</head>
+<body>
+    <h2>JavaScript Dates</h2>
+    
+    <b><p>Using new Date()</p></b>
+    <p id="demo1"></p>
+    <script>
+        const d = new Date();
+        document.getElementById("demo1").innerHTML = d;
+    </script>
+
+    <b><p>Using new Date()</p></b>
+    <p id="demo2"></p>
+    <script>
+        const e = new Date("October 13, 2014 11:13:00");
+        document.getElementById("demo2").innerHTML = e;
+    </script>
+
+    <b><p>JavaScript counts months from 0 to 11.</p></b>
+    <p id="demo3"></p>
+    <script>
+        const f = new Date(2018, 15, 24, 10, 33, 30, 0);
+        document.getElementById("demo3").innerHTML = f;
+    </script>
+
+    <b><p>6 numbers specify year, month, day, hour, minute and second:</p></b>
+    <p id="demo4"></p>
+    <script>
+        const g = new Date(2018, 11, 24, 10, 33, 30);
+        document.getElementById("demo4").innerHTML = g;
+    </script>
+
+    <b><p>100000000000 milliseconds from january 01 1970 UTC is:</p></b>
+    <p id="demo5"></p>
+    <script>
+        const h = new Date(100000000000);
+        document.getElementById("demo5").innerHTML = h;
+    </script>
+
+    <b><p>The toDateString() Method</p></b>
+    <p id="demo6"></p>
+    <script>
+        const i = new Date();
+        document.getElementById("demo6").innerHTML = i.toDateString();
+    </script>
+
+    <b><p>The toISOString() Method</p></b>
+    <p id="demo7"></p>
+    <script>
+        const j = new Date();
+        document.getElementById("demo7").innerHTML = j.toISOString();
+    </script>
+</body>
+</html>
