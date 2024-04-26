@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Random</title>
+</head>
+<body>
+    <h2>JavaScript Random</h2>
+    
+    <b><p>JavaScript Math.random()</p></b>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = Math.random();
+    </script>
+
+    <b><p>JavaScript Math</p></b>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML = Math.floor(Math.random() * 10);
+    </script>
+
+    <b><p>Javascript Math</p></b>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = Math.floor(Math.random() * 100);
+    </script>
+    
+    <b><p>JavaScript Math.random()</p></b>
+    <button onclick="document.getElementById('demo4').innerHTML = getRndInteger(0,10)">Clik Me</button>
+    <p id="demo4"></p>
+    <script>
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+    </script>
+</body>
+</html>
