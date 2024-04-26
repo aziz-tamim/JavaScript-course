@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Booleans</title>
+</head>
+<body>
+    <h2>JavaScript Booleans</h2>
+
+    <b><p>Display the value of Boolean (10 > 9):</p></b>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = Boolean(10 > 9);
+    </script>
+
+    <b><p>Display the Boolean value of 0:</p></b>
+    <p id="demo2"></p>
+    <script>
+        let x = 0;
+        document.getElementById("demo2").innerHTML = Boolean(x);
+    </script>
+
+    <b><p>Display the Boolean value of "":</p></b>
+    <p id="demo3"></p>
+    <script>
+        let y = "";
+        document.getElementById("demo3").innerHTML = Boolean("");
+    </script>
+
+    <b><p>Display the Boolean value of undefined:</p></b>
+    <p id="demo4"></p>
+    <script>
+        let z;
+        document.getElementById("demo4").innerHTML = Boolean(z);
+    </script>
+
+    <b><p>Booleans and Boolean objects cannot be safely compared:</p></b>
+    <p id="demo5"></p>
+    <script>
+        let a = false;
+        let b = new Boolean(false);
+        document.getElementById("demo5").innerHTML = typeof a + "<br>" + typeof b;
+    </script>
+
+    <b><p>Booleans and Boolean objects cannot be safely compared:</p></b>
+    <p id="demo6"></p>
+    <script>
+        let c = false;
+        let d = new Boolean(false);
+        document.getElementById("demo6").innerHTML = (x==y);
+    </script>
+
+    
+</body>
+</html>
