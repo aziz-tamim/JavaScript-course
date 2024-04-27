@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript For Loop</title>
+</head>
+<body>
+    <h2>JavaScript For Loop</h2>
+
+    <b><p>JavaScript For Loop</p></b>
+    <p id="demo1"></p>
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        let text = "";
+        for (let i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text;
+    </script>
+
+    <b><p>JavaScript For Loop</p></b>
+    <p id="demo2"></p>
+    <script>
+        let text1 = "";
+        for (let i = 0; i < 5; i++) {
+            text1 += "The number is " + i + "<br>"; 
+        }
+        document.getElementById("demo2").innerHTML = text1;
+    </script>
+
+    <b><p>JavaScript For Loop</p></b>
+    <p id="demo3"></p>
+    <script>
+        const cars1 = ["BMW", "Volvo", "Saab", "Ford"];
+        let i, len, text2;
+        for (i = 0, len = cars1.length, text2 = ""; i < len; i++) {
+            text2 += cars1[i] + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = text2;
+    </script>
+
+    <b><p>JavaScript For Loop</p></b>
+    <p id="demo4"></p>
+    <script>
+        const cars2 = ["BMW", "Volvo", "Saab", "Ford"];
+        let j = 2;
+        let len1 = cars2.length;
+        let text3 = "";
+        for (; j < len1; j++) {
+            text3 += cars2[j] + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text3;
+    </script>
+
+    <b><p>JavaScript var</p></b>
+    <p id="demo5"></p>
+    <script>
+        var k = 5;
+        for (var k = 0; k < 10; k++) {
+
+        }
+        document.getElementById("demo5").innerHTML = k;
+    </script>
+
+    <b><p>JavaScript let</p></b>
+    <p id="demo6"></p>
+    <script>
+        let l = 5;
+        for (let l = 0; l < 10; l++) {
+
+        }
+        document.getElementById("demo6").innerHTML = l;
+    </script>
+</body>
+</html>
