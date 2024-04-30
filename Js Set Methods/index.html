@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Set Methods</title>
+</head>
+<body>
+    <h2>JavaScript Set Methods</h2>
+
+    <b><p>create a Set from an Array:</p></b>
+    <p id="demo1"></p>
+    <script>
+        const letters = new Set(["a","b","c"]);
+        document.getElementById("demo1").innerHTML = "The set has " + letters.size + " values.";
+    </script>
+
+    <b><p>The add() method adds values to a Set:</p></b>
+    <p id="demo2"></p>
+    <script>
+        const letters1 = new Set(["a","b","c"]);
+        letters1.add("d");
+        letters1.add("e");
+        document.getElementById("demo2").innerHTML = "The set has " + letters1.size + " values.";
+    </script>
+
+    <b><p>Iterating set values:</p></b>
+    <p id="demo3"></p>
+    <script>
+        const letters2 = new Set(["a","b","c"]);
+        let text = "";
+        for (const x of letters2) {
+            text += x + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = text;
+    </script>
+
+    <b><p>The has() Method</p></b>
+    <p id="demo4"></p>
+    <script>
+        const letters3 = new Set(["a","b","c"]);
+        answer = letters3.has("d");
+        document.getElementById("demo4").innerHTML = "The answer is " + answer;
+    </script>
+
+    <b><p>The forEach() Method</p></b>
+    <p id="demo5"></p>
+    <script>
+        const letters4 = new Set(["a","b","c"]);
+        let text1 = "";
+        letters4.forEach (function(value) {
+            text1 += value + "<br>";
+        })
+        document.getElementById("demo5").innerHTML = text1;
+    </script>
+
+    <b><p>The values () Method</p></b>
+    <p id="demo6"></p>
+    <script>
+        const letters5 = new Set(["a","b","c"]);
+        const myIterator = letters5.values();
+        let text2 = "";
+        for (const x of myIterator) {
+            text2 += x + "<br>";
+        }
+        document.getElementById("demo6").innerHTML = text2;
+    </script>
+</body>
+</html>
