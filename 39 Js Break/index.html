@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Break and Continue</title>
+</head>
+<body>
+    <h2>Js Break and Continue</h2>
+
+    <b><p>A loop with a break statement</p></b>
+    <p id="demo1"></p>
+    <script>
+        let text = "";
+        for (let i = 0; i < 10; i++) {
+            if (i === 3) {break; }
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text;
+    </script>
+
+    <b><p>JavaScript Loops</p></b>
+    <p id="demo2"></p>
+    <script>
+        let text1 = "";
+        for (let i = 0; i < 10; i++) {
+            if (i === 3) { continue; }
+            text1 += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = text1
+    </script>
+
+    <b><p>JavaScript break</p></b>
+    <p id="demo3"></p>
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let text2 = "";
+        list: {
+            text2 += cars[0] + "<br>";
+            text2 += cars[1] + "<br>";
+            break list;
+            text2 += cars[2] + "<br>";
+            text2 += cars[3] + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = text2;
+    </script>
+</body>
+</html>
