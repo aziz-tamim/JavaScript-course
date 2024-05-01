@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Bitwise</title>
+</head>
+<body>
+    <h2>JavaScript Bitwise</h2>
+
+    <b><p>The & Operator</p></b>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = 5 & 1;
+    </script>
+
+    <b><p>The | Operator</p></b>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML = 5 | 1;
+    </script>
+
+    <b><p>The ^ Operator</p></b>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = 5 ^ 1;
+    </script>
+
+    <b><p>The ~ Operator</p></b>
+    <p id="demo4"></p>
+    <script>
+        document.getElementById("demo4").innerHTML = ~ 5;
+    </script>
+
+    <b><p>The << Operator</p></b>
+    <p id="demo5"></p>
+    <script>
+        document.getElementById("demo5").innerHTML = 5 << 1;
+    </script>
+
+    <b><p>The >> Operator</p></b>
+    <p id="demo6"></p>
+    <script>
+        document.getElementById("demo6").innerHTML = -5 >> 1;
+    </script>
+
+    <b><p>The >>> Operator</p></b>
+    <p id="demo7"></p>
+    <script>
+        document.getElementById("demo7").innerHTML = 5 >>> 1;
+    </script>
+
+    <b><p>JavaScript Convert Decimal to Binary</p></b>
+    <p id="demo8"></p>
+    <script>
+        document.getElementById("demo8").innerHTML = dec2bin(-5);
+        function dec2bin(dec) {
+            return (dec >>> 0).toString(2);
+        }
+    </script>
+
+    <b><p>JavaScript Convert Binary to Decimal</p></b>
+    <p id="demo9"></p>
+    <script>
+        document.getElementById("demo9").innerHTML = bin2dec(101);
+        function bin2dec(bin) {
+            return parseInt(bin,2).toString(10);
+        }
+    </script>
+</body>
+</html>
