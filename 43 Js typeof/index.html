@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js typeof</title>
+</head>
+<body>
+    <h2>JavaScript typeof</h2>
+
+    <b><p>The typeof Operator</p></b>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = "'John' is " + typeof "John" + "<br>" + 
+        "3.14 is " + typeof 3.14 + "<br>" +
+        "NaN is " + typeof NaN + "<br>" + 
+        "false is " + typeof false + "<br>" + 
+        "[1, 2, 3, 4] is " + typeof [1, 2, 3, 4] + "<br>" + 
+        "{name:'John', age:34} is " + typeof {name:'John', age:34} + "<br>" +
+        "new Date() is " + typeof new Date() + "<br>" + 
+        "function () {} is " + typeof function () {} + "<br>" + 
+        "myCar is " + typeof myCar + "<br>" + 
+        "null is " + typeof null;
+    </script>
+
+    <b><p>The typeof Operator</p></b>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML = 
+        typeof "john" + "<br>" +
+        typeof 3.14 + "<br>" +
+        typeof true + "<br>" +
+        typeof false + "<br>" + 
+        typeof x; 
+    </script>
+
+    <b><p>The typeof Operator</p></b>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = 
+        typeof {name:'john', age:34} + "<br>" + 
+        typeof [1,2,3,4] + "<br>" + 
+        typeof null + "<br>" + 
+        typeof function myFunc(){};
+    </script>
+
+    <b><p>The constructor Property</p></b>
+    <p id="demo4"></p>
+    <script>
+        document.getElementById("demo4").innerHTML = 
+        "john".constructor + "<br>" + 
+        (3.14).constructor + "<br>" + 
+        false.constructor + "<br>" + 
+        [1,2,3,4].constructor + "<br>" +
+        {name:'john',age:34}.constructor + "<br>" + 
+        new Date().constructor + "<br>" +
+        function () {}.constructor;
+    </script>
+
+    <b><p>Objects can be emptied by setting the value to null. </p></b>
+    <p id="demo5"></p>
+    <script>
+        let person = {firstName:"John",lastName:"Doe", age:50,eyeColor:"blue"};
+        person = null;
+        document.getElementById("demo5").innerHTML = typeof person;
+    </script>
+
+    <b><p>Objects can be emptied by setting the value to undefined.</p></b>
+    <p id="demo6"></p>
+    <script>
+        let person1 = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+        person1 = undefined;
+        document.getElementById("demo6").innerHTML = person1;
+    </script>
+
+    <b><p>The typeof Operator</p></b>
+    <p id="demo7"></p>
+    <script>
+        document.getElementById("demo7").innerHTML = 
+        typeof undefined + "<br>" +
+        typeof null + "<br><br>" + 
+        (null === undefined) + "<br>" + 
+        (null == undefined); 
+    </script>
+
+    <b><p>The instanceof Operator</p></b>
+    <p id="demo8"></p>
+    <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo8").innerHTML =
+        (cars instanceof Array) + "<br>" + 
+        (cars instanceof Object) + "<br>" + 
+        (cars instanceof String) + "<br>" + 
+        (cars instanceof Number);
+    </script>
+</body>
+</html>
