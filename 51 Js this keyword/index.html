@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js this keyword</title>
+</head>
+<body>
+    <h2>JavaScript this keyword</h2>
+
+    <b><p>The javaScript <i>this</i> keyword</p></b>
+    <p id="demo1"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("demo1").innerHTML = person.fullName();
+    </script>
+
+    <b><p>In this example, <i>this</i> refers to the person object.</p></b>
+    <p id="demo2"></p>
+    <script>
+        const person1 = {
+            firstName: "Marry",
+            lastName: "Doe",
+            id: 5566,
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }            
+        };
+        document.getElementById("demo2").innerHTML = person1.fullName();
+    </script>
+
+    <b><p>In this example, this refers to the window object:</p></b>
+    <p id="demo3"></p>
+    <script>
+        let x = this;
+        document.getElementById("demo3").innerHTML = x;
+    </script>
+
+    <b><p>In this example, this refers to the window object</p></b>
+    <p id="demo4"></p>
+    <script>
+        "use strict";
+        let y = this;
+        document.getElementById("demo4").innerHTML = y;
+    </script>
+
+    <b><p>The javaScript this keyword</p></b>
+    <p id="demo5"></p>
+    <script>
+        document.getElementById("demo5").innerHTML = myFunction();
+        function myFunction() {
+            return this;
+        }
+    </script>
+
+    <b><p>The javaScript this keyword</p></b>
+    <p id="demo6"></p>
+    <button onclick="this.style.display='none'">Click to Remove Me!</button>
+
+    <b><p>In this example, this refers to the person object.</p></b>
+    <p id="demo7"></p>
+    <script>
+        const person2 = {
+            firstName : "John",
+            lastName  : "Doe",
+            id      : 5566,
+            myFunction : function() {
+                return this;
+            }
+        };
+        document.getElementById("demo7").innerHTML = person2.myFunction();
+    </script>
+
+    <b><p>In this example, this refers to the person object.</p></b>
+    <p id="demo8"></p>
+    <script>
+        const person3 = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("demo8").innerHTML = person3.fullName();
+    </script>
+
+    <b><p>In this example this refers to person2, even if it is a method of person1:</p></b>
+    <p id="demo9"></p>
+    <script>
+        const person4 = {
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        const person5 = {
+            firstName: "John",
+            lastName: "Doe",
+        }
+        let z = person4.fullName.call(person5);
+        document.getElementById("demo9").innerHTML = z;
+    </script>
+
+    <b><p>JavaScript Function bind()</p></b>
+    <p id="demo10"></p>
+    <script>
+        const person6 = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        const member = {
+            firstName: "Hege",
+            lastName: "Nilsen",
+        }
+        let fullName = person.fullName.bind(member);
+        document.getElementById("demo10").innerHTML = fullName();
+    </script>
+</body>
+</html>
