@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Hoisting</title>
+</head>
+<body>
+    <h2>JavaScript Hoisting</h2>
+    <b><p>JavaScript declaration are hoisted</p></b>
+    <p id="demo1"></p>
+    <script>
+        x = 5;
+        elem = document.getElementById("demo1");
+        elem.innerHTML = x;
+        var x;
+    </script>
+
+    <b><p>JavaScript Hoisting</p></b>
+    <p id="demo2"></p>
+    <script>
+        try {
+            carName = "Saab";
+            let carName = "Volvo";
+        }
+        catch(err) {
+            document.getElementById("demo2").innerHTML = err;
+        }
+    </script>
+
+    <b><p>JavaScript intializations are not hoisted</p></b>
+    <p id="demo3"></p>
+    <script>
+        var x = 5;
+        var y = 7;
+        elem = document.getElementById("demo3");
+        elem.innerHTML = x + " " + y;
+    </script>
+
+    <b><p>javaScript hoisting</p></b>
+    <p id="demo4"></p>
+    <script>
+        var x = 5;
+        elem = document.getElementById("demo4");
+        elem.innerHTML = "x is " + x + " and y is " + y;
+        var y = 7;
+    </script>
+
+    <b><p>JavaScript hoisting</p></b>
+    <p id="demo5"></p>
+    <script>
+        var x = 5;
+        var y;
+        elem = document.getElementById("demo5");
+        elem.innerHTML = x + " " + y;
+        y = 7;
+    </script>
+</body>
+</html>
