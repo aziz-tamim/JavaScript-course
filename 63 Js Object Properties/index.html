@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Object Properties</title>
+</head>
+<body>
+    <h2>JavaScript Object properties</h2>
+
+    <b><p>JavaScript Object Properties</p></b>
+    <p id="demo1"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        document.getElementById("demo1").innerHTML = person.firstName + " is " + person.age + " years old."
+    </script>
+
+    <b><p>Access a property with ["property"]:</p></b>
+    <p id="demo2"></p>
+    <script>
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        document.getElementById("demo2").innerHTML = person1["firstName"] + " is " + person1["age"] + " years old.";
+    </script>
+
+    <b><p>Looping object property values:</p></b>
+    <p id="demo3"></p>
+    <script>
+        const person2 = {
+            fname: "John",
+            lname:"Doe",
+            age:25
+        };
+        let txt = "";
+        for (let x in person2) {
+            txt += person2[x] + " ";
+        }
+        document.getElementById("demo3").innerHTML = txt;
+    </script>
+
+    <b><p>Add a new property to an existing object:</p></b>
+    <p id="demo4"></p>
+    <script>
+        const person3 = {
+            firstname: "John",
+            lastname: "Doe",
+            age: 50,
+            eyecolor: "blue"
+        };
+        person3.nationality = "English";
+        document.getElementById("demo4").innerHTML = person3.firstname + " is " + person3.nationality + ".";
+    </script>
+
+    <b><p>Deleting object properties</p></b>
+    <p id="demo5"></p>
+    <script>
+        const person4 = {
+            firstname: "John",
+            lastname: "Doe",
+            age: 50,
+            eyecolor: "blue"
+        };
+        delete person4.age;
+        document.getElementById("demo5").innerHTML = person4.firstname + " is " + person4.age + " years old.";
+    </script>
+
+    <b><p>Access nested objects:</p></b>
+    <p id="demo6"></p>
+    <script>
+        const myObj = {
+            name: "John",
+            age: 30,
+            cars: {
+                car1: "Ford",
+                car2: "BMW",
+                car3: "Fiat"
+            }
+        }
+        document.getElementById("demo6").innerHTML = myObj.cars.car1 + "<br>" + myObj.cars.car2 + "<br>" + myObj.cars.car3;
+    </script>
+</body>
+</html>
