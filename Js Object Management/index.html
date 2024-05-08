@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Object Management</title>
+</head>
+<body>
+    <h2>JavaScript Object Management</h2>
+
+    <b><p>The defineProperty() Method</p></b>
+    <p id="demo1"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "EN"
+        };
+        Object.defineProperty(person, "year", {value:"2008"})
+        document.getElementById("demo1").innerHTML = person.year;
+    </script>
+
+    <b><p>The defineProperty() Methods</p></b>
+    <p id="demo2"></p>
+    <script>
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "EN"
+        };
+        Object.defineProperty(person1, "language", {value:"NO"})
+        console.log(person1.language);
+        document.getElementById("demo2").innerHTML = person1.language;
+    </script>
+
+    <b><p>getOwnPropertyNames() Methods</p></b>
+    <p id="demo3"></p>
+    <script>
+        const person2 = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "EN"
+        }
+        Object.defineProperty(person,"language", {enumerable:false});
+        document.getElementById("demo3").innerHTML = Object.getOwnPropertyNames(person);
+    </script>
+
+    <b><p>The Object.keys() Method</p></b>
+    <p id="demo4"></p>
+    <script>
+        const person3 = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "EN"
+        }
+        Object.defineProperty(person3,"language", {enumerable:false});
+        document.getElementById("demo4").innerHTML = Object.keys(person3);
+    </script>
+
+    <b><p>The defineProperty() Methods</p></b>
+    <p id="demo5"></p>
+    <script>
+        const person4 = {firstName:"John",lastName:"Doe"};
+        Object.defineProperty(person4,"fullName", {
+            get: function () {return this.firstName + " " + this.lastName;}
+        });
+        document.getElementById("demo5").innerHTML = person4.fullName;
+    </script>
+</body>
+</html>
