@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Object Protection</title>
+</head>
+<body>
+    <h2>JavaScript Object Protection</h2>
+
+    <b><p>The Object.preventExtensions() Method</p></b>
+    <p id="demo1"></p>
+    <script>
+        "use strict"
+        const person = {firstName:"John", lastName: "Doe",};
+        Object.preventExtensions(person)
+        let text = "";
+        try {
+            person.nationality = "English";
+        }
+        catch (err) {
+            text = err;
+        }
+        document.getElementById("demo1").innerHTML = text;
+    </script>
+
+    <b><p>The Object.preventExtensions() Method</p></b>
+    <p id="demo2"></p>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        Object.preventExtensions(fruits);
+        let text1 = "";
+        try {
+            fruits.push("kiwi");
+        }
+        catch (err) {
+            text1 = err;
+        }
+        document.getElementById("demo2").innerHTML = text1;
+    </script>
+
+    <b><p>The Object.isExtensible() Methods</p></b>
+    <p id="demo3"></p>
+    <script>
+        const person1 = {firstName: "John", lastName: "Doe"};
+        Object.preventExtensions(person1);
+        let answer = Object.isExtensible(person1)
+        document.getElementById("demo3").innerHTML = answer;
+    </script>
+
+    <b><p>The Object.seal() Method</p></b>
+    <p id="demo4"></p>
+    <script>
+        "use strict"
+        const person2 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        Object.seal(person2)
+        let text2 = "";
+        try {
+            delete person2.age;
+            text2 = Object.values(person2);
+        }
+        catch (err) {
+            text2 = err;
+        }
+        document.getElementById("demo4").innerHTML = text2;
+    </script>
+
+    <b><p>The Object.isSealed() Method</p></b>
+    <p id="demo5"></p>
+    <script>
+        const person3 = {firstName: "John", lastName: "Doe"};
+        Object.seal(person3);
+        let answer1 = Object.isSealed(person3)
+        document.getElementById("demo5").innerHTML = answer1;
+    </script>
+
+    <b><p>The Object.freeze() Method</p></b>
+    <p id="demo6"></p>
+    <script>
+        "use strict"
+        const person4 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        Object.freeze(person4)
+        let text3;
+        try {
+            person4.age = 51;
+            text3 = Object.values(person4);
+        }
+        catch (err) {
+            text3 = err;
+        }
+        document.getElementById("demo6").innerHTML = text3;
+    </script>
+
+    <b><p>The Object.isFrozen() Method</p></b>
+    <p id="demo7"></p>
+    <script>
+        const person5 = {firstName: "John", lastName: "Doe"};
+        Object.freeze(person5);
+        let answer2 = Object.isFrozen(person5);
+        document.getElementById("demo7").innerHTML = answer2;
+    </script>
+</body>
+</html>
