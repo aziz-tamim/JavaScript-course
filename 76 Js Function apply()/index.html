@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Function apply()</title>
+</head>
+<body>
+    <h2>JavaScript Function apply()</h2>
+
+    <b><p>JavaScript Funciton apply() Method</p></b>
+    <p id="demo1"></p>
+    <script>
+        const person = {
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe"
+        }
+        document.getElementById("demo1").innerHTML = person.fullName.apply(person1); 
+    </script>
+
+    <b><p>JavaScript Function apply() Method</p></b>
+    <p id="demo2"></p>
+    <script>
+        const persons = {
+            fullName: function(city, country) {
+                return this.firstName + " " + this.lastName + "," + city + "," + country;
+            }
+        }
+        const persons1 = {
+            firstName: "John",
+            lastName: "Doe"
+        }
+        document.getElementById("demo2").innerHTML = persons.fullName.apply(persons1,["Oslo", "Norway"]);
+    </script>
+
+    <b><p>JavaScript Functions call() Method</p></b>
+    <p id="demo3"></p>
+    <script>
+        const person2 = {
+            fullName: function(city, country) {
+                return this.firstName + " " + this.lastName + "," + city + "," + country;
+            }
+        }
+        const person3 = {
+            firstName: "John",
+            lastName: "Doe"
+        }
+        const person4 = {
+            firstName: "Marry",
+            lastName: "Doe"
+        }
+        document.getElementById("demo3").innerHTML = person2.fullName.call(person4, "Oslo", "Norway");
+    </script>
+
+    <b><p>JavaScript Math.max() Method</p></b>
+    <p id="demo4"></p>
+    <script>
+        document.getElementById("demo4").innerHTML = Math.max(1,2,3);
+    </script>
+
+    <b><p>javaScript Apply() Method</p></b>
+    <p id="demo5"></p>
+    <script>
+        document.getElementById("demo5").innerHTML = Math.max.apply(null,[1,2,3]);
+    </script>
+
+    <b><p>JavaScript Apply()</p></b>
+    <p id="demo6"></p>
+    <script>
+        document.getElementById("demo6").innerHTML = Math.max.apply(Math,[4,5,6]);
+    </script>
+
+    <b><p>JavaScript apply()</p></b>
+    <p id="demo7"></p>
+    <script>
+        document.getElementById("demo7").innerHTML = Math.max.apply(" ", [1,2,3]);
+    </script>
+
+    <b><p>JavaScirpt Apply()</p></b>
+    <p id="demo8"></p>
+    <script>
+        document.getElementById("demo8").innerHTML = Math.max.apply(0,[1,2,3]);
+    </script>
+</body>
+</html>
