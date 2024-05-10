@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Funciton Invocation</title>
+</head>
+<body>
+    <h2>JavaScript Function Invocation</h2>
+
+    <b><p>The global function (myFunction) retuns the product of the arguments (a, b):</p></b>
+    <p id="demo1"></p>
+    <script>
+        function myFunction(a, b) {
+            return a * b;
+        }
+        document.getElementById("demo1").innerHTML = myFunction(10, 2);
+    </script>
+
+    <b><p>JavaScript Function</p></b>
+    <p id="demo2"></p>
+    <script>
+        function myFunction(a, b) {
+            return a * b;
+        }
+        document.getElementById("demo2").innerHTML = window.myFunction(20, 2);
+    </script>
+    
+    <b><p>JavaScript Function</p></b>
+    <p id="demo3"></p>
+    <script>
+        let x = myFunction();
+        function myFunction() {
+            return this;
+        }
+        document.getElementById("demo3").innerHTML = x;
+    </script>
+
+    <b><p>myObject.fullName() will return john Doe:</p></b>
+    <p id="demo4"></p>
+    <script>
+        const myObject = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        document.getElementById("demo4").innerHTML = myObject.fullName();
+    </script>
+
+    <b><p>The value of this, in an object method, is the owner object.</p></b>
+    <p id="demo5"></p>
+    <script>
+        const myObject1 = {
+            firstName:"John",
+            lastName: "Doe",
+            fullName: function() {
+                return this;
+            }
+        }
+        document.getElementById("demo5").innerHTML = myObject1.fullName();
+    </script>
+
+    <b><p>JavaScript Function</p></b>
+    <p id="demo6"></p>
+    <script>
+        function myFunction(arg1, arg2) {
+            this.firstName = arg1;
+            this.lastName = arg2;
+        }
+        const myObj = new myFunction("John", "Doe")
+        document.getElementById("demo6").innerHTML = myObj.firstName;
+    </script>
+</body>
+</html>
