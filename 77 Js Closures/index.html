@@ -94,14 +94,14 @@
     </script> 
 
     <b><p>JavaScript Closures</p></b>
-    <button type="button" onclick="myFunction()">Count!</button>
+    <button type="button" onclick="myFunction1()">Count!</button>
     <p id="demo8">0</p>
     <script>
         const add1 = (function () {
-            let counter = 0;
-            return function () {counter += 1; return counter;}
+            let counter1 = 0;
+            return function () {counter1 += 1; return counter1;}
         })();
-        function myFunction() {
+        function myFunction1() {
             document.getElementById("demo8").innerHTML = add1();
         }
     </script>
