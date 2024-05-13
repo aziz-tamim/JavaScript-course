@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Class Inheritance</title>
+</head>
+<body>
+    <h2>JavaScript Class Inheritance</h2>
+
+    <p id="demo1"></p>
+    <script>
+        class Car {
+            constructor(brand) {
+                this.carname = brand;
+            }
+            present() {
+                return 'I have a ' + this.carname;
+            }
+        }
+        class Model extends Car {
+            constructor(brand, mod) {
+                super(brand);
+                this.model = mod;
+            }
+            show() {
+                return this.present() + ', it is a ' + this.model;
+            }
+        }
+        const myCar = new Model("Ford", "Mustang");
+        document.getElementById("demo1").innerHTML = myCar.show();
+    </script>
+
+    <b><p>JavaScript Class getter/setter</p></b>
+    <p id="demo2"></p>
+    <script>
+        class car {
+            constructor(brand) {
+                this.carname = brand;
+            }
+            get cnam(){
+                return this.carname;
+            }
+            set cnam(x) {
+                this.carname = x;
+            }
+        }
+        const mycar = new car("Ford");
+        document.getElementById("demo2").innerHTML = mycar.cnam;
+    </script>
+
+    <b><p>JavaScript Class Getter/Setter</p></b>
+    <p id="demo3"></p>
+    <script>
+        class car1 {
+            constructor(brand) {
+                this._carname = brand;
+            }
+            get carname() {
+                return this._carname;
+            }
+            set carname(x) {
+                this._carname = x;
+            }
+        }
+        const mycar1 = new car("Ford");
+        document.getElementById("demo3").innerHTML = mycar1.carname;
+    </script>
+
+    <b><p>JavaScript class setters</p></b>
+    <p id="demo4"></p>
+    <script>
+        class Car1 {
+            constructor(brand) {
+                this._carname = brand;
+            }
+            set carname(x) {
+                this._carname = x;
+            }
+            get carname() {
+                return this._carname;
+            }
+        }
+        const MyCar = new Car1("Ford");
+        MyCar.carname = "volvo";
+        document.getElementById("demo4").innerHTML = MyCar.carname;
+    </script>
+
+    <b><p>JavaScript classes are not hoisted</p></b>
+    <p id="demo5"></p>
+    <script>
+        class Car2 {
+            constructor(brand) {
+                this.carname = brand;
+            }
+        }
+        const myCar1 = new Car2("Ford");
+        document.getElementById("demo5").innerHTML = myCar1.carname;
+    </script>
+</body>
+</html>
