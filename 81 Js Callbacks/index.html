@@ -92,5 +92,22 @@
         }
         myCalculator(10, 10, myDisplayer);
     </script>
+
+    <b><p>JavaScript Callback Functions</p></b>
+    <p id="demo7"></p>
+    <script>
+        const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+        const postNumbers = removeNeg(myNumbers, (x) => x >= 0);
+        document.getElementById("demo7").innerHTML = postNumbers;
+        function removeNeg(numbers, callback) {
+            const myArray = [];
+            for (const x of numbers) {
+                if (callback(x)) {
+                    myArray.push(x);
+                }
+            }
+            return myArray;
+        }
+    </script>
 </body>
 </html>
