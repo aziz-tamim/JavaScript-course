@@ -47,30 +47,30 @@
         myPromise1.then(function(value) {
           document.getElementById("demo3").innerHTML = value;
         });
-        </script>
+    </script>
 
-        <b><p>The then() Method</p></b>
-        <p id="demo4"></p>
-        <script>
-            function myDisplayer(some) {
-                document.getElementById("demo4").innerHTML = some;
-            }
-            let myPromise2 = new Promise(function(myResolve, myReject) {
-                let req = new XMLHttpRequest();
-                req.open('GET', "./mycar.html");
-                req.onload = function() {
-                    if (req.status == 200) {
-                        myResolve(req.response);
-                    } else {
-                        myReject("File not Found");
-                    }
-                };
-                req.send();
-            });
-            myPromise2.then(
-                function(value) {myDisplayer(value);},
-                function(error) {myDisplayer(error);}
-            );
-        </script>
+    <b><p>The then() Method</p></b>
+    <p id="demo4"></p>
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo4").innerHTML = some;
+        }
+        let myPromise2 = new Promise(function(myResolve, myReject) {
+            let req = new XMLHttpRequest();
+            req.open('GET', "./mycar.html");
+            req.onload = function() {
+                if (req.status == 200) {
+                    myResolve(req.response);
+                } else {
+                    myReject("File not Found");
+                }
+            };
+            req.send();
+        });
+        myPromise2.then(
+            function(value) {myDisplayer(value);},
+            function(error) {myDisplayer(error);}
+        );
+    </script>
 </body>
 </html>
