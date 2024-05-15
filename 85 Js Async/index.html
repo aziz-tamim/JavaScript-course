@@ -56,5 +56,26 @@
         }
         myDisplay();
     </script>
+
+    <b><p>js async / asait</p></b>
+    <p id="demo5"></p>
+    <script>
+        async function getFile() {
+          let myPromise = new Promise(function(resolve) {
+            let req = new XMLHttpRequest();
+            req.open('GET', "mycar.html");
+            req.onload = function() {
+              if (req.status == 200) {
+                resolve(req.response);
+              } else {
+                resolve("File not Found");
+              }
+            };
+            req.send();
+          });
+          document.getElementById("demo5").innerHTML = await myPromise;
+        }
+        getFile();
+    </script>
 </body>
 </html>
