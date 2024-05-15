@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Async</title>
+</head>
+<body>
+    <h2>Javascript Async</h2>
+
+    <b><p>JavaScript async / await</p></b>
+    <p id="demo1"></p>
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo1").innerHTML = some;
+        }
+        async function myFunction() {return "Hello";}
+        myFunction().then (
+            function(value) {myDisplayer(value);},
+            function(error) {myDisplayer(error);}
+        );
+    </script>
+
+    <b><p>JavaScript async / await</p></b>
+    <p id="demo2"></p>
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo2").innerHTML = some;
+        }
+        async function myFunction() {return "Hello";}
+        myFunction().then(
+            function(value) {myDisplayer(value);}
+        );
+    </script>
+
+    <b><p>JavaScript async / await</p></b>
+    <h2 id="demo3"></h2>
+    <script>
+        async function myDisplay() {
+            let myPromise = new Promise(function(resolve, reject) {
+                resolve("Hello World !!");
+            });
+            document.getElementById("demo3").innerHTML = await myPromise;
+        }
+        myDisplay();
+    </script>
+
+    <b><p>JavaScript async / await</p></b>
+    <h2 id="demo4"></h2>
+    <script>
+        async function myDisplay() {
+            let myPromise = new Promise(function(resolve) {
+                resolve("Hello Bangladesh!!");
+            });
+            document.getElementById("demo4").innerHTML = await myPromise;
+        }
+        myDisplay();
+    </script>
+</body>
+</html>
