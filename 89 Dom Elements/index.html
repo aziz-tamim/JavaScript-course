@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js HTML Dom Elements</title>
+</head>
+<body>
+    <h2>JavaScript HTML Dom Element</h2>
+
+    <b><p>JavaScript HTML DOM</p></b>
+    <p id="intro">Finding HTML Elements by Id</p>
+    <p id="demo1"></p>
+    <script>
+        const element = document.getElementById("intro");
+        document.getElementById("demo1").innerHTML = "The text from the intro paragraph is: " + element.innerHTML;
+    </script>
+
+    <b><p>Js getElementsByTagName Methods</p></b>
+    <p id="demo2"></p>
+    <script>
+        const element1 = document.getElementsByTagName("p");
+        document.getElementById("demo2").innerHTML = 'The text in first paragraph (index 0) is: ' + element1[0].innerHTML; 
+    </script>
+
+    <b><p>Js getElementsByTagName Method</p></b>
+    <div id="main">
+        <p>Finding HTML Elements by Tag Name</p>
+    </div>
+    <p id="demo3"></p>
+    <script>
+        const x = document.getElementById("main");
+        const y = x.getElementsByTagName("p");
+        document.getElementById("demo3").innerHTML = 'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+    </script>
+
+    <b><p>Js getElementsByClassName Methods</p></b>
+    <p>Finding HTML Elements by class Name.</p>
+    <p class="intro1">Hello World!</p>
+    <p class="intro1">This example demonstrates the <b>getElementsByClassName</b>Method.</p>
+    <p id="demo4"></p>
+    <script>
+        const a = document.getElementsByClassName("intro1");
+        document.getElementById("demo4").innerHTML = 'The first paragraph (index 0) with class="intro" is: ' + a[0].innerHTML;
+    </script>
+</body>
+</html>
