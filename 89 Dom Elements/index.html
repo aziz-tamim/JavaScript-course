@@ -43,5 +43,15 @@
         const a = document.getElementsByClassName("intro1");
         document.getElementById("demo4").innerHTML = 'The first paragraph (index 0) with class="intro" is: ' + a[0].innerHTML;
     </script>
+
+    <b><p>Js querySelectorAll Method</p></b>
+    <p>Finding HTML Elements by Query Selector</p>
+    <p class="intro2">Hello World!.</p>
+    <p class="intro2">This example demonstrates the <b>querySelectorAll</b>method.</p>
+    <p id="demo5"></p>
+    <script>
+        const b = document.querySelectorAll("p.intro2");
+        document.getElementById("demo5").innerHTML = 'The first paragraph (index 0) with class="intro" is: ' + b[0].innerHTML;
+    </script>
 </body>
 </html>
