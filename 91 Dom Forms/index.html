@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Forms</title>
+</head>
+<body>
+    <h2>JavaScript Dom Forms</h2>
+
+    <b><p>JavaScript Validation</p></b>
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+
+     <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="submit">
+    </form>
+
+    <b><p>Please input a number between 1 and 10:</p></b>
+    <input id="numb">
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p id="demo1"></p>
+    <script>
+        function myFunction() {
+            let x = document.getElementById("numb").value;
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+                text = "Input not valid";
+            } else {
+                text = "Input Ok";
+            }
+            document.getElementById("demo1").innerHTML = text;
+        }
+    </script>
+
+    <b><p>JavaScript Validation</p></b>
+    <form action="/action_page.php" method="post">
+        <input type="text" name="fname" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
