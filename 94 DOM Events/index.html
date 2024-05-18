@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript HTML DOM Events</title>
+</head>
+<body>
+    <h2>JavaScript HTML DOM Events</h2>
+
+    <b><p>JavaScript Events The onclick Attribute</p></b>
+    <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+
+    <b><p>The onclick Attribute</p></b>
+    <h2 onclick="changeText(this)">Click on THis text!</h2>
+    <script>
+        function changeText(id) {
+            id.innerHTML = "Ooops!";
+        }
+    </script>
+
+    <b><p>JavaScript HTML Event onclick Attribute</p></b>
+    <button onclick="displayDate()">The time is?</button>
+    <script>
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+    <p id="demo"></p>
+
+    <b><p>The onclick Event</p></b>
+    <button id="myBtn">Try it</button>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("myBtn").onclick = displayDates;
+        function displayDates() {
+            document.getElementById("demo1").innerHTML = Date();
+        }
+    </script>
+
+    <b><p>The oninput Attribute</p></b>
+    Enter your name: <input type="text" id="fname" oninput="upperCase()">
+    <script>
+        function upperCase() {
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+
+    <b><p>The onmouseover Attribute</p></b>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;color:#fff;font-size:18px;">Mouse Over Me</div>
+    <script>
+        function mOver(obj) {
+            obj.innerHTML = "Thank You"
+        }
+        function mOut(obj) {
+            obj.innerHTML = "Mouse Over Me"
+        }
+    </script>
+
+    <b><p>The onmousedown Attribute</p></b>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:90px;height:20px;padding:40px;color:#fff;font-size:18px;">Click Me</div>
+    <script>
+        function mDown(obj) {
+            obj.style.backgroundColor = "#1ec5e5";
+            obj.innerHMTL = "Release Me";
+        }
+        function mUp(obj) {
+            obj.style.backgroundColor="#D94A38";
+            obj.innerHTML="Thank You";
+        }
+    </script>
+</body>
+</html>
