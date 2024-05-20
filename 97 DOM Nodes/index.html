@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js HTML DOM Elements (Nodes)</title>
+</head>
+<body>
+    <h2>JavaScript HTML DOM Elements (Nodes)</h2>
+
+    <b><p>JavaScript HTML DOM</p></b>
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+    </div>
+    <script>
+        const para = document.createElement("p");
+        const node = document.createTextNode("This is new.");
+        para.appendChild(node);
+        const element = document.getElementById("div1");
+        element.appendChild(para);
+    </script>
+
+    <b><p>JavaScript HTML Dom</p></b>
+    <div id="div2">
+        <p id="p3">This is a paragraph.</p>
+        <p id="p4">This is another paragraph.</p>
+    </div>
+    <script>
+        const para1 = document.createElement("p");
+        const node1 = document.createTextNode("This is new.");
+        para1.appendChild(node1);
+        const elements = document.getElementById("div2");
+        const child1 = document.getElementById("p3");
+        elements.insertBefore(para1,child1);
+    </script>
+
+    <b><p>JavaScript Remove an HTML Element.</p></b>
+    <div>
+        <p id="p5">This is a paragraph.</p>
+        <p id="p6">This is another paragraph.</p>
+    </div>
+    <button onclick="myFunction()">Remove Element</button>
+    <script>
+        function myFunction() {
+            document.getElementById("p5").remove();
+        }
+    </script>
+</body>
+</html>
