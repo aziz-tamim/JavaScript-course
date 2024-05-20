@@ -46,5 +46,16 @@
             document.getElementById("p5").remove();
         }
     </script>
+
+    <b><p>JavaScript HTML DOM</p></b>
+    <div id="div3">
+        <p id="p7">This is paragraph.</p>
+        <p id="p8">This is another paragraph.</p>
+    </div>
+    <script>
+        const parent = document.getElementById("div3");
+        const child = document.getElementById("p7");
+        parent.removeChild(child);
+    </script>
 </body>
 </html>
