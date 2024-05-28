@@ -83,12 +83,24 @@ function markMileStone(checkbox, id) {
     doneList.appendChild(item);
   } else {
     // back to main list
-    milestonesList.appendChild(item);
     doneList.removeChild(item);
+    milestonesList.appendChild(item);
 
-    // task - do the sorting
-    // reload list
+    // Sort the milestones
+    sortMilestones(milestonesList);
   }
+}
+
+function sortMilestones(list) {
+  let itemsArray = Array.from(list.getElementsByClassName('milestone'));
+
+  itemsArray.sort(function(a, b) {
+    return a.querySelector('p').innerText.localeCompare(b.querySelector('p').innerText);
+  });
+
+  itemsArray.forEach(function(item) {
+    list.appendChild(item);
+  });
 }
 
 loadMilestones();
