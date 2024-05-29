@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Window Screen</title>
+</head>
+<body>
+    <h2>JavaScript Window Screen</h2>
+
+    <b><p>Screen Width</p></b>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = "Screen width is " + screen.width;
+    </script>
+
+    <b><p>Screen height</p></b>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = "Screen height is " + screen.height;
+    </script>
+
+    <b><p>Available screen width</p></b>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML = "Available screen width is " + screen.availWidth;
+    </script>
+
+    <b><p>Available screen height</p></b>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = "Available screen height is " + screen.availHeight; 
+    </script>
+
+    <b><p>Screen color depth</p></b>
+    <p id="demo4"></p>
+    <script>
+        document.getElementById("demo4").innerHTML = "Screen color depth is " + screen.colorDepth;
+    </script>
+
+    <b><p>Screen pixel depth</p></b>
+    <p id="demo5"></p>
+    <script>
+        document.getElementById("demo5").innerHTML = "Screen pixel depth is " + screen.pixelDepth;
+    </script>
+</body>
+</html>
