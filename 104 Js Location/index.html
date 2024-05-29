@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Window Location</title>
+</head>
+<body>
+    <h2>JavaScript Window Location</h2>
+
+    <b><p>The window.location href object</p></b>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = "The full URL of this page is:<br>" + window.location.href;
+    </script>
+
+    <b><p>The window.location hostname object</p></b>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML = "Page hostname is: " + window.location.hostname;
+    </script>
+
+    <b><p>The window.location pathname object</p></b>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = "Page path is: " + window.location.pathname;
+    </script>
+
+    <b><p>The window.location protocol object</p></b>
+    <p id="demo4"></p>
+    <script>
+        document.getElementById("demo4").innerHTML = "The page protocol is: " + window.location.protocol;
+    </script>
+
+    <b><p>The window.location assign object</p></b>
+    <input type="button" value="Load w3schools" onclick="newDoc()">
+    <script>
+        function newDoc() {
+            window.location.assign("https://www.w3schools.com");
+        }
+    </script>
+</body>
+</html>
