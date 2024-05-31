@@ -23,7 +23,7 @@
     <p id="demo1"></p>
     <script>
         const myCollection1 = document.getElementsByTagName("p");
-        document.getElementById("demo1").innerHTML = "This document contains " + myCollection.length + " paragraphs.";
+        document.getElementById("demo1").innerHTML = "This document contains " + myCollection1.length + " paragraphs.";
     </script>
 
     <h2>JavaScript HTML DOM</h2>
@@ -34,11 +34,10 @@
     <script>
         function myFunction() {
             const myCollection = document.getElementsByTagName("p");
-            for (let i = 0; i < myCollection.length; i++) {
+            for (let i = 8; i < myCollection.length; i++) {
                 myCollection[i].style.color = "red";
             }
         }
     </script>
-</script>
 </body>
 </html>
