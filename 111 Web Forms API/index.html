@@ -24,5 +24,38 @@
             }
         }
     </script>
+
+    <b><p>JavaScript Validation</p></b>
+    <input id="id2" type="number" max="100" />
+    <button onclick="myFunction1()">OK</button>
+    <p id="demo1"></p>
+    <script>
+        function myFunction1() {
+            let text;
+            if (document.getElementById("id2").validity.rangeOverflow) {
+                text = "Value too large";
+            } else {
+                text = "Input OK";
+            }
+            document.getElementById("demo1").innerHTML = text;
+        }
+    </script>
+
+    <b><p>JavaScript Validation</p></b>
+    <input id="id3" type="number" min="100"/>
+    <button onclick="myFunction2()">OK</button>
+    <p id="demo2"></p>
+    <script>
+        function myFunction2() {
+            let text;
+            if (document.getElementById("id3").validity.rangeUnderflow) {
+                text = "Value too small";
+            } else {
+                text = "Input OK";
+            }
+
+            document.getElementById("demo2").innerHTML = text;
+        }
+    </script>
 </body>
 </html>
