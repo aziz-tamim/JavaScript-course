@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web APIs - Introduction</title>
+</head>
+<body>
+    <h2>Web APIs - Introduction</h2>    
+
+    <b><p>JavaScript Geolocation</p></b>
+    <button onclick="getLocation()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        const x = document.getElementById("demo");
+        function getLocation() {
+            try {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } catch {
+                x.innerHTML = err;
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+</html>
