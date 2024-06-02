@@ -13,9 +13,9 @@
     <script>
         const numbers1 = [45, 4, 9, 16, 25];
         let txt = "";
-        numbers1.forEach(myFunction);
+        numbers1.forEach(myFunction1);
         document.getElementById("demo1").innerHTML = txt;
-        function myFunction(value, index, array) {
+        function myFunction1(value, index, array) {
             txt += value + "<br>";
         }
     </script>
@@ -24,9 +24,9 @@
     <p id="demo2"></p>
     <script>
         const numbers2 = [45, 4, 9, 16, 25];
-        const numbers3 = numbers2.map(myFunction);
+        const numbers3 = numbers2.map(myFunction2);
         document.getElementById("demo2").innerHTML = numbers3;
-        function myFunction(value, index, array) {
+        function myFunction2(value, index, array) {
             return value * 2;
         } 
     </script>
@@ -43,9 +43,9 @@
     <p id="demo4"></p>
     <script>
         const numbers5 = [45, 4, 9, 16, 25];
-        const over18 = numbers5.filter(myFunction);
+        const over18 = numbers5.filter(myFunction3);
         document.getElementById("demo4").innerHTML = over18;
-        function myFunction(value, index, array) {
+        function myFunction3(value, index, array) {
             return value > 18;
         }
     </script>
@@ -65,9 +65,9 @@
     <p id="demo6"></p>
     <script>
         const numbers7 = [45, 4, 9, 16, 25];
-        let sum1 = numbers7.reduceRight(myFunction);
+        let sum1 = numbers7.reduceRight(myFunction4);
         document.getElementById("demo6").innerHTML = "The sum is " + sum1;
-        function myFunction(total, value, index, array) {
+        function myFunction4(total, value, index, array) {
             return total + value;
         }
     </script>
@@ -76,9 +76,9 @@
     <p id="demo7"></p>
     <script>
         const numbers8 = [45, 4, 9, 16, 25];
-        let allOver18 = numbers8.every(myFunction);
+        let allOver18 = numbers8.every(myFunction5);
         document.getElementById("demo7").innerHTML = "All over 18 is " + allOver18;
-        function myFunction(value, index, array) {
+        function myFunction5(value, index, array) {
             return value > 18;
         }
     </script>
@@ -87,9 +87,9 @@
     <p id="demo8"></p>
     <script>
         const numbers9 = [45, 4, 9, 16, 25];
-        let someOver18 = numbers9.some(myFunction);
+        let someOver18 = numbers9.some(myFunction6);
         document.getElementById("demo8").innerHTML = "Some over 18 is " + someOver18;
-        function myfunction(value, index, array) {
+        function myfunction6(value, index, array) {
             return value > 18;
         }
     </script>

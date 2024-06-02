@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web History API</title>
+</head>
+<body>
+    <h2>Web History API</h2>
+
+    <b><p>JavaScript back function</p></b>
+    <button onclick="myFunction1()">Go Back</button>
+    <script>
+        function myFunction1() {
+            window.history.back();
+        }
+    </script>
+    <br><br>
+
+    <button onclick="myFunction2()">Go Back 2 Pages</button>
+    <script>
+        function myFunction2() {
+            window.history.go(-2);
+        }
+    </script>
+</body>
+</html>

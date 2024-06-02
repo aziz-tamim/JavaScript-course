@@ -34,9 +34,9 @@
     <p id="demo4"></p>
     <script>
         const numbers1 = [4, 9, 16, 25, 29];
-        let first = numbers1.find(myFunction);
+        let first = numbers1.find(myFunction1);
         document.getElementById("demo4").innerHTML = "First number over 18 is : " + first;
-        function myFunction(value, index, array) {
+        function myFunction1(value, index, array) {
             return value > 18;
         }
     </script>
@@ -45,8 +45,8 @@
     <p id="demo5"></p>
     <script>
         const numbers2 = [4, 9, 16, 25, 29];
-        document.getElementById("demo5").innerHTML = "First number over 18 has index : " + numbers2.findIndex(myFunction);
-        function myFunction(value, index, array) {
+        document.getElementById("demo5").innerHTML = "First number over 18 has index : " + numbers2.findIndex(myFunction2);
+        function myFunction2(value, index, array) {
             return value > 18;
         }
     </script>

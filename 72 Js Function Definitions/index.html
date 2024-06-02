@@ -11,9 +11,9 @@
     <b><p>JavaScript Function</p></b>
     <p id="demo1"></p>
     <script>
-        let x = myFunction(4, 3);
+        let x = myFunction1(4, 3);
         document.getElementById("demo1").innerHTML = x;
-        function myFunction(a, b) {
+        function myFunction1(a, b) {
             return a * b;
         }
     </script>
@@ -35,8 +35,8 @@
     <b><p>JavaScript Functions</p></b>
     <p id="demo4"></p>
     <script>
-        const myFunctions = new Function("a", "b", "return a * b");
-        document.getElementById("demo4").innerHTML = myFunctions(4, 3);
+        const myFunction2 = new Function("a", "b", "return a * b");
+        document.getElementById("demo4").innerHTML = myFunction2(4, 3);
     </script>
 
     <b><p>Function can be invoked automatically without being called:</p></b>
@@ -50,39 +50,39 @@
     <b><p>Function can be treated as values:</p></b>
     <p id="demo6"></p>
     <script>
-        function myFunction(a, b) {
+        function myFunction3(a, b) {
             return a * b;
         }
-        let a = myFunction(8, 3);
+        let a = myFunction3(8, 3);
         document.getElementById("demo6").innerHTML = a;
     </script>
 
    <b><p>Function can be used in expressions.</p></b>
     <p id="demo7"></p>
     <script>
-        function myFunction1(a, b) {
+        function myFunction4(a, b) {
             return a * b;
         }
-        let b = myFunction1(4, 3) * 2;
+        let b = myFunction4(4, 3) * 2;
         document.getElementById("demo7").innerHTML = x;
     </script>
 
     <b><p>The arguments.length property retuns the number of arguments recived by the funciton:</p></b>
     <p id="demo8"></p>
     <script>
-        function myFunction(a, b) {
+        function myFunction5(a, b) {
             return arguments.length;
         }
-        document.getElementById("demo8").innerHTML = myFunction(4, 3);
+        document.getElementById("demo8").innerHTML = myFunction5(4, 3);
     </script>
 
     <b><p>The toString() Methods</p></b>
     <p id="demo9"></p>
     <script>
-        function myFunction(a, b) {
+        function myFunction6(a, b) {
             return a * b;
         }
-        document.getElementById("demo9").innerHTML = myFunction.toString();
+        document.getElementById("demo9").innerHTML = myFunction6.toString();
     </script>
 
     <b><p>JavaScript Arrow Functions</p></b>

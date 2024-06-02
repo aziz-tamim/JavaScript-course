@@ -11,26 +11,26 @@
     <b><p>The global function (myFunction) retuns the product of the arguments (a, b):</p></b>
     <p id="demo1"></p>
     <script>
-        function myFunction(a, b) {
+        function myFunction1(a, b) {
             return a * b;
         }
-        document.getElementById("demo1").innerHTML = myFunction(10, 2);
+        document.getElementById("demo1").innerHTML = myFunction1(10, 2);
     </script>
 
     <b><p>JavaScript Function</p></b>
     <p id="demo2"></p>
     <script>
-        function myFunction(a, b) {
+        function myFunction2(a, b) {
             return a * b;
         }
-        document.getElementById("demo2").innerHTML = window.myFunction(20, 2);
+        document.getElementById("demo2").innerHTML = window.myFunction2(20, 2);
     </script>
     
     <b><p>JavaScript Function</p></b>
     <p id="demo3"></p>
     <script>
-        let x = myFunction();
-        function myFunction() {
+        let x = myFunction3();
+        function myFunction3() {
             return this;
         }
         document.getElementById("demo3").innerHTML = x;
@@ -65,11 +65,11 @@
     <b><p>JavaScript Function</p></b>
     <p id="demo6"></p>
     <script>
-        function myFunction(arg1, arg2) {
+        function myFunction4(arg1, arg2) {
             this.firstName = arg1;
             this.lastName = arg2;
         }
-        const myObj = new myFunction("John", "Doe")
+        const myObj = new myFunction4("John", "Doe")
         document.getElementById("demo6").innerHTML = myObj.firstName;
     </script>
 </body>

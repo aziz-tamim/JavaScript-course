@@ -14,8 +14,8 @@
         function myDisplayer(some) {
             document.getElementById("demo1").innerHTML = some;
         }
-        async function myFunction() {return "Hello";}
-        myFunction().then (
+        async function myFunction1() {return "Hello";}
+        myFunction1().then (
             function(value) {myDisplayer(value);},
             function(error) {myDisplayer(error);}
         );
@@ -27,8 +27,8 @@
         function myDisplayer(some) {
             document.getElementById("demo2").innerHTML = some;
         }
-        async function myFunction() {return "Hello";}
-        myFunction().then(
+        async function myFunction2() {return "Hello";}
+        myFunction2().then(
             function(value) {myDisplayer(value);}
         );
     </script>

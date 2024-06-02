@@ -54,8 +54,8 @@
     <b><p>The javaScript this keyword</p></b>
     <p id="demo5"></p>
     <script>
-        document.getElementById("demo5").innerHTML = myFunction();
-        function myFunction() {
+        document.getElementById("demo5").innerHTML = myFunction1();
+        function myFunction1() {
             return this;
         }
     </script>
@@ -71,11 +71,11 @@
             firstName : "John",
             lastName  : "Doe",
             id      : 5566,
-            myFunction : function() {
+            myFunction2 : function() {
                 return this;
             }
         };
-        document.getElementById("demo7").innerHTML = person2.myFunction();
+        document.getElementById("demo7").innerHTML = person2.myFunction2();
     </script>
 
     <b><p>In this example, this refers to the person object.</p></b>

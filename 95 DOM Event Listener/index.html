@@ -29,8 +29,8 @@
     <b><p>JavaScript addEventListener()</p></b>
     <button id="MYBTN">Try it</button>
     <script>
-        document.getElementById("MYBTN").addEventListener("click",myFunction);
-        function myFunction() {
+        document.getElementById("MYBTN").addEventListener("click",myFunction1);
+        function myFunction1() {
             alert ("Hello Bangladesh!");
         }
     </script>
@@ -39,9 +39,9 @@
     <button id="MyBtn">Try it</button>
     <script>
         var x = document.getElementById("MyBtn");
-        x.addEventListener("click",myFunction);
+        x.addEventListener("click",myFunction2);
         x.addEventListener("click",someOtherFunction);
-        function myFunction() {
+        function myFunction2() {
             alert ("Hello World!");
         }
         function someOtherFunction() {
@@ -54,10 +54,10 @@
     <p id="demo2"></p>
     <script>
         var a = document.getElementById("myBtns");
-        a.addEventListener("mouseover",myFunction);
+        a.addEventListener("mouseover",myFunction3);
         a.addEventListener("click",mySecondFunction);
         a.addEventListener("mouseout",myThirdFunction);
-        function myFunction() {
+        function myFunction3() {
             document.getElementById("demo2").innerHTML += "Moused over!<br>";
         }
         function mySecondFunction() {
@@ -121,12 +121,12 @@
     </div>
     <p id="demo3"></p>
     <script>
-        document.getElementById("myDIV").addEventListener("mousemove",myFunction);
-        function myFunction() {
+        document.getElementById("myDIV").addEventListener("mousemove",myFunction4);
+        function myFunction4() {
             document.getElementById("demo3").innerHTML = Math.random();
         };
         function removeHandler() {
-            document.getElementById("myDIV").removeEventListener("mousemove",myFunction);
+            document.getElementById("myDIV").removeEventListener("mousemove",myFunction4);
         }
     </script>
 </body>

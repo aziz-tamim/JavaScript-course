@@ -24,8 +24,8 @@
     <b><p>setTimeout() With a Callback</p></b>
     <h2 id="demo2"></h2>
     <script>
-        setTimeout(myFunction, 2000);
-        function myFunction() {
+        setTimeout(myFunction1, 2000);
+        function myFunction1() {
             document.getElementById("demo2").innerHTML = "I love Bangladesh!!";
         }
     </script>
@@ -33,8 +33,8 @@
     <b><p>setInterval() With a Callback</p></b>
     <h2 id="demo3"></h2>
     <script>
-        setTimeout(function() { myFunction("Hello World !!!"); }, 2000);
-        function myFunction(value) {
+        setTimeout(function() { myFunction2("Hello World !!!"); }, 2000);
+        function myFunction2(value) {
           document.getElementById("demo3").innerHTML = value;
         }
     </script>
@@ -42,8 +42,8 @@
     <b><p>setInterval() With a Callback</p></b>
     <h1 id="demo4"></h1>
     <script>
-        setInterval(myFunction1, 1000);
-        function myFunction1() {
+        setInterval(myFunction3, 1000);
+        function myFunction3() {
             let d = new Date();
             document.getElementById("demo4").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
         }
