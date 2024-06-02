@@ -11,8 +11,8 @@
     <b><p>JavaScript Function</p></b>
     <p id="demo1"></p>
     <script>
-        myFunction();
-        function myFunction() {
+        myFunction1();
+        function myFunction1() {
             let a = 4;
             document.getElementById("demo1").innerHTML = a * a;
         }
@@ -22,8 +22,8 @@
     <p id="demo2"></p>
     <script>
         let a = 5;
-        myFunction()
-        function myFunction() {
+        myFunction2()
+        function myFunction2() {
             document.getElementById("demo2").innerHTML = a * a;
         }
     </script>
@@ -31,9 +31,9 @@
     <b><p>JavaScript Function</p></b>
     <p id="demo3"></p>
     <script>
-        myFunction();
+        myFunction3();
         document.getElementById("demo3").innerHTML = a * a;
-        function myFunction() {
+        function myFunction3() {
             a = 4;
         }
     </script>
@@ -66,7 +66,7 @@
     </script>
 
     <b><p>Counting with a local variable</p></b>
-    <button type="button" onclick="myFunction()">Count!</button>
+    <button type="button" onclick="myFunction4()">Count!</button>
     <p id="demo6">0</p>
     <script>
         function add() {
@@ -74,7 +74,7 @@
             counter += 1;
             return counter;
         }
-        function myFunction() {
+        function myFunction4() {
             document.getElementById("demo6").innerHTML = add();
         } 
     </script>
@@ -94,14 +94,14 @@
     </script> 
 
     <b><p>JavaScript Closures</p></b>
-    <button type="button" onclick="myFunction1()">Count!</button>
+    <button type="button" onclick="myFunction5()">Count!</button>
     <p id="demo8">0</p>
     <script>
         const add1 = (function () {
             let counter1 = 0;
             return function () {counter1 += 1; return counter1;}
         })();
-        function myFunction1() {
+        function myFunction5() {
             document.getElementById("demo8").innerHTML = add1();
         }
     </script>
