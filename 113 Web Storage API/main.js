@@ -3,7 +3,7 @@ function setLocalStorage(key, value) {
 }
 
 function getLocalStorage(key) {
-    localStorage.getItem(key);
+    alert(localStorage.getItem(key));
 }
 
 function removeLocalStorage(key) {

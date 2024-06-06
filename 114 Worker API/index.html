@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Workers API</title>
+  </head>
+  <body>
+    <h2>Web Workers API</h2>
+
+    <b><p>JavaScript Web Workers API</p></b>
+    <button onclick="startWorker()">Start worker</button>
+    <button onclick="stopWorker()">Stop worker</button>
+    <button onclick="alert('hello')">Click</button>
+    <p id="demo"></p>
+    <!-- <script>
+        const demo = document.getElementById("demo");
+        let i = 0;
+        while (i < 1000000000) {
+            i++
+        }
+        demo.innerHTML = i;
+    </script> -->
+    <script>
+      let w;
+      function startWorker() {
+        if (typeof Worker !== "undefined") {
+          // worker available
+
+          // if w worker is not already defined
+          if (typeof w == "undefined") {
+            // create a new worker called 'w'
+            w = new Worker("worker.js");
+          }
+
+          // listening for worker events/messages
+          w.onmessage = function (event) {
+            document.getElementById("demo").innerHTML = event.data;
+          };
+        } else alert("Your browser does not support web worker!");
+      }
+
+      function stopWorker() {
+        if (typeof Worker !== "undefined") {
+            w.terminate();
+            w = undefined;
+        } else {
+            alert("Your browser does not support web worker!");
+        }
+      }
+    </script>
+  </body>
+</html>
