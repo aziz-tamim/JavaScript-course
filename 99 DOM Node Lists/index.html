@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript DOM Node Lists</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript HTML DOM Node Lists</h2>
 
     <h3>JavaScript HTML Dom</h3>
@@ -13,17 +13,19 @@
     <p>Hello Norway!</p>
     <p id="demo"></p>
     <script>
-        const myNodelist = document.querySelectorAll("p");
-        document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myNodelist[1].innerHTML;
+      const myNodelist = document.querySelectorAll("p");
+      document.getElementById("demo").innerHTML =
+        "The innerHTML of the second paragraph is: " + myNodelist[1].innerHTML;
     </script>
-    
+
     <h3>JavaScript HTML DOM</h3>
     <p>Hellow World!</p>
     <p>Hellow Norway!</p>
     <p id="demo1"></p>
     <script>
-        const myNodelist1 = document.querySelectorAll("p");
-        document.getElementById("demo1").innerHTML = "This document contains " + myNodelist1.length + " paragraphs.";
+      const myNodelist1 = document.querySelectorAll("p");
+      document.getElementById("demo1").innerHTML =
+        "This document contains " + myNodelist1.length + " paragraphs.";
     </script>
 
     <h3>JavaScript HTML DOM</h3>
@@ -32,12 +34,12 @@
     <p>Click the button to change the color of all p elements.</p>
     <button onclick="myFunction()">Try it</button>
     <script>
-        function myFunction() {
-            const myNodelist = document.querySelectorAll("p");
-            for (let i = 6; i < myNodelist.length; i++) {
-                myNodelist[i].style.color = "red";
-            }
+      function myFunction() {
+        const myNodelist = document.querySelectorAll("p");
+        for (let i = 6; i < myNodelist.length; i++) {
+          myNodelist[i].style.color = "red";
         }
+      }
     </script>
-</body>
+  </body>
 </html>
