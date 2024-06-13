@@ -1,76 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Function</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Function</h2>
 
-    <b><p>Call a function which performs a calculation and returns the result:</p></b>
+    <b
+      ><p>
+        Call a function which performs a calculation and returns the result:
+      </p></b
+    >
     <p id="demo1"></p>
     <script>
-        function myFunction1(p1, p2) {
-            return p1 * p2;
-        }
-        let result = myFunction1(4, 3);
-        document.getElementById("demo1").innerHTML = result;
+      function myFunction1(p1, p2) {
+        return p1 * p2;
+      }
+      let result = myFunction1(4, 3);
+      document.getElementById("demo1").innerHTML = result;
     </script>
 
-    <b><p>Invoke (call) a function that converts from Fahrenheit to Celsius:</p></b>
+    <b
+      ><p>
+        Invoke (call) a function that converts from Fahrenheit to Celsius:
+      </p></b
+    >
     <p id="demo2"></p>
     <script>
-        function toCelsius(f) {
-            return (5/9) * (f-32);
-        }
-        let value = toCelsius(77);
-        document.getElementById("demo2").innerHTML = value;
+      function toCelsius(f) {
+        return (5 / 9) * (f - 32);
+      }
+      let value = toCelsius(77);
+      document.getElementById("demo2").innerHTML = value;
     </script>
 
-    <b><p>Invoke (call) a function to convert from Fahrenheit to Celsius:</p></b>
+    <b
+      ><p>Invoke (call) a function to convert from Fahrenheit to Celsius:</p></b
+    >
     <p id="demo3"></p>
     <script>
-        function toCelsius(f) {
-            return (5/9) * (f-32);
-        }
-        let valu = toCelsius();
-            document.getElementById("demo3").innerHTML = valu;
+      function toCelsius(f) {
+        return (5 / 9) * (f - 32);
+      }
+      let valu = toCelsius();
+      document.getElementById("demo3").innerHTML = valu;
     </script>
 
-    <b><p>Accessing a function without () returns the function and not the function result:</p></b>
+    <b
+      ><p>
+        Accessing a function without () returns the function and not the
+        function result:
+      </p></b
+    >
     <p id="demo4"></p>
     <script>
-        function toCelsius(f) {
-            return (5/9) * (f-32);
-        }
-        let values = toCelsius;
-        document.getElementById("demo4").innerHTML = values;
+      function toCelsius(f) {
+        return (5 / 9) * (f - 32);
+      }
+      let values = toCelsius;
+      document.getElementById("demo4").innerHTML = values;
     </script>
 
     <b><p>Using a function as a variable:</p></b>
     <p id="demo5"></p>
     <script>
-        let text = "The temperature is " + toCelsius(77) + " Celsius.";
-        document.getElementById("demo5").innerHTML = text;
-        function toCelsius(fahrenheit) {
-            return (5/9) * (fahrenheit-32);
-        }
+      let text = "The temperature is " + toCelsius(77) + " Celsius.";
+      document.getElementById("demo5").innerHTML = text;
+      function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+      }
     </script>
 
     <b><p>Outside myFunction() carName is undefined</p></b>
     <p id="demo6"></p>
     <p id="demo7"></p>
     <script>
-        let text1 = "Outside: " + typeof carName;
-        document.getElementById("demo6").innerHTML = text1;
+      let text1 = "Outside: " + typeof carName;
+      document.getElementById("demo6").innerHTML = text1;
 
-        function myFunction2() {
-            let carName = "Volvo";
-            let text2 = "Inside: " + typeof carName + " " + carName;
-            document.getElementById("demo7").innerHTML = text2;
-        }
-        myFunction2();
+      function myFunction2() {
+        let carName = "Volvo";
+        let text2 = "Inside: " + typeof carName + " " + carName;
+        document.getElementById("demo7").innerHTML = text2;
+      }
+      myFunction2();
     </script>
-</body>
+  </body>
 </html>

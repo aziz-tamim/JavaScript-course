@@ -1,71 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Function bind() Method</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Function bind()</h2>
 
     <b><p>JavaScript Function bind()</p></b>
     <p id="demo1"></p>
     <script>
-        const person = {
-            firstName:"John",
-            lastName: "Doe",
-            fullName: function() {
-                return this.firstName + " " + this.lastName;
-            }
-        }
-        const member = {
-            firstName: "Hege",
-            lastName:"Nilsen",
-        }
-        let fullName = person.fullName.bind(member);
-        document.getElementById("demo1").innerHTML = fullName();
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      const member = {
+        firstName: "Hege",
+        lastName: "Nilsen",
+      };
+      let fullName = person.fullName.bind(member);
+      document.getElementById("demo1").innerHTML = fullName();
     </script>
 
     <b><p>JavaScript Function bind()</p></b>
     <p id="demo2"></p>
     <script>
-        const person1 = {
-            firstName: "John",
-            lastName: "Doe",
-            display: function() {
-                let x = document.getElementById("demo2").innerHTML = this.firstName + " " + this.lastName;
-            }
-        }
-        person1.display();
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        display: function () {
+          let x = (document.getElementById("demo2").innerHTML =
+            this.firstName + " " + this.lastName);
+        },
+      };
+      person1.display();
     </script>
 
     <b><p>JavaScript Function bind()</p></b>
     <p id="demo3"></p>
     <script>
-        const person2 = {
-            firstName: "John",
-            lastName: "Doe",
-            display: function() {
-                 let x = document.getElementById("demo3");
-                 x.innerHTML = this.firstName + " " + this.lastName;
-            } 
-        }
-        setTimeout(person2.display,2000);
+      const person2 = {
+        firstName: "John",
+        lastName: "Doe",
+        display: function () {
+          let x = document.getElementById("demo3");
+          x.innerHTML = this.firstName + " " + this.lastName;
+        },
+      };
+      setTimeout(person2.display, 2000);
     </script>
 
     <b><p>JavaScript Function bind()</p></b>
     <p id="demo4"></p>
     <script>
-        const person3 = {
-            firstName: "John",
-            lastName: "Doe",
-            display: function() {
-                let x = document.getElementById("demo4");
-                x.innerHTML = this.firstName + " " + this.lastName;
-            }
-        }
-        let display = person3.display.bind(person3);
-        setTimeout(display, 2000);
+      const person3 = {
+        firstName: "John",
+        lastName: "Doe",
+        display: function () {
+          let x = document.getElementById("demo4");
+          x.innerHTML = this.firstName + " " + this.lastName;
+        },
+      };
+      let display = person3.display.bind(person3);
+      setTimeout(display, 2000);
     </script>
-</body>
+  </body>
 </html>
