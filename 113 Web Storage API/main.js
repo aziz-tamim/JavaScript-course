@@ -1,5 +1,5 @@
 function setLocalStorage(key, value) {
-    localStorage.setItem(key, value);
+    alert(localStorage.setItem(key, value));
 }
 
 function getLocalStorage(key) {
@@ -7,7 +7,7 @@ function getLocalStorage(key) {
 }
 
 function removeLocalStorage(key) {
-    localStorage.removeItem(key);
+    alert(localStorage.removeItem(key));
 }
 
 function clearLocalStorage() {
