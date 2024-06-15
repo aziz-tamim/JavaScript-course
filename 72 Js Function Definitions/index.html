@@ -1,102 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Function Definitions</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Function Definitions</h2>
 
     <b><p>JavaScript Function</p></b>
     <p id="demo1"></p>
     <script>
-        let x = myFunction1(4, 3);
-        document.getElementById("demo1").innerHTML = x;
-        function myFunction1(a, b) {
-            return a * b;
-        }
+      let x = myFunction1(4, 3);
+      document.getElementById("demo1").innerHTML = x;
+      function myFunction1(a, b) {
+        return a * b;
+      }
     </script>
 
     <b><p>A function can be stored in a variable:</p></b>
     <p id="demo2"></p>
     <script>
-        const y = function (a, b) {return a * b};
-        document.getElementById("demo2").innerHTML = y;
+      const y = function (a, b) {
+        return a * b;
+      };
+      document.getElementById("demo2").innerHTML = y;
     </script>
 
     <b><p>JavaScript Functions</p></b>
     <p id="demo3"></p>
     <script>
-        const z = function (a, b) {return a * b};
-        document.getElementById("demo3").innerHTML = z(4, 3);
+      const z = function (a, b) {
+        return a * b;
+      };
+      document.getElementById("demo3").innerHTML = z(4, 3);
     </script>
 
     <b><p>JavaScript Functions</p></b>
     <p id="demo4"></p>
     <script>
-        const myFunction2 = new Function("a", "b", "return a * b");
-        document.getElementById("demo4").innerHTML = myFunction2(4, 3);
+      const myFunction2 = new Function("a", "b", "return a * b");
+      document.getElementById("demo4").innerHTML = myFunction2(4, 3);
     </script>
 
     <b><p>Function can be invoked automatically without being called:</p></b>
     <p id="demo5"></p>
     <script>
-        (function () {
-            document.getElementById("demo5").innerHTML = "Hello! I called myself";
-        })();
+      (function () {
+        document.getElementById("demo5").innerHTML = "Hello! I called myself";
+      })();
     </script>
 
     <b><p>Function can be treated as values:</p></b>
     <p id="demo6"></p>
     <script>
-        function myFunction3(a, b) {
-            return a * b;
-        }
-        let a = myFunction3(8, 3);
-        document.getElementById("demo6").innerHTML = a;
+      function myFunction3(a, b) {
+        return a * b;
+      }
+      let a = myFunction3(8, 3);
+      document.getElementById("demo6").innerHTML = a;
     </script>
 
-   <b><p>Function can be used in expressions.</p></b>
+    <b><p>Function can be used in expressions.</p></b>
     <p id="demo7"></p>
     <script>
-        function myFunction4(a, b) {
-            return a * b;
-        }
-        let b = myFunction4(4, 3) * 2;
-        document.getElementById("demo7").innerHTML = x;
+      function myFunction4(a, b) {
+        return a * b;
+      }
+      let b = myFunction4(4, 3) * 2;
+      document.getElementById("demo7").innerHTML = x;
     </script>
 
-    <b><p>The arguments.length property retuns the number of arguments recived by the funciton:</p></b>
+    <b
+      ><p>
+        The arguments.length property retuns the number of arguments recived by
+        the funciton:
+      </p></b
+    >
     <p id="demo8"></p>
     <script>
-        function myFunction5(a, b) {
-            return arguments.length;
-        }
-        document.getElementById("demo8").innerHTML = myFunction5(4, 3);
+      function myFunction5(a, b) {
+        return arguments.length;
+      }
+      document.getElementById("demo8").innerHTML = myFunction5(4, 3);
     </script>
 
     <b><p>The toString() Methods</p></b>
     <p id="demo9"></p>
     <script>
-        function myFunction6(a, b) {
-            return a * b;
-        }
-        document.getElementById("demo9").innerHTML = myFunction6.toString();
+      function myFunction6(a, b) {
+        return a * b;
+      }
+      document.getElementById("demo9").innerHTML = myFunction6.toString();
     </script>
 
     <b><p>JavaScript Arrow Functions</p></b>
     <p id="demo10"></p>
     <script>
-        const c = (x, y) => x * y;
-        document.getElementById("demo10").innerHTML = c(5, 5);
+      const c = (x, y) => x * y;
+      document.getElementById("demo10").innerHTML = c(5, 5);
     </script>
 
     <b><p>JavaScript Arrow Functions</p></b>
     <p id="demo11"></p>
     <script>
-        const d = (x, y) => { return x * y};
-        document.getElementById("demo11").innerHTML = d(10, 10);
+      const d = (x, y) => {
+        return x * y;
+      };
+      document.getElementById("demo11").innerHTML = d(10, 10);
     </script>
-</body>
+  </body>
 </html>

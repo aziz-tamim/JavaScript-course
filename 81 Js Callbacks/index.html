@@ -1,113 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Async Callbacks</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Async Callbackis</h2>
 
     <b><p>JavaScript Functions Sequence</p></b>
     <p id="demo1"></p>
     <script>
-        function myDisplayer(some) {
-            document.getElementById("demo1").innerHTML = some;
-        }
-        function myFirst() {
-            myDisplayer("Hello");
-        }
-        function mySecond() {
-            myDisplayer("Goodbye");
-        }
-        myFirst();
-        mySecond();
+      function myDisplayer(some) {
+        document.getElementById("demo1").innerHTML = some;
+      }
+      function myFirst() {
+        myDisplayer("Hello");
+      }
+      function mySecond() {
+        myDisplayer("Goodbye");
+      }
+      myFirst();
+      mySecond();
     </script>
-    
+
     <b><p>JavaScript Function Sequence</p></b>
     <p id="demo2"></p>
     <script>
-        function myDisplayer(some) {
-            document.getElementById("demo2").innerHTML = some;
-        }
-        function myFirst() {
-            myDisplayer("Hello");
-        }
-        function mySecond() {
-            myDisplayer("Goodbye");
-        }
-        mySecond();
-        myFirst();
+      function myDisplayer(some) {
+        document.getElementById("demo2").innerHTML = some;
+      }
+      function myFirst() {
+        myDisplayer("Hello");
+      }
+      function mySecond() {
+        myDisplayer("Goodbye");
+      }
+      mySecond();
+      myFirst();
     </script>
 
     <b>JavaScript Function Sequence</b>
     <p id="demo3"></p>
     <script>
-        function myDisplayer(some) {
-            document.getElementById("demo3").innerHTML = some;
-        }
-        function myCalculator(num1, num2) {
-            let sum = num1 + num2;
-            return sum;
-        }
-        let result = myCalculator(5, 5);
-        myDisplayer(result);
+      function myDisplayer(some) {
+        document.getElementById("demo3").innerHTML = some;
+      }
+      function myCalculator(num1, num2) {
+        let sum = num1 + num2;
+        return sum;
+      }
+      let result = myCalculator(5, 5);
+      myDisplayer(result);
     </script>
 
     <b><p>Function Sequence</p></b>
     <p id="demo4"></p>
     <script>
-        function myDisplayer(some) {
-          document.getElementById("demo4").innerHTML = some;
-        }
-        function myCalculator(num1, num2) {
-          let sum = num1 + num2;
-          myDisplayer(sum);
-        }
-        myCalculator(5, 5);
+      function myDisplayer(some) {
+        document.getElementById("demo4").innerHTML = some;
+      }
+      function myCalculator(num1, num2) {
+        let sum = num1 + num2;
+        myDisplayer(sum);
+      }
+      myCalculator(5, 5);
     </script>
 
     <b><p>JavaScript Callback Function</p></b>
     <p id="demo5"></p>
     <script>
-        function myDisplayer(something) {
-          document.getElementById("demo5").innerHTML = something;
-        }
-        function myCalculator(num1, num2, myCallback) {
-          let sum = num1 + num2;
-          myCallback(sum);
-        }
-        myCalculator(10, 5, myDisplayer);
+      function myDisplayer(something) {
+        document.getElementById("demo5").innerHTML = something;
+      }
+      function myCalculator(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        myCallback(sum);
+      }
+      myCalculator(10, 5, myDisplayer);
     </script>
 
     <b><p>JavaScript Callback Function</p></b>
     <p id="demo6"></p>
     <script>
-        function myDisplayer(something) {
-            document.getElementById("demo6").innerHTML = something;
-        }
-        function myCalculator(num1, num2, myCallback) {
-            let sum = num1 + num2;
-            myCallback(sum);
-        }
-        myCalculator(10, 10, myDisplayer);
+      function myDisplayer(something) {
+        document.getElementById("demo6").innerHTML = something;
+      }
+      function myCalculator(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        myCallback(sum);
+      }
+      myCalculator(10, 10, myDisplayer);
     </script>
 
     <b><p>JavaScript Callback Functions</p></b>
     <p id="demo7"></p>
     <script>
-        const myNumbers = [4, 1, -20, -7, 5, 9, -6];
-        const postNumbers = removeNeg(myNumbers, (x) => x >= 0);
-        document.getElementById("demo7").innerHTML = postNumbers;
-        function removeNeg(numbers, callback) {
-            const myArray = [];
-            for (const x of numbers) {
-                if (callback(x)) {
-                    myArray.push(x);
-                }
-            }
-            return myArray;
+      const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+      const postNumbers = removeNeg(myNumbers, (x) => x >= 0);
+      document.getElementById("demo7").innerHTML = postNumbers;
+      function removeNeg(numbers, callback) {
+        const myArray = [];
+        for (const x of numbers) {
+          if (callback(x)) {
+            myArray.push(x);
+          }
         }
+        return myArray;
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -1,134 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript array iteration</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Array Iteration</h2>
 
     <b><p>The forEach() Method</p></b>
     <p id="demo1"></p>
     <script>
-        const numbers1 = [45, 4, 9, 16, 25];
-        let txt = "";
-        numbers1.forEach(myFunction1);
-        document.getElementById("demo1").innerHTML = txt;
-        function myFunction1(value, index, array) {
-            txt += value + "<br>";
-        }
+      const numbers1 = [45, 4, 9, 16, 25];
+      let txt = "";
+      numbers1.forEach(myFunction1);
+      document.getElementById("demo1").innerHTML = txt;
+      function myFunction1(value, index, array) {
+        txt += value + "<br>";
+      }
     </script>
 
     <b><p>The map() Method</p></b>
     <p id="demo2"></p>
     <script>
-        const numbers2 = [45, 4, 9, 16, 25];
-        const numbers3 = numbers2.map(myFunction2);
-        document.getElementById("demo2").innerHTML = numbers3;
-        function myFunction2(value, index, array) {
-            return value * 2;
-        } 
+      const numbers2 = [45, 4, 9, 16, 25];
+      const numbers3 = numbers2.map(myFunction2);
+      document.getElementById("demo2").innerHTML = numbers3;
+      function myFunction2(value, index, array) {
+        return value * 2;
+      }
     </script>
 
     <b><p>The fiatMap() Method</p></b>
     <p id="demo3"></p>
     <script>
-        const myArr = [1, 2, 3, 4, 5, 6];
-        const newArr = myArr.flatMap((x) => x * 2);
-        document.getElementById("demo3").innerHTML = newArr;
+      const myArr = [1, 2, 3, 4, 5, 6];
+      const newArr = myArr.flatMap((x) => x * 2);
+      document.getElementById("demo3").innerHTML = newArr;
     </script>
 
     <b><p>The filter() Method</p></b>
     <p id="demo4"></p>
     <script>
-        const numbers5 = [45, 4, 9, 16, 25];
-        const over18 = numbers5.filter(myFunction3);
-        document.getElementById("demo4").innerHTML = over18;
-        function myFunction3(value, index, array) {
-            return value > 18;
-        }
+      const numbers5 = [45, 4, 9, 16, 25];
+      const over18 = numbers5.filter(myFunction3);
+      document.getElementById("demo4").innerHTML = over18;
+      function myFunction3(value, index, array) {
+        return value > 18;
+      }
     </script>
 
     <b><p>The reduce() Method</p></b>
     <p id="demo5"></p>
     <script>
-        const numbers6 = [45, 4, 9, 16, 25];
-        let sum = numbers6.reduce(myFunction);
-        document.getElementById("demo5").innerHTML = "The sum is " + sum;
-        function myFunction(total, value, index, array) {
-            return total + value;
-        }
+      const numbers6 = [45, 4, 9, 16, 25];
+      let sum = numbers6.reduce(myFunction);
+      document.getElementById("demo5").innerHTML = "The sum is " + sum;
+      function myFunction(total, value, index, array) {
+        return total + value;
+      }
     </script>
 
     <b><p>The reduceRight() Method</p></b>
     <p id="demo6"></p>
     <script>
-        const numbers7 = [45, 4, 9, 16, 25];
-        let sum1 = numbers7.reduceRight(myFunction4);
-        document.getElementById("demo6").innerHTML = "The sum is " + sum1;
-        function myFunction4(total, value, index, array) {
-            return total + value;
-        }
+      const numbers7 = [45, 4, 9, 16, 25];
+      let sum1 = numbers7.reduceRight(myFunction4);
+      document.getElementById("demo6").innerHTML = "The sum is " + sum1;
+      function myFunction4(total, value, index, array) {
+        return total + value;
+      }
     </script>
 
     <b><p>The every() Method</p></b>
     <p id="demo7"></p>
     <script>
-        const numbers8 = [45, 4, 9, 16, 25];
-        let allOver18 = numbers8.every(myFunction5);
-        document.getElementById("demo7").innerHTML = "All over 18 is " + allOver18;
-        function myFunction5(value, index, array) {
-            return value > 18;
-        }
+      const numbers8 = [45, 4, 9, 16, 25];
+      let allOver18 = numbers8.every(myFunction5);
+      document.getElementById("demo7").innerHTML =
+        "All over 18 is " + allOver18;
+      function myFunction5(value, index, array) {
+        return value > 18;
+      }
     </script>
 
     <b><p>The some() Method</p></b>
     <p id="demo8"></p>
     <script>
-        const numbers9 = [45, 4, 9, 16, 25];
-        let someOver18 = numbers9.some(myFunction6);
-        document.getElementById("demo8").innerHTML = "Some over 18 is " + someOver18;
-        function myfunction6(value, index, array) {
-            return value > 18;
-        }
+      const numbers9 = [45, 4, 9, 16, 25];
+      let someOver18 = numbers9.some(myFunction6);
+      document.getElementById("demo8").innerHTML =
+        "Some over 18 is " + someOver18;
+      function myfunction6(value, index, array) {
+        return value > 18;
+      }
     </script>
 
     <b><p>The from() Method</p></b>
     <p id="demo9"></p>
     <script>
-        const myarr = Array.from("ABCDEFG");
-        document.getElementById("demo9").innerHTML = myarr;
+      const myarr = Array.from("ABCDEFG");
+      document.getElementById("demo9").innerHTML = myarr;
     </script>
 
     <b><p>The Keys() Method</p></b>
     <p id="demo10"></p>
     <script>
-        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
-        const keys = fruits1.keys();
-        let text = "";
-        for (let x of keys) {
-            text += x + "<br>";
-        }
-        document.getElementById("demo10").innerHTML = text;
+      const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+      const keys = fruits1.keys();
+      let text = "";
+      for (let x of keys) {
+        text += x + "<br>";
+      }
+      document.getElementById("demo10").innerHTML = text;
     </script>
 
     <b><p>The entries() method</p></b>
     <p id="demo11"></p>
     <script>
-        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
-        const f = fruits2.entries();
-        for (let x of f) {
-            document.getElementById("demo11").innerHTML += x + "<br>";
-        }
+      const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+      const f = fruits2.entries();
+      for (let x of f) {
+        document.getElementById("demo11").innerHTML += x + "<br>";
+      }
     </script>
 
     <b><p>The with() Method</p></b>
     <p id="demo12"></p>
     <script>
-        const months = ["January", "February", "Mar", "April"];
-        const myMonths = months.with(2, "March");
-        document.getElementById("demo12").innerHTML = myMonths;
+      const months = ["January", "February", "Mar", "April"];
+      const myMonths = months.with(2, "March");
+      document.getElementById("demo12").innerHTML = myMonths;
     </script>
-</body>
+  </body>
 </html>

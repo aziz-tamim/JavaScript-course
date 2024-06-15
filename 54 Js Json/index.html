@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript JSON</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript JSON</h2>
 
     <b><p>Create Object from JSON String</p></b>
     <p id="demo"></p>
     <script>
-        let text = '{"employees":[' +
-        '{"firstName":"John","lastName":"Doe" },' + 
-        '{"firstName":"Anna","lastName":"Smith"},' + 
+      let text =
+        '{"employees":[' +
+        '{"firstName":"John","lastName":"Doe" },' +
+        '{"firstName":"Anna","lastName":"Smith"},' +
         '{"firstName":"Peter","lastName":"Jones"}]}';
-        const obj = JSON.parse(text);
-        document.getElementById("demo").innerHTML = obj.employees[1].firstName + " " + obj.employees[1].lastName;
+      const obj = JSON.parse(text);
+      document.getElementById("demo").innerHTML =
+        obj.employees[1].firstName + " " + obj.employees[1].lastName;
     </script>
-</body>
+  </body>
 </html>

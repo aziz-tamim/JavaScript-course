@@ -1,100 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Data Types</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Data Types</h2>
 
-    <b><p>When adding a number and a string, javascript will treat the number as a string.</p></b>
+    <b
+      ><p>
+        When adding a number and a string, javascript will treat the number as a
+        string.
+      </p></b
+    >
     <p id="demo1"></p>
-    <Script>
-        let x = 16 + "Volvo";
-        document.getElementById("demo1").innerHTML = x;
-    </Script>
+    <script>
+      let x = 16 + "Volvo";
+      document.getElementById("demo1").innerHTML = x;
+    </script>
 
-    <b><p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p></b>
+    <b
+      ><p>
+        JavaScript evaluates expressions from left to right. Different sequences
+        can produce different results:
+      </p></b
+    >
     <p id="demo2"></p>
     <script>
-        let y = 16 + 4 + "Volvo";
-        document.getElementById("demo2").innerHTML = y;
+      let y = 16 + 4 + "Volvo";
+      document.getElementById("demo2").innerHTML = y;
     </script>
 
-    <b><p>Strings are written with quots. You can use single or double quotes:</p></b>
+    <b
+      ><p>
+        Strings are written with quots. You can use single or double quotes:
+      </p></b
+    >
     <p id="demo3"></p>
     <script>
-        let carName1 = "Volvo XC60";
-        let carName2 = "Volvo XC60";
-        document.getElementById("demo3").innerHTML = carName1 + "<br>" + carName2;
+      let carName1 = "Volvo XC60";
+      let carName2 = "Volvo XC60";
+      document.getElementById("demo3").innerHTML = carName1 + "<br>" + carName2;
     </script>
 
-    <b><p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p></b>
+    <b
+      ><p>
+        You can use quotes inside a string, as long as they don't match the
+        quotes surrounding the string:
+      </p></b
+    >
     <p id="demo4"></p>
     <script>
-        let answer1 = "It's alright";
-        let answer2 = "He is called 'Johnny'";
-        let answer3 = 'He is called "Johnny"';
-        document.getElementById("demo4").innerHTML = answer1 + "<br>" + answer2 + "<br>" + answer3;
+      let answer1 = "It's alright";
+      let answer2 = "He is called 'Johnny'";
+      let answer3 = 'He is called "Johnny"';
+      document.getElementById("demo4").innerHTML =
+        answer1 + "<br>" + answer2 + "<br>" + answer3;
     </script>
 
     <b><p>Numbers can be written with, or without decimals:</p></b>
     <p id="demo5"></p>
     <script>
-        let x1 = 34.00;
-        let x2 = 34;
-        let x3 = 3.14;
-        document.getElementById("demo5").innerHTML = x1 + "<br>" + x2 + "<br>" + x3;
+      let x1 = 34.0;
+      let x2 = 34;
+      let x3 = 3.14;
+      document.getElementById("demo5").innerHTML =
+        x1 + "<br>" + x2 + "<br>" + x3;
     </script>
 
-    <b><p>Extra large or extra small numbers can be written with scientific (exponential) notation:</p></b>
+    <b
+      ><p>
+        Extra large or extra small numbers can be written with scientific
+        (exponential) notation:
+      </p></b
+    >
     <p id="demo6"></p>
     <script>
-    let a = 123e5;
-    let b = 123e-5;
-    document.getElementById("demo6").innerHTML = a + "<br>" + b;
+      let a = 123e5;
+      let b = 123e-5;
+      document.getElementById("demo6").innerHTML = a + "<br>" + b;
     </script>
 
     <b><p>Booleans can have two values: true or false:</p></b>
     <p id="demo7"></p>
     <script>
-        let c = 5;
-        let d = 5;
-        let e = 6;
-        document.getElementById("demo7").innerHTML = (c == d) + "<br>" + (c == e);
+      let c = 5;
+      let d = 5;
+      let e = 6;
+      document.getElementById("demo7").innerHTML = (c == d) + "<br>" + (c == e);
     </script>
 
-    <b><p>Array indexes are zero-based, which means the first item is [0].</p></b>
+    <b
+      ><p>
+        Array indexes are zero-based, which means the first item is [0].
+      </p></b
+    >
     <p id="demo8"></p>
     <script>
-        const cars = ["Saab", "Volvo", "BMW"];
-        document.getElementById("demo8").innerHTML = cars[0];
+      const cars = ["Saab", "Volvo", "BMW"];
+      document.getElementById("demo8").innerHTML = cars[0];
     </script>
 
     <b><p>Javascript Object</p></b>
     <p id="demo9"></p>
     <script>
-        const person = {
-            firstName : "John",
-            lastName : "Doe",
-            age : 50,
-            eyeColor : "blue" 
-        };
-        document.getElementById("demo9").innerHTML = person.firstName + " is " + person.age + " years old. ";
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+      document.getElementById("demo9").innerHTML =
+        person.firstName + " is " + person.age + " years old. ";
     </script>
 
     <b><p>The typeof Operator</p></b>
     <p id="demo10"></p>
     <script>
-        document.getElementById("demo10").innerHTML = typeof "" + "<br>" + typeof "John" + "<br>" + typeof "John Doe";
+      document.getElementById("demo10").innerHTML =
+        typeof "" + "<br>" + typeof "John" + "<br>" + typeof "John Doe";
     </script>
 
     <b><p>An empty string has both a legal value and a type:</p></b>
     <p id="demo11"></p>
     <script>
-        let car = "";
-        document.getElementById("demo11").innerHTML = "The value is: " + car + "<br>" + "The type is: " + typeof car;
+      let car = "";
+      document.getElementById("demo11").innerHTML =
+        "The value is: " + car + "<br>" + "The type is: " + typeof car;
     </script>
-</body>
+  </body>
 </html>

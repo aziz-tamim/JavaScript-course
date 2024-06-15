@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Static methods</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Static Methods</h2>
 
     <b><p>JavaScript Class Static methods</p></b>
     <p id="demo1"></p>
     <script>
-        class Car {
-            constructor(name) {
-                this.name = name;
-            }
-            static hello() {
-                return "Hello!!"
-            }
+      class Car {
+        constructor(name) {
+          this.name = name;
         }
-        const myCar = new Car("Ford");
-        document.getElementById("demo1").innerHTML = Car.hello();
+        static hello() {
+          return "Hello!!";
+        }
+      }
+      const myCar = new Car("Ford");
+      document.getElementById("demo1").innerHTML = Car.hello();
     </script>
 
     <b><p>JavaScript Class Static Methods</p></b>
     <p id="demo2"></p>
     <script>
-        class Car1 {
-            constructor(name) {
-                this.name = name;
-            }
-            static hello(x) {
-                return "Hello " + x.name;
-            }
+      class Car1 {
+        constructor(name) {
+          this.name = name;
         }
-        const myCar1 = new Car1("Ford");
-        document.getElementById("demo2").innerHTML = Car1.hello(myCar1);
+        static hello(x) {
+          return "Hello " + x.name;
+        }
+      }
+      const myCar1 = new Car1("Ford");
+      document.getElementById("demo2").innerHTML = Car1.hello(myCar1);
     </script>
-</body>
+  </body>
 </html>

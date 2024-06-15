@@ -1,110 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Switch Statement</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Switch Statement</h2>
 
     <b><p>JavaScript Switch</p></b>
     <p id="demo1"></p>
     <script>
-        let day;
-        switch (new Date().getDay()) {
-            case 0:
-                day = "Sunday";
-                break;
-            case 1:
-                day = "Monday";
-                break;
-            case 2:
-                day = "Tuesday";
-                break;
-            case 3:
-                day = "Wednesday";
-                break;
-            case 4:
-                day = "Thursday";
-                break;
-            case 5:
-                day = "Friday";
-                break;
-            case 6:
-                day = "Saturday";
-        }
-        document.getElementById("demo1").innerHTML = "Today is " + day;
+      let day;
+      switch (new Date().getDay()) {
+        case 0:
+          day = "Sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+      }
+      document.getElementById("demo1").innerHTML = "Today is " + day;
     </script>
 
     <b><p>JavaScript Switch</p></b>
     <p id="demo2"></p>
     <script>
-        let text;
-        switch (new Date().getDay()) {
-            case 0:
-                text = "Today is Sunday";
-                break;
-            case 1:
-                text = "Today is Monday"
-                break;
-            default:
-                text = "Looking forward to the Weekend";
-        }
-        document.getElementById("demo2").innerHTML = text;
+      let text;
+      switch (new Date().getDay()) {
+        case 0:
+          text = "Today is Sunday";
+          break;
+        case 1:
+          text = "Today is Monday";
+          break;
+        default:
+          text = "Looking forward to the Weekend";
+      }
+      document.getElementById("demo2").innerHTML = text;
     </script>
 
     <b><p>JavaScript Switch</p></b>
     <p id="demo3"></p>
     <script>
-        let text1;
-        switch (new Date().getDay()) {
-            default:
-                text1 = "Looking forward to the Weekend";
-                break;
-            case 6:
-            text1 = "Today is Saturday";
-            break;
+      let text1;
+      switch (new Date().getDay()) {
+        default:
+          text1 = "Looking forward to the Weekend";
+          break;
+        case 6:
+          text1 = "Today is Saturday";
+          break;
         case 0:
-            text1 = "Today is Sunday";
-        }
-        document.getElementById("demo3").innerHTML = text1;
+          text1 = "Today is Sunday";
+      }
+      document.getElementById("demo3").innerHTML = text1;
     </script>
 
     <b><p>JavaScript Switch</p></b>
     <p id="demo4"></p>
     <script>
-        let text2;
-        switch (new Date().getDay()) {
-            case 4:
-            case 5:
-                text2 = "Soon it is Weekend";
-                break;
-            case 0:
-            case 6:
-                text2 = "It is Weekend";
-                break;
-            default: 
-            text2 = "Looking  forward to the Weekend";
-        }
-        document.getElementById("demo4").innerHTML = text2;
+      let text2;
+      switch (new Date().getDay()) {
+        case 4:
+        case 5:
+          text2 = "Soon it is Weekend";
+          break;
+        case 0:
+        case 6:
+          text2 = "It is Weekend";
+          break;
+        default:
+          text2 = "Looking  forward to the Weekend";
+      }
+      document.getElementById("demo4").innerHTML = text2;
     </script>
 
     <b><p>JavaScript Switch</p></b>
     <p id="demo5"></p>
     <script>
-        let x = "0";
-        switch (x) {
-            case 0:
-                text3 = "Off";
-                break;
-            case 1:
-                text3 = "On";
-                break;
-            default:
-                text3 = "No value found";
-        }
-        document.getElementById("demo5").innerHTML = text3;
+      let x = "0";
+      switch (x) {
+        case 0:
+          text3 = "Off";
+          break;
+        case 1:
+          text3 = "On";
+          break;
+        default:
+          text3 = "No value found";
+      }
+      document.getElementById("demo5").innerHTML = text3;
     </script>
-</body>
+  </body>
 </html>

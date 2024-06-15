@@ -1,108 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Objects</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Display Objects</h2>
 
     <b><p>Displaying a JavaScript object will output [object Object]:</p></b>
     <p id="demo1"></p>
     <script>
-        const person = {
-            name: "John",
-            age: 30,
-            city: "New York"
-        };
-        document.getElementById("demo1").innerHTML = person;
+      const person = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+      document.getElementById("demo1").innerHTML = person;
     </script>
 
     <b><p>Display object properties:</p></b>
     <p id="demo2"></p>
     <script>
-        const person1 = {
-            name: "John",
-            age: 30,
-            city: "New York"
-        };
-        document.getElementById("demo2").innerHTML = person1.name + ", " + person1.age + ", " + person1.city;
+      const person1 = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+      document.getElementById("demo2").innerHTML =
+        person1.name + ", " + person1.age + ", " + person1.city;
     </script>
 
     <b><p>Display object properties:</p></b>
     <p id="demo3"></p>
     <script>
-        const person2 = {
-            name: "John",
-            age: 30,
-            city: "New York"
-        };
-        let txt = "";
-        for (let x in person2) {
-            txt += person2[x] + " ";
-        };
-        document.getElementById("demo3").innerHTML = txt;
+      const person2 = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+      let txt = "";
+      for (let x in person2) {
+        txt += person2[x] + " ";
+      }
+      document.getElementById("demo3").innerHTML = txt;
     </script>
 
     <b><p>Object.values() converts an object to an array.</p></b>
     <p id="demo4"></p>
     <script>
-        const person3 = {
-            name: "John",
-            age: 30,
-            city: "New York"
-        };
-        document.getElementById("demo4").innerHTML = Object.values(person3);
+      const person3 = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+      document.getElementById("demo4").innerHTML = Object.values(person3);
     </script>
 
     <b><p>Display properties in JSON format:</p></b>
     <p id="demo5"></p>
     <script>
-        const person4 = {
-            name: "John",
-            age: 30,
-            city: "New Work"
-        };
-        document.getElementById("demo5").innerHTML = JSON.stringify(person);
+      const person4 = {
+        name: "John",
+        age: 30,
+        city: "New Work",
+      };
+      document.getElementById("demo5").innerHTML = JSON.stringify(person);
     </script>
 
     <b><p>JavaScript Objects</p></b>
     <p id="demo6"></p>
     <script>
-        var person5 = {
-            name: "John",
-            today: new Date()
-        };
-        document.getElementById("demo6").innerHTML = JSON.stringify(person5);
+      var person5 = {
+        name: "John",
+        today: new Date(),
+      };
+      document.getElementById("demo6").innerHTML = JSON.stringify(person5);
     </script>
 
     <b><p>JSON.stringify will not stringify function:</p></b>
     <p id="demo7"></p>
     <script>
-        const person7 = {
-            name: "John",
-            age: function () {return 30;}
-        };
-        document.getElementById("demo7").innerHTML = JSON.stringify(person7);
+      const person7 = {
+        name: "John",
+        age: function () {
+          return 30;
+        },
+      };
+      document.getElementById("demo7").innerHTML = JSON.stringify(person7);
     </script>
 
     <b><p>JavaScript Display Objects</p></b>
     <p id="demo8"></p>
     <script>
-        const person8 = {
-            name: "John",
-            age: function () {return 30;}
-        };
-        person8.age = person8.age.toString();
-        document.getElementById("demo8").innerHTML = JSON.stringify(person8);
+      const person8 = {
+        name: "John",
+        age: function () {
+          return 30;
+        },
+      };
+      person8.age = person8.age.toString();
+      document.getElementById("demo8").innerHTML = JSON.stringify(person8);
     </script>
 
     <b><p>JSON.stringify can stringify arrays:</p></b>
     <p id="demo9"></p>
     <script>
-        const arr = ["John", "Peter", "Sally", "Jane"];
-        document.getElementById("demo9").innerHTML = JSON.stringify(arr);
+      const arr = ["John", "Peter", "Sally", "Jane"];
+      document.getElementById("demo9").innerHTML = JSON.stringify(arr);
     </script>
-</body>
+  </body>
 </html>

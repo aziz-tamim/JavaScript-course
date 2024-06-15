@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript HTML DOM Events</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript HTML DOM Events</h2>
 
     <b><p>JavaScript Events The onclick Attribute</p></b>
@@ -14,17 +14,17 @@
     <b><p>The onclick Attribute</p></b>
     <h2 onclick="changeText(this)">Click on This text!</h2>
     <script>
-        function changeText(id) {
-            id.innerHTML = "Ooops!";
-        }
+      function changeText(id) {
+        id.innerHTML = "Ooops!";
+      }
     </script>
 
     <b><p>JavaScript HTML Event onclick Attribute</p></b>
     <button onclick="displayDate()">The time is?</button>
     <script>
-        function displayDate() {
-            document.getElementById("demo").innerHTML = Date();
-        }
+      function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+      }
     </script>
     <p id="demo"></p>
 
@@ -32,43 +32,69 @@
     <button id="myBtn">Try it</button>
     <p id="demo1"></p>
     <script>
-        document.getElementById("myBtn").onclick = displayDates;
-        function displayDates() {
-            document.getElementById("demo1").innerHTML = Date();
-        }
+      document.getElementById("myBtn").onclick = displayDates;
+      function displayDates() {
+        document.getElementById("demo1").innerHTML = Date();
+      }
     </script>
 
     <b><p>The oninput Attribute</p></b>
-    Enter your name: <input type="text" id="fname" oninput="upperCase()">
+    Enter your name: <input type="text" id="fname" oninput="upperCase()" />
     <script>
-        function upperCase() {
-            const x = document.getElementById("fname");
-            x.value = x.value.toUpperCase();
-        }
+      function upperCase() {
+        const x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+      }
     </script>
 
     <b><p>The onmouseover Attribute</p></b>
-    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px; height:20px; padding:40px; color:#fff; font-size:18px;">Mouse Over Me</div>
+    <div
+      onmouseover="mOver(this)"
+      onmouseout="mOut(this)"
+      style="
+        background-color: #d94a38;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+        color: #fff;
+        font-size: 18px;
+      "
+    >
+      Mouse Over Me
+    </div>
     <script>
-        function mOver(obj) {
-            obj.innerHTML = "Thank You"
-        }
-        function mOut(obj) {
-            obj.innerHTML = "Mouse Over Me"
-        }
+      function mOver(obj) {
+        obj.innerHTML = "Thank You";
+      }
+      function mOut(obj) {
+        obj.innerHTML = "Mouse Over Me";
+      }
     </script>
 
     <b><p>The onmousedown Attribute</p></b>
-    <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38; width:90px; height:20px; padding:40px; color:#fff; font-size:18px;">Click Me</div>
+    <div
+      onmousedown="mDown(this)"
+      onmouseup="mUp(this)"
+      style="
+        background-color: #d94a38;
+        width: 90px;
+        height: 20px;
+        padding: 40px;
+        color: #fff;
+        font-size: 18px;
+      "
+    >
+      Click Me
+    </div>
     <script>
-        function mDown(obj) {
-            obj.style.backgroundColor = "#1ec5e5";
-            obj.innerHMTL = "Release Me";
-        }
-        function mUp(obj) {
-            obj.style.backgroundColor="#D94A38";
-            obj.innerHTML="Thank You";
-        }
+      function mDown(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHMTL = "Release Me";
+      }
+      function mUp(obj) {
+        obj.style.backgroundColor = "#D94A38";
+        obj.innerHTML = "Thank You";
+      }
     </script>
-</body>
+  </body>
 </html>

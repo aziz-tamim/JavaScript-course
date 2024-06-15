@@ -1,84 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript variables</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Variables</h2>
 
     <b><p>In this example, x, y, and z are undeclared.</p></b>
     <p id="demo1"></p>
     <script>
-        x = 5;
-        y = 6;
-        z = x + y;
-        document.getElementById("demo1").innerHTML = "The value of z is:" + z;
+      x = 5;
+      y = 6;
+      z = x + y;
+      document.getElementById("demo1").innerHTML = "The value of z is:" + z;
     </script>
 
     <b><p>In this example, x, y, and z are variables.</p></b>
     <p id="demo2"></p>
     <script>
-        var x = 5;
-        var y = 6;
-        var z = x + y;
-        document.getElementById("demo2").innerHTML = "THe value of z is: " + z; 
+      var x = 5;
+      var y = 6;
+      var z = x + y;
+      document.getElementById("demo2").innerHTML = "THe value of z is: " + z;
     </script>
 
     <b><p>In this example, price1, price2, and total are variables.</p></b>
     <p id="demo4"></p>
     <script>
-        const price1 = 7;
-        const price2 = 6;
-        let total = price1 + price2;
-        document.getElementById("demo4").innerHTML = "The total is: " + total;
+      const price1 = 7;
+      const price2 = 6;
+      let total = price1 + price2;
+      document.getElementById("demo4").innerHTML = "The total is: " + total;
     </script>
 
     <b><p>Number are written withourt quotes.</p></b>
     <p id="demo5"></p>
     <script>
-        const pi = 3.14;
-        let person = "John Doe";
-        let answer = 'Yes I am!';
-        document.getElementById("demo5").innerHTML = pi + "<br>" + person + "<br>" + answer;
+      const pi = 3.14;
+      let person = "John Doe";
+      let answer = "Yes I am!";
+      document.getElementById("demo5").innerHTML =
+        pi + "<br>" + person + "<br>" + answer;
     </script>
 
     <b><p>Create a variable, assign a value to it, and display it:</p></b>
     <p id="demo6"></p>
     <script>
-        let carName = "Volvo";
-        document.getElementById("demo6").innerHTML = carName;
+      let carName = "Volvo";
+      document.getElementById("demo6").innerHTML = carName;
     </script>
 
     <b><p>You can declare many variables in one statement.</p></b>
     <p id="demo7"></p>
     <script>
-        let person1 = "John Doe", carName1 = "volvo", price = 200;
-        document.getElementById("demo7").innerHTML = carName1;
+      let person1 = "John Doe",
+        carName1 = "volvo",
+        price = 200;
+      document.getElementById("demo7").innerHTML = carName1;
     </script>
 
     <b><p>The result of adding 5 + 2 + 3 is:</p></b>
     <p id="demo8"></p>
     <script>
-        let x = 5 + 2 + 3;
-        document.getElementById("demo8").innerHTML = x;
+      let x = 5 + 2 + 3;
+      document.getElementById("demo8").innerHTML = x;
     </script>
 
     <b><p>The dollor sign is treated as a letter in JavaScript names.</p></b>
     <p id="demo9"></p>
     <script>
-        let $$$ = 2;
-        let $myMoney = 5;
-        document.getElementById("demo9").innerHTML = $$$ + $myMoney;
+      let $$$ = 2;
+      let $myMoney = 5;
+      document.getElementById("demo9").innerHTML = $$$ + $myMoney;
     </script>
 
     <b><p>The underscore is treated as a letter in JavaScript names.</p></b>
     <p id="demo10"></p>
     <script>
-        let _x = 2;
-        let _100 = 5;
-        document.getElementById("demo10").innerHTML = _x + _100;
+      let _x = 2;
+      let _100 = 5;
+      document.getElementById("demo10").innerHTML = _x + _100;
     </script>
-</body>
+  </body>
 </html>

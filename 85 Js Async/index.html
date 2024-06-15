@@ -1,81 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Async</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Javascript Async</h2>
 
     <b><p>JavaScript async / await</p></b>
     <p id="demo1"></p>
     <script>
-        function myDisplayer(some) {
-            document.getElementById("demo1").innerHTML = some;
+      function myDisplayer(some) {
+        document.getElementById("demo1").innerHTML = some;
+      }
+      async function myFunction1() {
+        return "Hello";
+      }
+      myFunction1().then(
+        function (value) {
+          myDisplayer(value);
+        },
+        function (error) {
+          myDisplayer(error);
         }
-        async function myFunction1() {return "Hello";}
-        myFunction1().then (
-            function(value) {myDisplayer(value);},
-            function(error) {myDisplayer(error);}
-        );
+      );
     </script>
 
     <b><p>JavaScript async / await</p></b>
     <p id="demo2"></p>
     <script>
-        function myDisplayer(some) {
-            document.getElementById("demo2").innerHTML = some;
-        }
-        async function myFunction2() {return "Hello";}
-        myFunction2().then(
-            function(value) {myDisplayer(value);}
-        );
+      function myDisplayer(some) {
+        document.getElementById("demo2").innerHTML = some;
+      }
+      async function myFunction2() {
+        return "Hello";
+      }
+      myFunction2().then(function (value) {
+        myDisplayer(value);
+      });
     </script>
 
     <b><p>JavaScript async / await</p></b>
     <h2 id="demo3"></h2>
     <script>
-        async function myDisplay() {
-            let myPromise = new Promise(function(resolve, reject) {
-                resolve("Hello World !!");
-            });
-            document.getElementById("demo3").innerHTML = await myPromise;
-        }
-        myDisplay();
+      async function myDisplay() {
+        let myPromise = new Promise(function (resolve, reject) {
+          resolve("Hello World !!");
+        });
+        document.getElementById("demo3").innerHTML = await myPromise;
+      }
+      myDisplay();
     </script>
 
     <b><p>JavaScript async / await</p></b>
     <h2 id="demo4"></h2>
     <script>
-        async function myDisplay() {
-            let myPromise = new Promise(function(resolve) {
-                resolve("Hello Bangladesh!!");
-            });
-            document.getElementById("demo4").innerHTML = await myPromise;
-        }
-        myDisplay();
+      async function myDisplay() {
+        let myPromise = new Promise(function (resolve) {
+          resolve("Hello Bangladesh!!");
+        });
+        document.getElementById("demo4").innerHTML = await myPromise;
+      }
+      myDisplay();
     </script>
 
     <b><p>JavaScript async / asait</p></b>
     <p id="demo5"></p>
     <script>
-        async function getFile() {
-          let myPromise = new Promise(function(resolve) {
-            let req = new XMLHttpRequest();
-            req.open('GET', "mycar.html");
-            req.onload = function() {
-              if (req.status == 200) {
-                resolve(req.response);
-              } else {
-                resolve("File not Found");
-              }
-            };
-            req.send();
-          });
-          document.getElementById("demo5").innerHTML = await myPromise;
-        }
-        getFile();
+      async function getFile() {
+        let myPromise = new Promise(function (resolve) {
+          let req = new XMLHttpRequest();
+          req.open("GET", "mycar.html");
+          req.onload = function () {
+            if (req.status == 200) {
+              resolve(req.response);
+            } else {
+              resolve("File not Found");
+            }
+          };
+          req.send();
+        });
+        document.getElementById("demo5").innerHTML = await myPromise;
+      }
+      getFile();
     </script>
-</body>
+  </body>
 </html>

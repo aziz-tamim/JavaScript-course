@@ -1,125 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Mistakes</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Mistakes</h2>
     <b><p>JavaScript Comparisons</p></b>
     <p id="demo1"></p>
     <script>
-        let x = 0;
-        document.getElementById("demo1").innerHTML = Boolean(x == 10);
+      let x = 0;
+      document.getElementById("demo1").innerHTML = Boolean(x == 10);
     </script>
 
     <b><p>common JavaScript Mistakes</p></b>
     <p id="demo2"></p>
     <script>
-        let y = 0;
-        document.getElementById("demo2").innerHTML = Boolean(y === 10);
+      let y = 0;
+      document.getElementById("demo2").innerHTML = Boolean(y === 10);
     </script>
 
     <b><p>Common JavaScript mistakes</p></b>
     <p id="demo3"></p>
     <script>
-        let z = 0;
-        document.getElementById("demo3").innerHTML = Boolean(z = 0);
+      let z = 0;
+      document.getElementById("demo3").innerHTML = Boolean((z = 0));
     </script>
 
     <b><p>Js Common Mistakes</p></b>
     <p id="demo4"></p>
     <script>
-        let a = 10;
-        let b = "10";
-        document.getElementById("demo4").innerHTML = Boolean(a == b);
+      let a = 10;
+      let b = "10";
+      document.getElementById("demo4").innerHTML = Boolean(a == b);
     </script>
 
     <b><p>JavaScript Common Mistakes</p></b>
     <p id="demo5"></p>
     <script>
-        let c = 10;
-        let d = "10";
-        document.getElementById("demo5").innerHTML = Boolean(c === d);
+      let c = 10;
+      let d = "10";
+      document.getElementById("demo5").innerHTML = Boolean(c === d);
     </script>
 
     <b><p>Js common mistakes</p></b>
     <p id="demo6"></p>
     <script>
-        let e = 10;
-        switch(e) {
-            case 10:
-        document.getElementById("demo6").innerHTML = "Hello";
-        }
+      let e = 10;
+      switch (e) {
+        case 10:
+          document.getElementById("demo6").innerHTML = "Hello";
+      }
     </script>
 
     <b><p>Common JavaScript Mistakes</p></b>
     <p id="demo7"></p>
     <script>
-        let f = 10;
-        f += "5";
-        document.getElementById("demo7").innerHTML = f;
+      let f = 10;
+      f += "5";
+      document.getElementById("demo7").innerHTML = f;
     </script>
 
     <b><p>JavaScript Common Mistakes</p></b>
     <p id="demo8"></p>
     <script>
-        let g = 0.1;
-        let h = 0.2;
-        let i = g + h;
-        document.getElementById("demo8").innerHTML = i;
+      let g = 0.1;
+      let h = 0.2;
+      let i = g + h;
+      document.getElementById("demo8").innerHTML = i;
     </script>
 
     <b><p>Common JavaScript Mistakes</p></b>
     <p id="demo9"></p>
     <script>
-        let j = 0.1;
-        let k = 0.2;
-        let l = (j * 10 + k *10) / 10;
-        document.getElementById("demo9").innerHTML = l;
+      let j = 0.1;
+      let k = 0.2;
+      let l = (j * 10 + k * 10) / 10;
+      document.getElementById("demo9").innerHTML = l;
     </script>
 
     <b><p>Breaking a JavaScript Statement</p></b>
     <p id="demo10"></p>
     <script>
-        document.getElementById("demo10").innerHTML = "Hello World!";
+      document.getElementById("demo10").innerHTML = "Hello World!";
     </script>
 
     <b><p>Common JavaScript Mistakes</p></b>
     <p id="demo11"></p>
     <script>
-        let m = 5;
-        if (x == 19);
-        {
-            document.getElementById("demo11").innerHTML = "Hello";
-        }
+      let m = 5;
+      if (x == 19);
+      {
+        document.getElementById("demo11").innerHTML = "Hello";
+      }
     </script>
 
     <b><p>This example will return a correct result:</p></b>
     <p id="demo12"></p>
     <script>
-        document.getElementById("demo12").innerHTML = myFunction(55);
-        function myFunction(a) {
-            let power = 10
-            return a * power
-        }
+      document.getElementById("demo12").innerHTML = myFunction(55);
+      function myFunction(a) {
+        let power = 10;
+        return a * power;
+      }
     </script>
 
     <b><p>JavaScript Arrays</p></b>
     <p id="demo13"></p>
     <script>
-        const person = [];
-        person[0] = "John";
-        person[1] = "Doe";
-        person[2] = 46;
-        document.getElementById("demo13").innerHTML = person[0] + " " + person.length;
+      const person = [];
+      person[0] = "John";
+      person[1] = "Doe";
+      person[2] = 46;
+      document.getElementById("demo13").innerHTML =
+        person[0] + " " + person.length;
     </script>
 
     <b><p>JavaScript objects</p></b>
     <p id="demo14"></p>
     <script>
-        document.getElementById("demo14").innerHTML = typeof myObj === "undefined";
+      document.getElementById("demo14").innerHTML =
+        typeof myObj === "undefined";
     </script>
-</body>
+  </body>
 </html>

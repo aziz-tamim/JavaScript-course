@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Object</title>    
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Object</title>
+  </head>
+  <body>
     <h2>JavaScript Objects</h2>
 
     <b><p>JavaScript Objects</p></b>
     <p id="demo1"></p>
     <script>
-        const car = {type:"Fiat", model:"500", color:"white"};
-        document.getElementById("demo1").innerHTML = "The car type is " + car.type;
+      const car = { type: "Fiat", model: "500", color: "white" };
+      document.getElementById("demo1").innerHTML =
+        "The car type is " + car.type;
     </script>
 
     <b><p>JavaScript Object</p></b>
     <p id="demo2"></p>
     <script>
-        const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
-        document.getElementById("demo2").innerHTML = person.firstName + " is " + person.age + " years old.";
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+      document.getElementById("demo2").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
     </script>
 
     <b><p>There are two different ways to access an object property.</p></b>
     <p id="demo3"></p>
     <script>
-        const person1 = {
-            firstName: "John",
-            lastName: "Doe",
-            id      : 5566,
-        };
-        document.getElementById("demo3").innerHTML = person.firstName + " " + person.lastName;
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+      };
+      document.getElementById("demo3").innerHTML =
+        person.firstName + " " + person.lastName;
     </script>
 
-    <b><p>An object method is a function definition, stored as a property value.</p></b>
+    <b
+      ><p>
+        An object method is a function definition, stored as a property value.
+      </p></b
+    >
     <p id="demo4"></p>
     <script>
-        const person2 = {
-            firstName: "Marry",
-            lastName: "Doe",
-            id: 5566,
-            fullName: function() {
-                return this.firstName + " " + this.lastName;
-            }
-        };
-        document.getElementById("demo4").innerHTML = person2.fullName();
+      const person2 = {
+        firstName: "Marry",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo4").innerHTML = person2.fullName();
     </script>
 
-    <b><p>If you access an object method without (),it will return the function definition:</p></b>
+    <b
+      ><p>
+        If you access an object method without (),it will return the function
+        definition:
+      </p></b
+    >
     <p id="demo5"></p>
     <script>
-        const person3 = {
-            firstName: "John",
-            lastName: " Doe",
-            id     : 5566,
-            fullName : function() {
-                return this.firstName + "" + this.lastName;
-            }
-        };
-        document.getElementById("demo5").innerHTML = person3.fullName();
+      const person3 = {
+        firstName: "John",
+        lastName: " Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + "" + this.lastName;
+        },
+      };
+      document.getElementById("demo5").innerHTML = person3.fullName();
     </script>
-</body>
+  </body>
 </html>

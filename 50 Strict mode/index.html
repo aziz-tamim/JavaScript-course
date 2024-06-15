@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Strict mode</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Use Strict</h2>
     <b><p>Using a variable without declaring it, is not allowed.</p></b>
     <script>
-        "use strict";
-        x = 3.14;
+      "use strict";
+      x = 3.14;
     </script>
 
     <b><p>Global "use Strict" declaration</p></b>
     <script>
-        "use strict"
-        myFunction();
-        function myFunction() {
-            y = 3.14;
-        }
+      "use strict";
+      myFunction();
+      function myFunction() {
+        y = 3.14;
+      }
     </script>
 
     <b><p>Deleting a variable (or object) is not allowed.</p></b>
     <script>
-        "use strict";
-        let z = 3.14;
-        delete z;
+      "use strict";
+      let z = 3.14;
+      delete z;
     </script>
 
     <b><p>Deleting a function is not allowed.</p></b>
     <script>
-        "use strict";
-        function a(p1, p2) {};
-        delete a;
+      "use strict";
+      function a(p1, p2) {}
+      delete a;
     </script>
 
     <b><p>Octal numeric literals are not allowed.</p></b>
     <script>
-        "use strict";
-        let b = 010;
+      "use strict";
+      let b = 010;
     </script>
 
     <b><p>Octal escape characters are not allowed</p></b>
     <script>
-        "use strict";
-        let c = "\010";
+      "use strict";
+      let c = "\010";
     </script>
-</body>
+  </body>
 </html>

@@ -1,127 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Object Constructors</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Object Constructors</h2>
 
     <b><p>JavaScript object constructors</p></b>
     <p id="demo1"></p>
     <script>
-        function Person(first, last, age, eye) {
-            this.firstName = first;
-            this.lastName = last;
-            this.age = age;
-            this.eyeColor = eye;
-        }
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
 
-        const myFather = new Person("John", "Doe", 50, "blue");
-        document.getElementById("demo1").innerHTML = "My father is " + myFather.age + ".";
+      const myFather = new Person("John", "Doe", 50, "blue");
+      document.getElementById("demo1").innerHTML =
+        "My father is " + myFather.age + ".";
     </script>
 
     <b><p>JavaScript Object Constructors</p></b>
     <p id="demo2"></p>
     <script>
-        function Person(first, last, age, eye) {
-            this.firstName = first;
-            this.lastName = last;
-            this.age = age;
-            this.eyeColor = eye;
-        }
-        const myFather1 = new Person("John", "Doe", 50, "blue");
-        const myMother = new Person("Sally", "Rally", 48, "green");
-        document.getElementById("demo2").innerHTML = "My father is " + myFather.age + ". My mother is " + myMother.age + ".";
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+      const myFather1 = new Person("John", "Doe", 50, "blue");
+      const myMother = new Person("Sally", "Rally", 48, "green");
+      document.getElementById("demo2").innerHTML =
+        "My father is " + myFather.age + ". My mother is " + myMother.age + ".";
     </script>
 
     <b><p>JavaScript object Constructors</p></b>
     <p id="demo3"></p>
     <script>
-        function Person(first, last, age, eye) {
-            this.firstName = first;
-            this.lastName = last;
-            this.age = age;
-            this.eyeColor = eye;
-        };
-        const myFather2 = new Person("John", "Doe", 50, "blue");
-        const myMother1 = new Person("Sally", "Rally", 48, "green");
-        myFather2.nationality = "English";
-        document.getElementById("demo3").innerHTML = "My father language is " + myFather2.nationality;
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+      const myFather2 = new Person("John", "Doe", 50, "blue");
+      const myMother1 = new Person("Sally", "Rally", 48, "green");
+      myFather2.nationality = "English";
+      document.getElementById("demo3").innerHTML =
+        "My father language is " + myFather2.nationality;
     </script>
 
     <b><p>javaScript object constructors</p></b>
     <p id="demo4"></p>
     <script>
-        function Person(first, last, age, eye) {
-            this.firstName = first;
-            this.lastName = last;
-            this.age = age;
-            this.eyeColor = eye;
-        }
-        const myFather3 = new Person("john", "Doe", 50, "blue");
-        const myMother2 = new Person("Sally", "Rally", 48, "green");
-        myFather3.name = function() {
-            return this.firstName + " " + this.lastName;
-        }
-        document.getElementById("demo4").innerHTML = "My father is " + myFather3.name();
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+      const myFather3 = new Person("john", "Doe", 50, "blue");
+      const myMother2 = new Person("Sally", "Rally", 48, "green");
+      myFather3.name = function () {
+        return this.firstName + " " + this.lastName;
+      };
+      document.getElementById("demo4").innerHTML =
+        "My father is " + myFather3.name();
     </script>
 
     <b><p>JavaScript Object Constructors</p></b>
     <p id="demo5"></p>
     <script>
-        function Person(first, last, age, eye) {
-            this.firstname = first;
-            this.lastName = last;
-            this.eyeColor = eye;
-            this.nationality = "English";
-        }
-        const myFather4 = new Person("John", "Doe", 50, "blue");
-        const myMother3 = new Person("Sally", "Rally", 48, "green");
-        document.getElementById("demo5").innerHTML = "My father is " + myFather4.nationality + ". My Mother is " + myMother3.nationality;
+      function Person(first, last, age, eye) {
+        this.firstname = first;
+        this.lastName = last;
+        this.eyeColor = eye;
+        this.nationality = "English";
+      }
+      const myFather4 = new Person("John", "Doe", 50, "blue");
+      const myMother3 = new Person("Sally", "Rally", 48, "green");
+      document.getElementById("demo5").innerHTML =
+        "My father is " +
+        myFather4.nationality +
+        ". My Mother is " +
+        myMother3.nationality;
     </script>
 
     <b><p>JavaScript Object Constructors</p></b>
     <p id="demo6"></p>
     <script>
-        const x1 = new String();
-        const x2 = new Number();
-        const x3 = new Boolean();
-        const x4 = new Object();
-        const x5 = new Array();
-        const x6 = new RegExp();
-        const x7 = new Function();
-        const x8 = new Date();
-        document.getElementById("demo6").innerHTML = 
-        "x1: " + typeof x1 + "<br>" + 
-        "x2: " + typeof x2 + "<br>" +
-        "x3: " + typeof x3 + "<br>" +
-        "x4: " + typeof x4 + "<br>" + 
-        "x5: " + typeof x5 + "<br>" +
-        "x6: " + typeof x6 + "<br>" +
-        "x7: " + typeof x7 + "<br>" + 
-        "x8: " + typeof x8 + "<br>";
+      const x1 = new String();
+      const x2 = new Number();
+      const x3 = new Boolean();
+      const x4 = new Object();
+      const x5 = new Array();
+      const x6 = new RegExp();
+      const x7 = new Function();
+      const x8 = new Date();
+      document.getElementById("demo6").innerHTML =
+        "x1: " +
+        typeof x1 +
+        "<br>" +
+        "x2: " +
+        typeof x2 +
+        "<br>" +
+        "x3: " +
+        typeof x3 +
+        "<br>" +
+        "x4: " +
+        typeof x4 +
+        "<br>" +
+        "x5: " +
+        typeof x5 +
+        "<br>" +
+        "x6: " +
+        typeof x6 +
+        "<br>" +
+        "x7: " +
+        typeof x7 +
+        "<br>" +
+        "x8: " +
+        typeof x8 +
+        "<br>";
     </script>
 
     <b><p>use string, number boolean literals</p></b>
-    <p id="demo7"></p>    
+    <p id="demo7"></p>
     <script>
-        let a1 = "";
-        let a2 = 0;
-        let a3 = false;
-        const a4 = {};
-        const a5 = [];
-        const a6 = /()/;
-        const a7 = function(){};
-        document.getElementById("demo7").innerHTML = 
-        "a1: " + typeof a1 + "<br>" +
-        "a2: " + typeof a2 + "<br>" +
-        "a3: " + typeof a3 + "<br>" +
-        "a4: " + typeof a4 + "<br>" +
-        "a5: " + typeof a5 + "<br>" +
-        "a6: " + typeof a6 + "<br>" +
-        "a7: " + typeof a7 + "<br>";
-    </script>   
-</body>
+      let a1 = "";
+      let a2 = 0;
+      let a3 = false;
+      const a4 = {};
+      const a5 = [];
+      const a6 = /()/;
+      const a7 = function () {};
+      document.getElementById("demo7").innerHTML =
+        "a1: " +
+        typeof a1 +
+        "<br>" +
+        "a2: " +
+        typeof a2 +
+        "<br>" +
+        "a3: " +
+        typeof a3 +
+        "<br>" +
+        "a4: " +
+        typeof a4 +
+        "<br>" +
+        "a5: " +
+        typeof a5 +
+        "<br>" +
+        "a6: " +
+        typeof a6 +
+        "<br>" +
+        "a7: " +
+        typeof a7 +
+        "<br>";
+    </script>
+  </body>
 </html>

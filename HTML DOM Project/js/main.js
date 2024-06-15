@@ -92,13 +92,15 @@ function markMileStone(checkbox, id) {
 }
 
 function sortMilestones(list) {
-  let itemsArray = Array.from(list.getElementsByClassName('milestone'));
+  let itemsArray = Array.from(list.getElementsByClassName("milestone"));
 
-  itemsArray.sort(function(a, b) {
-    return a.querySelector('p').innerText.localeCompare(b.querySelector('p').innerText);
+  itemsArray.sort(function (a, b) {
+    return a
+      .querySelector("p")
+      .innerText.localeCompare(b.querySelector("p").innerText);
   });
 
-  itemsArray.forEach(function(item) {
+  itemsArray.forEach(function (item) {
     list.appendChild(item);
   });
 }

@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Template String</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Template String</h2>
 
     <b><p>Templates use back-ticks (``) to define a string:</p></b>
     <p id="demo1"></p>
     <script>
-        let text1 = `Hello world!`;
-        document.getElementById("demo1").innerHTML = text1;
+      let text1 = `Hello world!`;
+      document.getElementById("demo1").innerHTML = text1;
     </script>
 
-    <b><p>With back-ticks, you can use both single and double quotes inside a string:</p></b>
+    <b
+      ><p>
+        With back-ticks, you can use both single and double quotes inside a
+        string:
+      </p></b
+    >
     <p id="demo2"></p>
     <script>
-        let text2 = `He's often called "Johnny"`;
-        document.getElementById("demo2").innerHTML = text2
+      let text2 = `He's often called "Johnny"`;
+      document.getElementById("demo2").innerHTML = text2;
     </script>
 
     <b><p>Templates allow multiline strings:</p></b>
     <p id="demo3"></p>
     <script>
-        let text3 = `The quick
+      let text3 = `The quick
                     brown fox
                     jumps over
                     the lazy dog`;
-        document.getElementById("demo3").innerHTML = text3;
+      document.getElementById("demo3").innerHTML = text3;
     </script>
 
     <b><p>Template allow variables in strings:</p></b>
     <p id="demo4"></p>
     <script>
-        let firstName = "John";
-        let lastName = "Doe";
-        let text4 = `Welcome ${firstName}, ${lastName}!`;
-        document.getElementById("demo4").innerHTML = text4;
+      let firstName = "John";
+      let lastName = "Doe";
+      let text4 = `Welcome ${firstName}, ${lastName}!`;
+      document.getElementById("demo4").innerHTML = text4;
     </script>
 
     <b><p>Templates allow variables in strings:</p></b>
     <p id="demo5"></p>
     <script>
-        let header = "Template strings";
-        let tags = ["template strings", "javascript", "es6"];
-        let html = `<h2>${header}</h2><ul>`;
-            for (const x of tags) {
-                html += `<li>${x}</li>`;
-            }
-            html += `</ul>`;
-        document.getElementById("demo5").innerHTML = html;
+      let header = "Template strings";
+      let tags = ["template strings", "javascript", "es6"];
+      let html = `<h2>${header}</h2><ul>`;
+      for (const x of tags) {
+        html += `<li>${x}</li>`;
+      }
+      html += `</ul>`;
+      document.getElementById("demo5").innerHTML = html;
     </script>
-</body>
+  </body>
 </html>

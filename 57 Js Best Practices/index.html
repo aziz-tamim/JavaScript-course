@@ -1,119 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Best Practices</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Best Practices</h2>
-    
+
     <b><p>JavaScript Literal Constructors</p></b>
-    <p id="demo1"></p>    
+    <p id="demo1"></p>
     <script>
-        let x1 = "";
-        let x2 = 0;
-        let x3 = false;
-        const x4 = {};
-        const x5 = [];
-        const x6 = /()/;
-        const x7 = function(){};
-        document.getElementById("demo1").innerHTML = 
-        "x1: " + typeof x1 + "<br>" +
-        "x2: " + typeof x2 + "<br>" + 
-        "x3: " + typeof x3 + "<br>" + 
-        "x4: " + typeof x4 + "<br>" + 
-        "x5: " + typeof x5 + "<br>" + 
-        "x6: " + typeof x6 + "<br>" +
-        "x7: " + typeof x7 + "<br>";
+      let x1 = "";
+      let x2 = 0;
+      let x3 = false;
+      const x4 = {};
+      const x5 = [];
+      const x6 = /()/;
+      const x7 = function () {};
+      document.getElementById("demo1").innerHTML =
+        "x1: " +
+        typeof x1 +
+        "<br>" +
+        "x2: " +
+        typeof x2 +
+        "<br>" +
+        "x3: " +
+        typeof x3 +
+        "<br>" +
+        "x4: " +
+        typeof x4 +
+        "<br>" +
+        "x5: " +
+        typeof x5 +
+        "<br>" +
+        "x6: " +
+        typeof x6 +
+        "<br>" +
+        "x7: " +
+        typeof x7 +
+        "<br>";
     </script>
 
     <b><p>JavaScript Variables</p></b>
     <p id="demo2"></p>
     <script>
-        let x = "Hello";
-        x = 5;
-        document.getElementById("demo2").innerHTML = typeof x;
+      let x = "Hello";
+      x = 5;
+      document.getElementById("demo2").innerHTML = typeof x;
     </script>
 
     <b><p>JavaScript Variables</p></b>
     <p id="demo3"></p>
     <script>
-        let y = 5;
-        document.getElementById("demo3").innerHTML = y.valueOf() + " " + typeof y;
+      let y = 5;
+      document.getElementById("demo3").innerHTML = y.valueOf() + " " + typeof y;
     </script>
 
     <b><p>JavaScript Variables</p></b>
     <p id="demo4"></p>
     <script>
-        document.getElementById("demo4").innerHTML = "Hello" - "Dolly";
+      document.getElementById("demo4").innerHTML = "Hello" - "Dolly";
     </script>
 
-    <b><p>JavaScript Comparisons </p></b>
+    <b><p>JavaScript Comparisons</p></b>
     <p id="demo5"></p>
     <script>
-        let z;
-        document.getElementById("demo5").innerHTML = z;
+      let z;
+      document.getElementById("demo5").innerHTML = z;
     </script>
 
     <b><p>JavaScript Function</p></b>
     <p id="demo6"></p>
     <script>
-        function myFunction(x, y) {
-            if(y === undefined) {
-                y = 0;
-            }
-            return x * y;
+      function myFunction(x, y) {
+        if (y === undefined) {
+          y = 0;
         }
-        document.getElementById("demo6").innerHTML = myFunction(4);
+        return x * y;
+      }
+      document.getElementById("demo6").innerHTML = myFunction(4);
     </script>
 
     <b><p>End your Switches with Defaults</p></b>
     <p id="demo7"></p>
     <script>
-        let day;
-        switch (new Date().getDay()) {
-            case 0:
-                day = "Sunday";
-                break;
-            case 1:
-                day = "Monday";
-                break;
-            case 2:
-                day = "Tuesday";
-                break;
-            case 3:
-                day = "Wednesday";
-                break;
-            case 4:
-                day = "Thursday";
-                break;
-            case 5:
-                day = "Friday";
-                break;
-            case 6:
-                day = "Saturday";
-                break;
-            default:
-                day = "unKnown";
-        }
-        document.getElementById("demo7").innerHTML = "Today is " + day;
+      let day;
+      switch (new Date().getDay()) {
+        case 0:
+          day = "Sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+          break;
+        default:
+          day = "unKnown";
+      }
+      document.getElementById("demo7").innerHTML = "Today is " + day;
     </script>
 
     <b><p>JavaScript String Objects</p></b>
     <p id="demo8"></p>
     <script>
-        let a = "John";
-        let b = new String("John");
-        document.getElementById("demo8").innerHTML = (a === b); 
+      let a = "John";
+      let b = new String("John");
+      document.getElementById("demo8").innerHTML = a === b;
     </script>
 
     <b><p>JavaScript String Object</p></b>
     <p id="demo9"></p>
     <script>
-        let c = new String("John");
-        let d = new String("John");
-        document.getElementById("demo9").innerHTML = (c == d);
+      let c = new String("John");
+      let d = new String("John");
+      document.getElementById("demo9").innerHTML = c == d;
     </script>
-</body>
+  </body>
 </html>

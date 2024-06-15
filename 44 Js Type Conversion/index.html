@@ -1,59 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Type Conversion</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Type Conversion</h2>
 
     <b><p>The Number() Method</p></b>
     <p id="demo1"></p>
     <script>
-        document.getElementById("demo1").innerHTML = 
-        Number("3.14") + "<br>" +
-        Number(Math.PI) + "<br>" +
-        Number("    ") + "<br>" + 
-        Number("") + "<br>" +
-        Number("99 88") + "<br>" +
-        Number("John") + "<br>";
+      document.getElementById("demo1").innerHTML =
+        Number("3.14") +
+        "<br>" +
+        Number(Math.PI) +
+        "<br>" +
+        Number("    ") +
+        "<br>" +
+        Number("") +
+        "<br>" +
+        Number("99 88") +
+        "<br>" +
+        Number("John") +
+        "<br>";
     </script>
 
     <b><p>The JavaScript typeof Operator</p></b>
     <p id="demo2"></p>
     <script>
-        let y = "5";
-        let x = + y;
-        document.getElementById("demo2").innerHTML = typeof y + "<br>" + typeof x;
+      let y = "5";
+      let x = +y;
+      document.getElementById("demo2").innerHTML = typeof y + "<br>" + typeof x;
     </script>
 
-    <b><p>The typeof operator returns the type of a variable or expression:</p></b>
+    <b
+      ><p>
+        The typeof operator returns the type of a variable or expression:
+      </p></b
+    >
     <p id="demo3"></p>
     <script>
-        let a = "John";
-        let b = + a;
-        document.getElementById("demo3").innerHTML = typeof a + "<br>" + typeof b;
+      let a = "John";
+      let b = +a;
+      document.getElementById("demo3").innerHTML = typeof a + "<br>" + typeof b;
     </script>
 
     <b><p>The JavaScript String() Method</p></b>
     <p id="demo4"></p>
     <script>
-        let c = 123;
-        document.getElementById("demo4").innerHTML = 
-        String(c) + "<br>" + 
-        String(123) + "<br>" + 
-        String(100 + 23);
+      let c = 123;
+      document.getElementById("demo4").innerHTML =
+        String(c) + "<br>" + String(123) + "<br>" + String(100 + 23);
     </script>
 
     <b><p>The toString() Method</p></b>
     <p id="demo5"></p>
     <script>
-        let d = 123;
-        document.getElementById("demo5").innerHTML = 
-        d.toString() + "<br>" + 
-        (123).toString() + "<br>" + 
+      let d = 123;
+      document.getElementById("demo5").innerHTML =
+        d.toString() +
+        "<br>" +
+        (123).toString() +
+        "<br>" +
         (100 + 23).toString();
     </script>
-</body>
+  </body>
 </html>

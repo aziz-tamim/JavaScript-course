@@ -8,9 +8,9 @@ width.innerHTML = "window inner width is: " + window.innerWidth;
 height.innerHTML = "window inner height is: " + window.innerHeight;
 
 function openWindow() {
-    myWindow = window.open("https://google.com");
+  myWindow = window.open("https://google.com");
 }
 
 function closeWindow() {
-    myWindow.close();
+  myWindow.close();
 }

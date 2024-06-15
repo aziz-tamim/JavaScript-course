@@ -1,86 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript object Prototypes</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Object ProtoTypes</h2>
 
     <b><p>Using an object constructor:</p></b>
     <p id="demo1"></p>
     <script>
-        function Person(first, last, age, eye) {
-            this.firstName = first;
-            this.lastName = last;
-            this.age = age;
-            this.eyeColor = eye;
-        }
-        const myFather = new Person("John", "Doe", 50, "blue");
-        const myMother = new Person("Sally", "Rally", 48, "green");
-        document.getElementById("demo1").innerHTML = "My father is " + myFather.age + ". My mother is " + myMother.age;
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+      const myFather = new Person("John", "Doe", 50, "blue");
+      const myMother = new Person("Sally", "Rally", 48, "green");
+      document.getElementById("demo1").innerHTML =
+        "My father is " + myFather.age + ". My mother is " + myMother.age;
     </script>
 
     <b><p>you cannot add a new property to a constructor function.</p></b>
     <p id="demo2"></p>
     <script>
-        function Person(first, last, age, eye) {
-            this.firstName = first;
-            this.lastName = last;
-            this.age = age;
-            this.eyeColor = eye;
-        }
-        Person.nationality = "English";
-        const myFather1 = new Person("John", "Doe", 50, "blue");
-        const myMother1 = new Person("Sally", "Rally", 48, "green");
-        document.getElementById("demo2").innerHTML = "The nationality of my father is " + myFather1.nationality;
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+      Person.nationality = "English";
+      const myFather1 = new Person("John", "Doe", 50, "blue");
+      const myMother1 = new Person("Sally", "Rally", 48, "green");
+      document.getElementById("demo2").innerHTML =
+        "The nationality of my father is " + myFather1.nationality;
     </script>
 
     <b><p>Using an object constructor:</p></b>
     <p id="demo3"></p>
     <script>
-        function Person(first, last, age, eye) {
-            this.firstName = first;
-            this.lastName = last;
-            this.age = age;
-            this.eyeColor = eye;
-            this.nationality = "English";
-        }
-        const myFather2 = new Person("John", "Doe", 50, "blue");
-        const myMother2 = new Person("Sally", "Rally", 48, "green");
-        document.getElementById("demo3").innerHTML = 
-        "The nationality of my father is " + myFather2.nationality + ". The nationality of my mother is " + myMother2.nationality;
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+        this.nationality = "English";
+      }
+      const myFather2 = new Person("John", "Doe", 50, "blue");
+      const myMother2 = new Person("Sally", "Rally", 48, "green");
+      document.getElementById("demo3").innerHTML =
+        "The nationality of my father is " +
+        myFather2.nationality +
+        ". The nationality of my mother is " +
+        myMother2.nationality;
     </script>
 
-    <b><p>The prototype property allows you to add new methods to objects constructors:</p></b>
+    <b
+      ><p>
+        The prototype property allows you to add new methods to objects
+        constructors:
+      </p></b
+    >
     <p id="demo4"></p>
     <script>
-        function Person(first, last, age, eye) {
-            this.firstName = first;
-            this.lastName = last;
-            this.age = age;
-            this.eyeColor = eye; 
-        }
-        Person.prototype.nationality = "English";
-        const myFather3 = new Person("John", "Doe", 50, "blue");
-        document.getElementById("demo4").innerHTML = "The nationality of my father is " + myFather3.nationality;
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+      Person.prototype.nationality = "English";
+      const myFather3 = new Person("John", "Doe", 50, "blue");
+      document.getElementById("demo4").innerHTML =
+        "The nationality of my father is " + myFather3.nationality;
     </script>
 
     <b><p>JavaScript object</p></b>
     <p id="demo5"></p>
     <script>
-        function Person(first, last, age, eye) {
-            this.firstName = first;
-            this.lastName = last;
-            this.age = age;
-            this.eyeColor = eye; 
-        }
-        Person.prototype.name = function() {
-            return this.firstName + " " + this.lastName
-        };
-        const myFather5 = new Person("John", "Doe", 50, "blue");
-        document.getElementById("demo5").innerHTML = "My father is " + myFather5.name();
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+      Person.prototype.name = function () {
+        return this.firstName + " " + this.lastName;
+      };
+      const myFather5 = new Person("John", "Doe", 50, "blue");
+      document.getElementById("demo5").innerHTML =
+        "My father is " + myFather5.name();
     </script>
-</body>
+  </body>
 </html>

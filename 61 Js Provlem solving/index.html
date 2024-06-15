@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Provlem Solving</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Provlem Solving</h2>
 
     <b><p>Provlem solving 01</p></b>
@@ -13,119 +13,129 @@
     <p id="demo2"></p>
     <p id="demo3"></p>
     <script>
-        const sentence = "Learn with Sumit is all about teaching web development skills and techniques in an efficient   and practical manner. If you are just getting started in web development, Learn with Sumit has all the tools you need to learn the newest and most popular technologies to convert you from a no stack to full stack developer. Learn with Sumit also deep dives into advanced topics using the latest best practices for you seasoned web developers.";
-        const matches = sentence.match(/Sumit/gi);
-        document.getElementById("demo1").innerHTML = matches;
+      const sentence =
+        "Learn with Sumit is all about teaching web development skills and techniques in an efficient   and practical manner. If you are just getting started in web development, Learn with Sumit has all the tools you need to learn the newest and most popular technologies to convert you from a no stack to full stack developer. Learn with Sumit also deep dives into advanced topics using the latest best practices for you seasoned web developers.";
+      const matches = sentence.match(/Sumit/gi);
+      document.getElementById("demo1").innerHTML = matches;
 
-        const occurances = matches ?  matches.length : 0;
-        document.getElementById("demo2").innerHTML = occurances;
+      const occurances = matches ? matches.length : 0;
+      document.getElementById("demo2").innerHTML = occurances;
 
-        let position = sentence.search(/Sumit/i);
-        position = position >= 0 ? position : "not found!";
-        document.getElementById("demo3").innerHTML = position;
+      let position = sentence.search(/Sumit/i);
+      position = position >= 0 ? position : "not found!";
+      document.getElementById("demo3").innerHTML = position;
     </script>
 
     <b><p>Provlem solving 02</p></b>
     <p id="demo4"></p>
     <script>
-        function linearSearch(arr, val) {
-            const length = arr.length;
-            for (let i = 0; i < length; i++) {
-                if(arr[i] === val) {
-                    return i;
-                }
-            }
-            return 'not found!';
+      function linearSearch(arr, val) {
+        const length = arr.length;
+        for (let i = 0; i < length; i++) {
+          if (arr[i] === val) {
+            return i;
+          }
         }
-        document.getElementById("demo4").innerHTML = (linearSearch (['a', 'b', 'c', 'd', 'c'], 'c'));
+        return "not found!";
+      }
+      document.getElementById("demo4").innerHTML = linearSearch(
+        ["a", "b", "c", "d", "c"],
+        "c"
+      );
     </script>
 
     <b><p>provlem solving 03</p></b>
     <p id="demo5"></p>
     <script>
-        function longestString(names) {
-            let longestWord = '';
-            for (name of names) {
-                if(name.length > longestWord.length) {
-                    longestWord = name;
-                }
-            }
-            return [longestWord, names.indexOf(longestWord)];
+      function longestString(names) {
+        let longestWord = "";
+        for (name of names) {
+          if (name.length > longestWord.length) {
+            longestWord = name;
+          }
         }
-        document.getElementById("demo5").innerHTML = (longestString(['Sumit Saha', 'Learn with Sumit', 'akash', 'Saad', 'Daiyan']));
+        return [longestWord, names.indexOf(longestWord)];
+      }
+      document.getElementById("demo5").innerHTML = longestString([
+        "Sumit Saha",
+        "Learn with Sumit",
+        "akash",
+        "Saad",
+        "Daiyan",
+      ]);
     </script>
 
     <b><p>provlem solving 04</p></b>
     <p id="demo6"></p>
     <script>
-        function fizzBuzz(number) {
-            for(let i = 1; i <= number; i++) {
-                if(i % 15 === 0) {
-                    return(`${i} is fizzBuzz`);
-                } else if(9 % 3 === 0) {
-                    return(`${i} is Fizz`);
-                } else if(i % 5 === 0) {
-                    return(`${i} is Buzz`);
-                } else {
-                    return (i);
-                }
-            }
+      function fizzBuzz(number) {
+        for (let i = 1; i <= number; i++) {
+          if (i % 15 === 0) {
+            return `${i} is fizzBuzz`;
+          } else if (9 % 3 === 0) {
+            return `${i} is Fizz`;
+          } else if (i % 5 === 0) {
+            return `${i} is Buzz`;
+          } else {
+            return i;
+          }
         }
-        fizzBuzz(100);
-        document.getElementById("demo6").innerHTML = fizzBuzz(100);
+      }
+      fizzBuzz(100);
+      document.getElementById("demo6").innerHTML = fizzBuzz(100);
     </script>
 
     <b><p>provlem solving 07</p></b>
     <p id="demo7"></p>
     <script>
-        const mixedArr = [
-            "lws",
-            undefined,
-            "learn With Sumit",
-            false,
-            "",
-            "apple",
-            40,
-            "k",
-            true,
-            "Thanks all",
-            NaN
-        ];
-        const trueArray = mixedArr.filter(function(el) {
-            if(el) {
-                return true;
-            } else {
-                return false;
-            }
-        });
-        document.getElementById("demo7").innerHTML = trueArray;
+      const mixedArr = [
+        "lws",
+        undefined,
+        "learn With Sumit",
+        false,
+        "",
+        "apple",
+        40,
+        "k",
+        true,
+        "Thanks all",
+        NaN,
+      ];
+      const trueArray = mixedArr.filter(function (el) {
+        if (el) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      document.getElementById("demo7").innerHTML = trueArray;
     </script>
 
     <b><p>provlem solving 08</p></b>
     <p id="demo8"></p>
     <script>
-        const obj = {
-            a: "lws",
-            b: undefined,
-            c: "learn with sumit",
-            d: false,
-            e: "",
-            f: "apple",
-            g: 40,
-            h: "k",
-            i: true,
-            j: "Thanks all",
-            k: NaN,
-        };
-        const truthyObject = function(obj) {
-            for(let i in obj){
-                if(!obj[i]) {
-                    delete obj[i];
-                }
-            }
-            return obj;
+      const obj = {
+        a: "lws",
+        b: undefined,
+        c: "learn with sumit",
+        d: false,
+        e: "",
+        f: "apple",
+        g: 40,
+        h: "k",
+        i: true,
+        j: "Thanks all",
+        k: NaN,
+      };
+      const truthyObject = function (obj) {
+        for (let i in obj) {
+          if (!obj[i]) {
+            delete obj[i];
+          }
         }
-        document.getElementById("demo8").innerHTML = (truthyObject (obj));
+        return obj;
+      };
+      document.getElementById("demo8").innerHTML = truthyObject(obj);
     </script>
-</body>
+  </body>
 </html>

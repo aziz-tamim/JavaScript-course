@@ -1,139 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Array Methods</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Array Methods</h2>
-    
+
     <b><p>The length Property</p></b>
     <p id="demo1"></p>
     <script>
-        const fruits1 = ["Banana", "Orange", "Apple", "Mango"]
-        let size = fruits1.length;
-        document.getElementById("demo1").innerHTML = size;
+      const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+      let size = fruits1.length;
+      document.getElementById("demo1").innerHTML = size;
     </script>
 
     <b><p>The toString Method</p></b>
     <p id="demo2"></p>
     <script>
-        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo2").innerHTML = fruits2.toString();
+      const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo2").innerHTML = fruits2.toString();
     </script>
 
     <b><p>The at() Methods</p></b>
     <p id="demo3"></p>
     <script>
-        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
-        let fruit = fruits3.at(2);
-        document.getElementById("demo3").innerHTML = fruit;
+      const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+      let fruit = fruits3.at(2);
+      document.getElementById("demo3").innerHTML = fruit;
     </script>
 
     <b><p>The join() Method</p></b>
     <p id="demo4"></p>
     <script>
-        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo4").innerHTML = fruits4.join(" * ");
+      const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo4").innerHTML = fruits4.join(" * ");
     </script>
 
     <b><p>The Pop() Method</p></b>
     <p id="demo5"></p>
     <p id="demo6"></p>
     <script>
-        const fruits5 = ["Banana", "Orange", "Apple", "Mango"]
-        document.getElementById("demo5").innerHTML = fruits5;
-        document.getElementById("demo6").innerHTML = fruits5;
+      const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo5").innerHTML = fruits5;
+      document.getElementById("demo6").innerHTML = fruits5;
     </script>
 
     <b><p>The push() Method</p></b>
     <p id="demo7"></p>
     <p id="demo8"></p>
     <script>
-        const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo7").innerHTML = fruits6;
-        fruits6.push("kiwi");
-        document.getElementById("demo8").innerHTML = fruits6;
+      const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo7").innerHTML = fruits6;
+      fruits6.push("kiwi");
+      document.getElementById("demo8").innerHTML = fruits6;
     </script>
 
     <b><p>The shift() Method</p></b>
     <p id="demo9"></p>
     <p id="demo10"></p>
     <script>
-        const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo9").innerHTML = fruits7;
-        fruits7.shift();
-        document.getElementById("demo10").innerHTML = fruits7;
+      const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo9").innerHTML = fruits7;
+      fruits7.shift();
+      document.getElementById("demo10").innerHTML = fruits7;
     </script>
 
     <b><p>The unshift() Method</p></b>
-    <p id="demo11"></p> 
-    <p id="demo12"></p> 
+    <p id="demo11"></p>
+    <p id="demo12"></p>
     <script>
-        const fruits8 = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo11").innerHTML = fruits8;
-        fruits8.unshift("Lemon");
-        document.getElementById("demo12").innerHTML = fruits8;
+      const fruits8 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo11").innerHTML = fruits8;
+      fruits8.unshift("Lemon");
+      document.getElementById("demo12").innerHTML = fruits8;
     </script>
 
     <b><p>The delete Method</p></b>
     <p id="demo13"></p>
     <p id="demo14"></p>
     <script>
-        const fruits9 = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo13").innerHTML = "The first fruit is: " + fruits9[0]; 
-        delete fruits9[0];
-        document.getElementById("demo14").innerHTML = "The first fruit is: " + fruits9[0];
+      const fruits9 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo13").innerHTML =
+        "The first fruit is: " + fruits9[0];
+      delete fruits9[0];
+      document.getElementById("demo14").innerHTML =
+        "The first fruit is: " + fruits9[0];
     </script>
 
     <b><p>The concat() Method</p></b>
     <p id="demo15"></p>
     <script>
-        const myGirls = ["Cecilie", "Lone"];
-        const myBoys = ["Emil", "Tobias", "Linus"];
-        const myChildren = myGirls.concat(myBoys);
-        document.getElementById("demo15").innerHTML = myChildren;
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const myChildren = myGirls.concat(myBoys);
+      document.getElementById("demo15").innerHTML = myChildren;
     </script>
 
     <b><p>The copyWithin() Method</p></b>
     <p id="demo16"></p>
     <script>
-        const fruits10 = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo16").innerHTML = fruits10.copyWithin(2,0);
+      const fruits10 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo16").innerHTML = fruits10.copyWithin(2, 0);
     </script>
 
     <b><p>The fiat() Method</p></b>
     <p id="demo17"></p>
     <script>
-        const myArr = [[1,2],[3,4],[5,6]];
-        const newArr = myArr.flat();
-        document.getElementById("demo17").innerHTML = newArr;
+      const myArr = [
+        [1, 2],
+        [3, 4],
+        [5, 6],
+      ];
+      const newArr = myArr.flat();
+      document.getElementById("demo17").innerHTML = newArr;
     </script>
 
     <b><p>The splice() Method</p></b>
     <p id="demo18"></p>
     <p id="demo19"></p>
     <script>
-        const fruits11 = ["Banana","Orange", "Apple", "Mango"];
-        document.getElementById("demo18").innerHTML = fruits11;
-        fruits11.splice(2,0, "Lemon", "Kiwi");
-        document.getElementById("demo19").innerHTML = fruits11;
+      const fruits11 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo18").innerHTML = fruits11;
+      fruits11.splice(2, 0, "Lemon", "Kiwi");
+      document.getElementById("demo19").innerHTML = fruits11;
     </script>
 
     <b><p>The toSpliced() Method</p></b>
     <p id="demo20"></p>
     <script>
-        const months = ["Jan", "Feb", "Mar", "Apr"];
-        const spliced = months.toSpliced(0,1);
-        document.getElementById("demo20").innerHTML = spliced;
+      const months = ["Jan", "Feb", "Mar", "Apr"];
+      const spliced = months.toSpliced(0, 1);
+      document.getElementById("demo20").innerHTML = spliced;
     </script>
 
     <b><p>The toString() Method</p></b>
     <p id="demo21"></p>
     <script>
-        const fruits12 = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo21").innerHTML = fruits12.toString();
+      const fruits12 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo21").innerHTML = fruits12.toString();
     </script>
-</body>
+  </body>
 </html>

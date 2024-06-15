@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript While Loop</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript While Loop</h2>
 
     <b><p>JavaScript While Loop</p></b>
     <p id="demo1"></p>
     <script>
-        let text = "";
-        let i = 0;
-        while (i < 10) {
-            text += "<br>The number is " + i;
-            i++; 
-        }
-        document.getElementById("demo1").innerHTML = text;
+      let text = "";
+      let i = 0;
+      while (i < 10) {
+        text += "<br>The number is " + i;
+        i++;
+      }
+      document.getElementById("demo1").innerHTML = text;
     </script>
 
     <b><p>JavaScript Do while Loop</p></b>
     <p id="demo2"></p>
     <script>
-        let text1 = "";
-        let j = 0;
-        do {
-            text1 += "<br>The number is " + j;
-            j++;
-        }
-        while (j < 10);
-        document.getElementById("demo2").innerHTML = text1;
+      let text1 = "";
+      let j = 0;
+      do {
+        text1 += "<br>The number is " + j;
+        j++;
+      } while (j < 10);
+      document.getElementById("demo2").innerHTML = text1;
     </script>
 
     <b><p>JavaScript for loop</p></b>
     <p id="demo3"></p>
     <script>
-        const cars = ["BMW", "Volvo", "Saab", "Ford"];
-        let k = 0;
-        let text2 = "";
-        for (;cars[k];) {
-            text2 += cars[k] + "<br>";
-            k++;
-        }
-        document.getElementById("demo3").innerHTML = text2;
+      const cars = ["BMW", "Volvo", "Saab", "Ford"];
+      let k = 0;
+      let text2 = "";
+      for (; cars[k]; ) {
+        text2 += cars[k] + "<br>";
+        k++;
+      }
+      document.getElementById("demo3").innerHTML = text2;
     </script>
-</body>
+  </body>
 </html>

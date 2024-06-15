@@ -1,90 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Get Date Methods</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Get Date Methods</h2>
 
     <b><p>The getFullYear() Method</p></b>
     <p id="demo1"></p>
     <script>
-        const d = new Date("2024-03-25")
-        document.getElementById("demo1").innerHTML = d.getFullYear();
+      const d = new Date("2024-03-25");
+      document.getElementById("demo1").innerHTML = d.getFullYear();
     </script>
 
     <b><p>The getMonth() Method</p></b>
     <p id="demo2"></p>
     <script>
-        const e = new Date("2024-04-25");
-        document.getElementById("demo2").innerHTML = e.getMonth() + 1;
+      const e = new Date("2024-04-25");
+      document.getElementById("demo2").innerHTML = e.getMonth() + 1;
     </script>
 
     <b><p>Javascript getMonth()</p></b>
     <p id="demo3"></p>
     <script>
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "Sepember", "October", "November", "December"];
-        const f = new Date("2021-03-25");
-        let month = months[f.getMonth()];
-        document.getElementById("demo3").innerHTML = month;
+      const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "Sepember",
+        "October",
+        "November",
+        "December",
+      ];
+      const f = new Date("2021-03-25");
+      let month = months[f.getMonth()];
+      document.getElementById("demo3").innerHTML = month;
     </script>
 
     <b><p>The getDate() Method</p></b>
     <p id="demo4"></p>
     <script>
-        const g = new Date("2021-03-25");
-        document.getElementById("demo4").innerHTML = g.getDate();
+      const g = new Date("2021-03-25");
+      document.getElementById("demo4").innerHTML = g.getDate();
     </script>
 
     <b><p>The getHours() Method</p></b>
     <p id="demo5"></p>
     <script>
-        const h = new Date("2021-03-25");
-        document.getElementById("demo5").innerHTML = h.getHours();
+      const h = new Date("2021-03-25");
+      document.getElementById("demo5").innerHTML = h.getHours();
     </script>
 
     <b><p>The getMinutes() Method</p></b>
     <p id="demo6"></p>
     <script>
-        const i = new Date("2021-03-25");
-        document.getElementById("demo6").innerHTML = i.getMinutes();
+      const i = new Date("2021-03-25");
+      document.getElementById("demo6").innerHTML = i.getMinutes();
     </script>
 
     <b><p>The getSeconds() Method</p></b>
     <p id="demo7"></p>
     <script>
-        const j = new Date();
-        document.getElementById("demo7").innerHTML = j.getSeconds();
+      const j = new Date();
+      document.getElementById("demo7").innerHTML = j.getSeconds();
     </script>
 
     <b><p>The getMilliseconds()</p></b>
     <p id="demo8"></p>
     <script>
-        const k = new Date();
-        document.getElementById("demo8").innerHTML = k.getMilliseconds();
+      const k = new Date();
+      document.getElementById("demo8").innerHTML = k.getMilliseconds();
     </script>
 
     <b><p>The getDay() Method</p></b>
     <p id="demo9"></p>
     <script>
-        const l = new Date("2021-03-25");
-        document.getElementById("demo9").innerHTML = l.getDay();
+      const l = new Date("2021-03-25");
+      document.getElementById("demo9").innerHTML = l.getDay();
     </script>
 
     <b><p>The getTime() Method</p></b>
     <p id="demo10"></p>
     <script>
-        const m = new Date();
-        document.getElementById("demo10").innerHTML = m.getTime();
+      const m = new Date();
+      document.getElementById("demo10").innerHTML = m.getTime();
     </script>
 
     <b><p>The getTimezomeOffset() Method</p></b>
     <p id="demo11"></p>
     <script>
-        const n = new Date();
-        document.getElementById("demo11").innerHTML = n.getTimezoneOffset();
+      const n = new Date();
+      document.getElementById("demo11").innerHTML = n.getTimezoneOffset();
     </script>
-</body>
+  </body>
 </html>

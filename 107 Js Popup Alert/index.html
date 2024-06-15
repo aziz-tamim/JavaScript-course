@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Popup Boxes</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Popup Boxes</h2>
 
     <b><p>JavaScript Alert</p></b>
     <button onclick="myFunction1()">Try it</button>
     <script>
-        function myFunction1() {
-            alert("I am an alert box!");
-        }
+      function myFunction1() {
+        alert("I am an alert box!");
+      }
     </script>
 
     <b><p>JavaScript Confirm Box</p></b>
     <button onclick="myFunction2()">Try it</button>
     <p id="demo1"></p>
     <script>
-        function myFunction2() {
-            var txt;
-            if (confirm("Press a button!"))
-            {
-                txt = "You pressed OK!";
-            } else {
-                txt = "You pressed Cancel!";
-            }
-            document.getElementById("demo1").innerHTML = txt;
+      function myFunction2() {
+        var txt;
+        if (confirm("Press a button!")) {
+          txt = "You pressed OK!";
+        } else {
+          txt = "You pressed Cancel!";
         }
+        document.getElementById("demo1").innerHTML = txt;
+      }
     </script>
 
     <b><p>JavaScript Prompt</p></b>
     <button onclick="myFunction3()">Try it</button>
     <p id="demo2"></p>
     <script>
-        function myFunction3() {
-            let text;
-            let person = prompt("Please enter your name:", "Harry Potter");
-            if (person == null || person == "") {
-                text = "User cancelled the prompt.";
-            } else {
-                text = "Hello " + person + "! How are you today?";
-            }
-            document.getElementById("demo2").innerHTML = text;
+      function myFunction3() {
+        let text;
+        let person = prompt("Please enter your name:", "Harry Potter");
+        if (person == null || person == "") {
+          text = "User cancelled the prompt.";
+        } else {
+          text = "Hello " + person + "! How are you today?";
         }
+        document.getElementById("demo2").innerHTML = text;
+      }
     </script>
 
     <b><p>JavaScript Line-breaks in a popup box.</p></b>
     <button onclick="alert('Hello\nHow are you?')">Try it</button>
-</body>
+  </body>
 </html>

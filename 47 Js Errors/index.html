@@ -1,105 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Errors</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Errors</h2>
 
     <b><p>How to use catch to display an error.</p></b>
     <p id="demo1"></p>
     <script>
-        try {
-            addlert("Welcome guest!");
-        }
-        catch(err) {
-            document.getElementById("demo1").innerHTML = err.message;
-        }
+      try {
+        addlert("Welcome guest!");
+      } catch (err) {
+        document.getElementById("demo1").innerHTML = err.message;
+      }
     </script>
 
     <b><p>please input a number 5 and 10:</p></b>
-    <input id="demo" type="text">
+    <input id="demo" type="text" />
     <button type="button" onclick="myFunction()">Test Input</button>
     <p id="p01"></p>
     <script>
-        function myFunction() {
-          const message = document.getElementById("p01");
-          message.innerHTML = "";
-          let x = document.getElementById("demo").value;
-          try { 
-            if(x.trim() == "")  throw "is empty";
-            if(isNaN(x)) throw "is not a number";
-            x = Number(x);
-            if(x > 10)   throw "is too high";
-            if(x < 5)  throw "is too low";
-          }
-          catch(err) {
-            message.innerHTML = "Input " + err;
-          }
-          finally {
-            document.getElementById("demo").value = "";
-          }
+      function myFunction() {
+        const message = document.getElementById("p01");
+        message.innerHTML = "";
+        let x = document.getElementById("demo").value;
+        try {
+          if (x.trim() == "") throw "is empty";
+          if (isNaN(x)) throw "is not a number";
+          x = Number(x);
+          if (x > 10) throw "is too high";
+          if (x < 5) throw "is too low";
+        } catch (err) {
+          message.innerHTML = "Input " + err;
+        } finally {
+          document.getElementById("demo").value = "";
         }
+      }
     </script>
 
     <b><p>The RangeError</p></b>
     <p id="demo3"></p>
     <script>
-        let num = 1;
-        try {
-            num.toPrecision(500);
-        }
-        catch(err) {
-            document.getElementById("demo3").innerHTML = err.name;
-        }
+      let num = 1;
+      try {
+        num.toPrecision(500);
+      } catch (err) {
+        document.getElementById("demo3").innerHTML = err.name;
+      }
     </script>
 
     <b><p>The ReferenceError</p></b>
     <p id="demo4"></p>
     <script>
-        let x = 5;
-        try {
-            x = y + 1;
-        }
-        catch(err) {
-            document.getElementById("demo4").innerHTML = err.name;
-        }
+      let x = 5;
+      try {
+        x = y + 1;
+      } catch (err) {
+        document.getElementById("demo4").innerHTML = err.name;
+      }
     </script>
 
     <b><p>The SyntaxError</p></b>
     <p id="demo5"></p>
     <script>
-        try {
-          eval("alert('Hello)");
-        }
-        catch(err) {
-          document.getElementById("demo5").innerHTML = err.name;
-        }
+      try {
+        eval("alert('Hello)");
+      } catch (err) {
+        document.getElementById("demo5").innerHTML = err.name;
+      }
     </script>
 
     <b><p>The TypeError</p></b>
     <p id="demo6"></p>
     <script>
-        let num1 = 1;
-        try {
-            num1.toUpperCase();
-        }
-        catch(err) {
-            document.getElementById("demo6").innerHTML = err.name;
-        }
+      let num1 = 1;
+      try {
+        num1.toUpperCase();
+      } catch (err) {
+        document.getElementById("demo6").innerHTML = err.name;
+      }
     </script>
 
     <b><p>The URIError</p></b>
     <p id="demo7"></p>
     <script>
-        try {
-            decodeURI("%%%");
-        }
-        catch(err){
-            document.getElementById("demo7").innerHTML = err.name;
-        }
+      try {
+        decodeURI("%%%");
+      } catch (err) {
+        document.getElementById("demo7").innerHTML = err.name;
+      }
     </script>
-</body>
+  </body>
 </html>

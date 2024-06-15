@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript For In</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript For In</h2>
 
     <b><p>JavaScript For In Loops</p></b>
     <p id="demo1"></p>
     <script>
-        const person = {fname:"John", lname:"Doe", age:25};
-        let txt = "";
-        for (let x in person) {
-            txt += person[x] + " ";
-        }
-        document.getElementById("demo1").innerHTML = txt;
+      const person = { fname: "John", lname: "Doe", age: 25 };
+      let txt = "";
+      for (let x in person) {
+        txt += person[x] + " ";
+      }
+      document.getElementById("demo1").innerHTML = txt;
     </script>
 
     <b><p>JavaScript Arrays For In Loops</p></b>
     <p id="demo2"></p>
     <script>
-        const numbers = [45, 3, 9, 16, 25];
-        let txt1 = "";
-        for (let x in numbers) {
-            txt1 += numbers[x] + "<br>";
-        }
-        document.getElementById("demo2").innerHTML = txt1;
+      const numbers = [45, 3, 9, 16, 25];
+      let txt1 = "";
+      for (let x in numbers) {
+        txt1 += numbers[x] + "<br>";
+      }
+      document.getElementById("demo2").innerHTML = txt1;
     </script>
 
     <b><p>The forEach() Method</p></b>
     <p id="demo3"></p>
     <script>
-        const numbers1 = [45, 4, 9, 16, 25];
-        let txt2 = ""
-        numbers1.forEach(myFunction);
-        document.getElementById("demo3").innerHTML = txt2;
-        function myFunction(value, index, array) {
-            txt2 += value + "<br>";
-        }
+      const numbers1 = [45, 4, 9, 16, 25];
+      let txt2 = "";
+      numbers1.forEach(myFunction);
+      document.getElementById("demo3").innerHTML = txt2;
+      function myFunction(value, index, array) {
+        txt2 += value + "<br>";
+      }
     </script>
-</body>
+  </body>
 </html>

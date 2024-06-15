@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Object Methods</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Object Methods</h2>
 
     <b><p>The JavaScript This Keyword</p></b>
     <p id="demo1"></p>
     <script>
-        const person = {
-            firstName: "John",
-            lastName: "Doe",
-            id: 5566,
-            fullName : function() {
-                return this.firstName + " " + this.lastName;
-            }
-        };
-        document.getElementById("demo1").innerHTML = person.fullName();
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo1").innerHTML = person.fullName();
     </script>
 
     <b><p>Creating and using an object method</p></b>
     <p id="demo2"></p>
     <script>
-        const person1 = {
-            firstName: "John",
-            lastName: "Doe",
-            id: 5566,
-            fullName: function() {
-                return this.firstName + " " + this.lastName;
-            }
-        };
-        document.getElementById("demo2").innerHTML = person1.fullName();
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo2").innerHTML = person1.fullName();
     </script>
 
     <b><p>JavaScript Objects</p></b>
     <p id="demo3"></p>
     <script>
-        const person2 = {
-            firstName: "John",
-            lastName: "Doe",
-            id: 5566,
-        };
-        person2.name = function() {
-            return this.firstName + " " + this.lastName;
-        };
-        document.getElementById("demo3").innerHTML = "My father is " + person2.name();
+      const person2 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+      };
+      person2.name = function () {
+        return this.firstName + " " + this.lastName;
+      };
+      document.getElementById("demo3").innerHTML =
+        "My father is " + person2.name();
     </script>
 
     <b><p>JavaScript Object toUpperCase()</p></b>
     <p id="demo4"></p>
     <script>
-        const person3 = {
-            firstName: "John",
-            lastName: "Doe",
-            id: 5566,
-        };
-        person3.name = function() {
-            return (this.firstName + " " + this.lastName).toUpperCase();
-        };
-        document.getElementById("demo4").innerHTML = "My father is " + person3.name();
+      const person3 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+      };
+      person3.name = function () {
+        return (this.firstName + " " + this.lastName).toUpperCase();
+      };
+      document.getElementById("demo4").innerHTML =
+        "My father is " + person3.name();
     </script>
-</body>
+  </body>
 </html>

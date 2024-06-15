@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Arrow Function</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Arrow Function</h2>
 
     <b><p>The Arrow Function</p></b>
     <p id="demo1"></p>
     <script>
-        let myFunction = (a, b) => a * b;
-        document.getElementById("demo1").innerHTML = myFunction(4, 5);
+      let myFunction = (a, b) => a * b;
+      document.getElementById("demo1").innerHTML = myFunction(4, 5);
     </script>
 
     <b><p>JavaScript Function</p></b>
     <p id="demo2"></p>
     <script>
-        let hello = "";
-        hello = function() {
-            return "Hello World!";
-        }
-        document.getElementById("demo2").innerHTML = hello();
+      let hello = "";
+      hello = function () {
+        return "Hello World!";
+      };
+      document.getElementById("demo2").innerHTML = hello();
     </script>
 
     <b><p>The Arrow Function</p></b>
     <p id="demo3"></p>
     <script>
-        let hello1 = "";
-        hello = () => {
-            return "Hello World!!!";
-        }
-        document.getElementById("demo3").innerHTML = hello();
+      let hello1 = "";
+      hello = () => {
+        return "Hello World!!!";
+      };
+      document.getElementById("demo3").innerHTML = hello();
     </script>
 
     <b><p>The Arrow Function</p></b>
     <p id="demo4"></p>
     <script>
-        let hello2 = "";
-        hello2 = (val) => "Hello " + val;
-        document.getElementById("demo4").innerHTML = hello2("Universe!");
+      let hello2 = "";
+      hello2 = (val) => "Hello " + val;
+      document.getElementById("demo4").innerHTML = hello2("Universe!");
     </script>
 
     <b><p>JavaScript "this"</p></b>
     <button id="btn">Click Me!</button>
     <p id="demo5"></p>
     <script>
-        let hello3 = "";
-        hello3 = function() {
-            document.getElementById("demo5").innerHTML += this;
-        }
-        window.addEventListener("load",hello);
-        document.getElementById("btn").addEventListener("click", hello3);
+      let hello3 = "";
+      hello3 = function () {
+        document.getElementById("demo5").innerHTML += this;
+      };
+      window.addEventListener("load", hello);
+      document.getElementById("btn").addEventListener("click", hello3);
     </script>
-</body>
+  </body>
 </html>

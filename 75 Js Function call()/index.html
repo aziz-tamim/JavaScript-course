@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Function call()</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Function call()</h2>
 
     <b><p>The fullName property is a method:</p></b>
     <p id="demo1"></p>
     <script>
-        const myObject = {
-            firstName: "John",
-            lastName: "Doe",
-            fullName: function() {
-                return this.firstName + " " + this.lastName;
-            }
-        }
-        document.getElementById("demo1").innerHTML = myObject.fullName();
+      const myObject = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo1").innerHTML = myObject.fullName();
     </script>
 
     <b><p>JavaScript Function</p></b>
     <p id="demo2"></p>
     <script>
-        const person = {
-            fullName: function() {
-                return this.firstName + " " + this.lastName;
-            }
-        }
-        const person1 = {
-            firstName:"John",
-            lastName: "Doe"
-        }
-        const person2 = {
-            firstName: "Marry",
-            lastName: "Doe"
-        }
-        document.getElementById("demo2").innerHTML = person.fullName.call(person2);
+      const person = {
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+      const person2 = {
+        firstName: "Marry",
+        lastName: "Doe",
+      };
+      document.getElementById("demo2").innerHTML =
+        person.fullName.call(person2);
     </script>
 
     <b><p>JavaScript Function</p></b>
     <p id="demo3"></p>
     <script>
-        const persons = {
-            fullName: function(city, country) {
-                return this.firstName + " " + this.lastName + "," + city + "," + country;
-            }
-        }
-        const persons1 = {
-            firstName: "John",
-            lastName: "Doe"
-        }
-        const persons2 = {
-            firstname: "Mary",
-            lastName: "Doe"
-        }
-        document.getElementById("demo3").innerHTML = persons.fullName.call(persons1,"Oslo","Norway");
+      const persons = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + " " + this.lastName + "," + city + "," + country
+          );
+        },
+      };
+      const persons1 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+      const persons2 = {
+        firstname: "Mary",
+        lastName: "Doe",
+      };
+      document.getElementById("demo3").innerHTML = persons.fullName.call(
+        persons1,
+        "Oslo",
+        "Norway"
+      );
     </script>
-</body>
+  </body>
 </html>

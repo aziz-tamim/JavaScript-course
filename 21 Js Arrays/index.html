@@ -1,140 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Arrays</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Arrays</h2>
 
     <b><p>Js Arrays</p></b>
     <p id="demo1"></p>
     <script>
-        const cars = ["Saab", "Volvo", "BMW"];
-        document.getElementById("demo1").innerHTML = cars;
+      const cars = ["Saab", "Volvo", "BMW"];
+      document.getElementById("demo1").innerHTML = cars;
     </script>
 
     <b><p>javascript new Array</p></b>
     <p id="demo2"></p>
     <script>
-        const cars1 = new Array("Volvo", "BMW", "Saab");
-        document.getElementById("demo2").innerHTML = cars1;
+      const cars1 = new Array("Volvo", "BMW", "Saab");
+      document.getElementById("demo2").innerHTML = cars1;
     </script>
 
     <b><p>Bracket Indexing</p></b>
     <p id="demo3"></p>
     <script>
-        const cars2 = ["Saab", "Volvo", "BMW"];
-        document.getElementById("demo3").innerHTML = cars[1];
+      const cars2 = ["Saab", "Volvo", "BMW"];
+      document.getElementById("demo3").innerHTML = cars[1];
     </script>
 
     <b><p>The toString() Method</p></b>
     <p id="demo4"></p>
     <script>
-        const fruits = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo4").innerHTML = fruits.toString();
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo4").innerHTML = fruits.toString();
     </script>
 
     <b><p>javaScript uses names to access object properties.</p></b>
     <p id="demo5"></p>
     <script>
-        const person = {firstName:"John", lastName:"Doe", age:46};
-        document.getElementById("demo5").innerHTML = person.firstName;
+      const person = { firstName: "John", lastName: "Doe", age: 46 };
+      document.getElementById("demo5").innerHTML = person.firstName;
     </script>
 
     <b><p>The length Property</p></b>
     <p id="demo6"></p>
     <script>
-        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
-        let size = fruits.length;
-        document.getElementById("demo6").innerHTML = size;
+      const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+      let size = fruits.length;
+      document.getElementById("demo6").innerHTML = size;
     </script>
 
-    <b><p>javaScript array element are accesses using numeric indexed (starting from 0).</p></b>
+    <b
+      ><p>
+        javaScript array element are accesses using numeric indexed (starting
+        from 0).
+      </p></b
+    >
     <p id="demo7"></p>
     <script>
-        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo7").innerHTML = fruits2[fruits2.length-1];
+      const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo7").innerHTML = fruits2[fruits2.length - 1];
     </script>
 
     <b><p>Looping an Array</p></b>
     <p id="demo8"></p>
     <script>
-        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
-        let fLen = fruits3.length;
-        let text = "<ul>";
-        for (let i = 0; i < fLen; i++) {
-            text += "<li>" + fruits3[i] + "</li>"
-        }
-        text += "</ul>";
-        document.getElementById("demo8").innerHTML = text;
+      const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+      let fLen = fruits3.length;
+      let text = "<ul>";
+      for (let i = 0; i < fLen; i++) {
+        text += "<li>" + fruits3[i] + "</li>";
+      }
+      text += "</ul>";
+      document.getElementById("demo8").innerHTML = text;
     </script>
 
     <p><b>Call forEach() Method</b></p>
     <p id="demo9"></p>
     <script>
-        const fruits4 = ["pineapple", "Lemon", "Banana", "Coconut"];
-        let text1 = "<ul>";
-        fruits4.forEach(myFunction);
-        text1 += "</ul>";
-        document.getElementById("demo9").innerHTML = text1;
-        function myFunction(value) {
-            text1 += "<li>" + value + "</li>";
-        }
+      const fruits4 = ["pineapple", "Lemon", "Banana", "Coconut"];
+      let text1 = "<ul>";
+      fruits4.forEach(myFunction);
+      text1 += "</ul>";
+      document.getElementById("demo9").innerHTML = text1;
+      function myFunction(value) {
+        text1 += "<li>" + value + "</li>";
+      }
     </script>
 
     <b><p>The Push() Method</p></b>
     <button onclick="myFunction1()">Try it</button>
     <p id="demo10"></p>
     <script>
-        const fruits5 = ["Banana", "Orange", "Apple"];
+      const fruits5 = ["Banana", "Orange", "Apple"];
+      document.getElementById("demo10").innerHTML = fruits5;
+      function myFunction1() {
+        fruits5.push("Lemon");
         document.getElementById("demo10").innerHTML = fruits5;
-        function myFunction1() {
-            fruits5.push("Lemon");
-        document.getElementById("demo10").innerHTML = fruits5;
-        }
+      }
     </script>
 
-    <b><p>Adding element with high indexes can create undefined "holes" in an array.</p></b>
+    <b
+      ><p>
+        Adding element with high indexes can create undefined "holes" in an
+        array.
+      </p></b
+    >
     <p id="demo11"></p>
     <script>
-        const fruits6 = ["Banana", "Orange", "Apple"];
-        fruits6[6] = "Lemon";
-        let fLen1 = fruits6.length;
-        let text2 = "";
-        for (i = 0; i < fLen1; i++) {
-            text2 += fruits6[i] + "<br>";
-        }
-        document.getElementById("demo11").innerHTML = text2;
+      const fruits6 = ["Banana", "Orange", "Apple"];
+      fruits6[6] = "Lemon";
+      let fLen1 = fruits6.length;
+      let text2 = "";
+      for (i = 0; i < fLen1; i++) {
+        text2 += fruits6[i] + "<br>";
+      }
+      document.getElementById("demo11").innerHTML = text2;
     </script>
 
-    <b><p>Avoid using new Array(). Use [] instead<p></b>
+    <b
+      ><p>Avoid using new Array(). Use [] instead</p>
+      <p></p
+    ></b>
     <p id="demo12"></p>
     <script>
-        const points1 = [40, 100, 1, 5, 25, 10];
-        document.getElementById("demo12").innerHTML = points1[0];
+      const points1 = [40, 100, 1, 5, 25, 10];
+      document.getElementById("demo12").innerHTML = points1[0];
     </script>
 
     <b><p>Create an Array with three element</p></b>
     <p id="demo13"></p>
     <script>
-        var points2 = new Array(40, 100, 1);
-        document.getElementById("demo13").innerHTML = points2;
+      var points2 = new Array(40, 100, 1);
+      document.getElementById("demo13").innerHTML = points2;
     </script>
 
     <b><p>The isArray() Method</p></b>
     <p id="demo14"></p>
     <script>
-        const fruits7 = ["Banana", "Orange", "Apple"];
-        document.getElementById("demo14").innerHTML = Array.isArray(fruits7);
+      const fruits7 = ["Banana", "Orange", "Apple"];
+      document.getElementById("demo14").innerHTML = Array.isArray(fruits7);
     </script>
 
     <b><p>The instanceof Operator</p></b>
     <p id="demo15"></p>
     <script>
-        var fruits8 = ["Banana", "Orange", "Apple"];
-        document.getElementById("demo15").innerHTML = fruits8 instanceof Array;
+      var fruits8 = ["Banana", "Orange", "Apple"];
+      document.getElementById("demo15").innerHTML = fruits8 instanceof Array;
     </script>
-</body>
+  </body>
 </html>

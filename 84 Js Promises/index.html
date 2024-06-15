@@ -1,77 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Async Promises</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Async Promises</h2>
 
     <b><p>The then() Method</p></b>
     <p id="demo1"></p>
     <script>
-        function myDisplayer(some) {
-            document.getElementById("demo1").innerHTML = some;
+      function myDisplayer(some) {
+        document.getElementById("demo1").innerHTML = some;
+      }
+      let myPromise = new Promise(function (myResolve, myReject) {
+        let x = 0;
+        if (x == 0) {
+          myResolve("OK");
+        } else {
+          myReject("Error");
         }
-        let myPromise = new Promise(function(myResolve, myReject) {
-            let x = 0;
-            if (x == 0) {
-                myResolve("OK");
-            } else {
-                myReject("Error");
-            }
-        });
-        myPromise.then(
-            function(value) {myDisplayer(value);},
-            function(error) {myDisplayer(error);}
-        );
+      });
+      myPromise.then(
+        function (value) {
+          myDisplayer(value);
+        },
+        function (error) {
+          myDisplayer(error);
+        }
+      );
     </script>
 
     <b><p>setInterval() With a Callback</p></b>
     <h2 id="demo2"></h2>
     <script>
-        setTimeout(function() {
-            myFunction("I love Bangladesh !!!");
-        }, 2000);
-        function myFunction(value) {
-            document.getElementById("demo2").innerHTML = value;
-        }
+      setTimeout(function () {
+        myFunction("I love Bangladesh !!!");
+      }, 2000);
+      function myFunction(value) {
+        document.getElementById("demo2").innerHTML = value;
+      }
     </script>
-    
+
     <b><p>The then() Method</p></b>
     <h2 id="demo3"></h2>
     <script>
-        const myPromise1 = new Promise(function(myResolve, myReject) {
-          setTimeout(function(){ myResolve("Hello Bangladesh!!"); }, 2000);
-        });
-        myPromise1.then(function(value) {
-          document.getElementById("demo3").innerHTML = value;
-        });
+      const myPromise1 = new Promise(function (myResolve, myReject) {
+        setTimeout(function () {
+          myResolve("Hello Bangladesh!!");
+        }, 2000);
+      });
+      myPromise1.then(function (value) {
+        document.getElementById("demo3").innerHTML = value;
+      });
     </script>
 
     <b><p>The then() Method</p></b>
     <p id="demo4"></p>
     <script>
-        function myDisplayer(some) {
-            document.getElementById("demo4").innerHTML = some;
+      function myDisplayer(some) {
+        document.getElementById("demo4").innerHTML = some;
+      }
+      let myPromise2 = new Promise(function (myResolve, myReject) {
+        let req = new XMLHttpRequest();
+        req.open("GET", "./mycar.html");
+        req.onload = function () {
+          if (req.status == 200) {
+            myResolve(req.response);
+          } else {
+            myReject("File not Found");
+          }
+        };
+        req.send();
+      });
+      myPromise2.then(
+        function (value) {
+          myDisplayer(value);
+        },
+        function (error) {
+          myDisplayer(error);
         }
-        let myPromise2 = new Promise(function(myResolve, myReject) {
-            let req = new XMLHttpRequest();
-            req.open('GET', "./mycar.html");
-            req.onload = function() {
-                if (req.status == 200) {
-                    myResolve(req.response);
-                } else {
-                    myReject("File not Found");
-                }
-            };
-            req.send();
-        });
-        myPromise2.then(
-            function(value) {myDisplayer(value);},
-            function(error) {myDisplayer(error);}
-        );
+      );
     </script>
-</body>
+  </body>
 </html>

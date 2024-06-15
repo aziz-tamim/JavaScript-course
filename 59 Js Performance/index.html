@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Performance</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JavaScript Performance</h2>
 
     <b><p>JavaScript Performance</p></b>
     <p id="demo1"></p>
     <script>
-        const obj = document.getElementById("demo1").innerHTML = " Hello";
+      const obj = (document.getElementById("demo1").innerHTML = " Hello");
     </script>
 
     <b><p>Avoid unnecessary variables</p></b>
     <p id="demo2"></p>
     <script>
-        let firstName = "John";
-        let lastName = "Doe";
-        let fullName = firstName + " " + lastName;
-        document.getElementById("demo2").innerHTML = fullName;
+      let firstName = "John";
+      let lastName = "Doe";
+      let fullName = firstName + " " + lastName;
+      document.getElementById("demo2").innerHTML = fullName;
     </script>
-</body>
+  </body>
 </html>
