@@ -1,0 +1,2 @@
+<h1>We are learning AJAX</h1>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nemo alias quia dolore doloribus eligendi necessitatibus ipsam magni. Aliquam, tenetur porro! Repellendus veniam delectus distinctio voluptatum nostrum magni reiciendis mollitia.</div>
