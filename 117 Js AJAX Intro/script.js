@@ -5,7 +5,7 @@ function loadData() {
   // What to do when response arrives
   xhr.onload = function () {
     const container = document.getElementById("demo");
-    demo.innerHTML = xhr.responseText;
+    container.innerHTML = xhr.responseText;
   };
 
   // Prepare request - method: GET, POST, PUT, PATCH, DELETE, OPTIONS
