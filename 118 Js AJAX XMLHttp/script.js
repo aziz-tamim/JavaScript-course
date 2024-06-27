@@ -16,8 +16,8 @@ function loadData(callbackF) {
   // send request
   xhr.send();
 
-  // about
-  // xhr.about();
+  // abort
+  // xhr.abort();
 }
 
 function myCallback1(xhr) {
