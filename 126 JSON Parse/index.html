@@ -15,5 +15,22 @@
         const obj = JSON.parse(txt);
         document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
     </script>
+
+    <b><p>Parsing a JSON Array.</p></b>
+    <p id="demo2"></p>
+    <script>
+        const text = '["Ford", "BMW", "Audi", "Fiat" ]';
+        const myArr = JSON.parse(text);
+        document.getElementById("demo2").innerHTML = myArr[0];
+    </script>
+
+    <b><p>Convert a string into a date object.</p></b>
+    <p id="demo3"></p>
+    <script>
+        const text2 = '{"name":"John","birth":"1986-12-14", "city":"New York"}';
+        const obj2 = JSON.parse(text2);
+        obj2.birth = new Date(obj2.birth);
+        document.getElementById("demo3").innerHTML = obj2.name + ", " + obj2.birth;
+    </script>
 </body>
 </html>
