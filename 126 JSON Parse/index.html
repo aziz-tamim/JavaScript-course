@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JSON.Parse()</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>JSON.Parse()</h2>
 
     <b><p>Creating an Object from a JSON String</p></b>
     <p id="demo"></p>
     <script>
-        const txt = '{"name":"John", "age":30, "city":"New York"}'
-        const obj = JSON.parse(txt);
-        document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+      const txt = '{"name":"John", "age":30, "city":"New York"}';
+      const obj = JSON.parse(txt);
+      document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
     </script>
 
     <b><p>Parsing a JSON Array.</p></b>
     <p id="demo2"></p>
     <script>
-        const text = '["Ford", "BMW", "Audi", "Fiat" ]';
-        const myArr = JSON.parse(text);
-        document.getElementById("demo2").innerHTML = myArr[0];
+      const text = '["Ford", "BMW", "Audi", "Fiat" ]';
+      const myArr = JSON.parse(text);
+      document.getElementById("demo2").innerHTML = myArr[0];
     </script>
 
     <b><p>Convert a string into a date object.</p></b>
     <p id="demo3"></p>
     <script>
-        const text2 = '{"name":"John","birth":"1986-12-14", "city":"New York"}';
-        const obj2 = JSON.parse(text2);
-        obj2.birth = new Date(obj2.birth);
-        document.getElementById("demo3").innerHTML = obj2.name + ", " + obj2.birth;
+      const text2 = '{"name":"John","birth":"1986-12-14", "city":"New York"}';
+      const obj2 = JSON.parse(text2);
+      obj2.birth = new Date(obj2.birth);
+      document.getElementById("demo3").innerHTML =
+        obj2.name + ", " + obj2.birth;
     </script>
-</body>
+
+    <b><p>Convert a string into a date object.</p></b>
+    <p id="demo4"></p>
+
+    <script>
+      const text3 = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+      const obj3 = JSON.parse(text3, function (key, value) {
+        if (key == "birth") {
+          return new Date(value);
+        } else {
+          return value;
+        }
+      });
+      document.getElementById("demo4").innerHTML = obj3.name + ", " + obj3.birth;
+    </script>
+  </body>
 </html>
