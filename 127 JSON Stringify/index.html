@@ -11,9 +11,39 @@
     <b>Create a JSON string from a JavaScript object.</b>
     <p id="demo1"></p>
     <script>
-        const obj = {name: "John", age: 30, city: "New York"};
+        const obj = {name: "John", age: 30, city: "New York" };
         const myJSON = JSON.stringify(obj);
         document.getElementById("demo1").innerHTML = myJSON;
+    </script>
+
+    <b><p>Create a JOSN string from a JavaScript array.</p></b>
+    <p id="demo2"></p>
+    <script>
+        const arr = ["John", "Peter", "Sally", "Jane"];
+        const myJSON2 = JSON.stringify(arr);
+        document.getElementById("demo2").innerHTML = myJSON2; 
+    </script>
+
+    <b><p>Store and retrieve data from local storage.</p></b>
+    <p id="demo3"></p>
+    <script>
+        // Storing data:
+        const myObj = { name: "John", age: 31, city: "New York" };
+        const myJSON3 = JSON.stringify(myObj);
+        localStorage.setItem("testJSON", myJSON3);
+
+        // Retrieving data:
+        let text = localStorage.getItem("testJSON");
+        let obj1 = JSON.parse(text);
+        document.getElementById("demo3").innerHTML = obj1.name;
+    </script>
+
+    <b><p>JSON.stringify() converts date objects into strings.</p></b>
+    <p id="demo4"></p>
+    <script>
+        const obj2 = {name: "John", today: new Date(), city: "New York"};
+        const myJSON4 = JSON.stringify(obj2);
+        document.getElementById("demo4").innerHTML = myJSON4;
     </script>
 </body>
 </html>
