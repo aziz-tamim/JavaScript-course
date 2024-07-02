@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON.Stringify</title>
+</head>
+<body>
+    <h2>JSON.Stringify</h2>
+
+    <b>Create a JSON string from a JavaScript object.</b>
+    <p id="demo1"></p>
+    <script>
+        const obj = {name: "John", age: 30, city: "New York"};
+        const myJSON = JSON.stringify(obj);
+        document.getElementById("demo1").innerHTML = myJSON;
+    </script>
+</body>
+</html>
