@@ -8,6 +8,51 @@
 <body>
     <h2>JSON Object Literals</h2>
 
-    <b><p></p></b>
+    <b><p>Creating an Object from a JSON Literal</p></b>
+    <p id="demo1"></p>  
+    <script>
+        const myObj = {"name":"John", "age":30, "car":null};
+        document.getElementById("demo1").innerHTML = myObj.name;
+    </script>
+
+    <b><p>Creating an Object Parsing JSON</p></b>
+    <p id="demo2"></p>
+    <script>
+        const myJSON = '{"name":"John","age":30, "car":null}';
+        const myObj2 = JSON.parse(myJSON);
+        document.getElementById("demo2").innerHTML = myObj2.name;
+    </script>
+
+    <b><p>Access a JavaScript Object</p></b>
+    <p id="demo3"></p>
+    <script>
+        const myJSON2 = '{"name":"John","age":30, "car":null}';
+        const myObj3 = JSON.parse(myJSON2);
+        document.getElementById("demo3").innerHTML = myObj3.name;
+    </script>
+
+    <b><p>Looping Object Properties</p></b>
+    <p id="demo4"></p>
+    <script>
+        const myJSON3 = '{"name":"John", "age":30, "car":null}';
+        const myObj4 = JSON.parse(myJSON3);
+        let text = "";
+        for (const x in myObj4) {
+            text += x + ", ";
+        }
+        document.getElementById("demo4").innerHTML = text;
+    </script>
+
+    <b><p>Looping JavaScript Object Values</p></b>
+    <p id="demo5"></p>
+    <script>
+        const myJSON4 = '{"name":"John", "age":30, "car":null}';
+        const myObj5 = JSON.parse(myJSON);
+        let text1 = "";
+        for (const x in myObj5) {
+            text1 += myObj5[x] + ", ";
+        }
+        document.getElementById("demo5").innerHTML = text1;
+    </script>
 </body>
 </html>
