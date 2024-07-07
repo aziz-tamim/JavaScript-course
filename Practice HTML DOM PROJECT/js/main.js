@@ -51,19 +51,19 @@ function openMilestone(milestoneElement, id) {
 }
 
 function showMilestone(id) {
-    const milestoneImage = document.querySelector(".milestoneImage");
-    const name = document.querySelector(".title");
-    const details = document.querySelector(".details");
-  
-    milestoneImage.style.opacity = "0";
-    milestoneImage.src = milestonesData[id].image;
-    name.innerText = milestonesData[id].name;
-    details.innerText = milestonesData[id].description;
-  }
-  
   const milestoneImage = document.querySelector(".milestoneImage");
-  milestoneImage.onload = function () {
-    this.style.opacity = "1";
-  };
+  const name = document.querySelector(".title");
+  const details = document.querySelector(".details");
+
+  milestoneImage.style.opacity = "0";
+  milestoneImage.src = milestonesData[id].image;
+  name.innerText = milestonesData[id].name;
+  details.innerText = milestonesData[id].description;
+}
+
+const milestoneImage = document.querySelector(".milestoneImage");
+milestoneImage.onload = function () {
+  this.style.opacity = "1";
+};
 
 loadMilestones();
