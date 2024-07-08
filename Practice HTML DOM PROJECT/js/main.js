@@ -82,4 +82,9 @@ function markMileStone(checkbox, id) {
   }
 }
 
+function sortMilestones(list) {
+    let itemsArray = Array.form(list.getElementsByClassName("milestone"));
+
+}
+
 loadMilestones();
